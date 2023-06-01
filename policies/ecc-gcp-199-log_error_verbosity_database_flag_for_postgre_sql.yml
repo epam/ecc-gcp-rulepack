@@ -1,0 +1,26 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-199-log_error_verbosity_database_flag_for_postgre_sql
+    description: |
+      The 'log_error_verbosity' database flag for Cloud SQL PostgreSQL instance is not set to 'DEFAULT' or stricter
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "POSTGRES"
+        op: contains
+      - not:
+          - type: value
+            key: settings.databaseFlags[?name == 'log_error_verbosity'].value
+            value: verbose
+            op: contains
+      - not:
+          - type: value
+            key: settings.databaseFlags[?name == 'log_error_verbosity'].value
+            value: default
+            op: contains

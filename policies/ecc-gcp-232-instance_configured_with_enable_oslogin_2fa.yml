@@ -1,0 +1,20 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-232-instance_configured_with_enable_oslogin_2fa
+    description: |
+      OS Login is not configured with Two-Factor Authentication (2FA) for production VM instances
+    resource: gcp.instance
+    filters:
+      - not:
+          - type: value
+            key: metadata.items[?key == 'enable-oslogin-2fa'].value[]
+            value:
+              - "TRUE"
+              - "True"
+              - "true"
+            op: intersect

@@ -1,0 +1,6 @@
+project       = "project_id"
+region        = "us-central1"
+instance_name = "admin-name-077-red"
+dbver         = "MYSQL_5_7"
+user_name     = "admin"
+host          = "my.com"

@@ -1,0 +1,24 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Need to be modified
+# It is recommended to set 'log_hostname' database flag for Cloud SQL
+# PostgreSQL server instance according organization-defined value.
+
+policies:
+  - name: ecc-gcp-202-log_hostname_database-flag-for-postgresql
+    description: |
+      The 'log_hostname' database flag for Cloud SQL PostgreSQL instance is not set appropriately
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "POSTGRES"
+        op: contains
+      - type: value
+        key: settings.databaseFlags[?name == 'log_hostname'].value
+        value: "on"
+        op: contains

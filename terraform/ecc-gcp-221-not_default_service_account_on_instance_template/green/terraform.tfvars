@@ -1,0 +1,6 @@
+project       = "project_id"
+region        = "us-central1"
+machine_type  = "f1-micro"
+template_name = "no-default-sa-221-green"
+network       = "default"
+sa_id         = "service-account-221-green"

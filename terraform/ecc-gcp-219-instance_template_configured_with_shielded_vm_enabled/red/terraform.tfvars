@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central-1"
+machine_type  = "f1-micro"
+template_name = "shielded-219-red"
+network       = "default"

@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-253-workload_identity_disabled_for_gke_cluster
+    description: |
+      GCP Kubernetes Engine cluster workload identity is disabled
+    resource: gcp.gke-cluster
+    filters:
+      - or:
+          - type: value
+            key: workloadIdentityConfig
+            value: absent
+          - not:
+              - type: value
+                key: nodePools[].config.workloadMetadataConfig.mode
+                value: "GKE_METADATA"
+                op: contains

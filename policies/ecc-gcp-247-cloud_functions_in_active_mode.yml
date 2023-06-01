@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-247-cloud_functions_in_active_mode
+    description: |
+      The deployed Cloud Function is not in 'ACTIVE' mode
+    resource: gcp.function
+    filters:
+      - type: value
+        key: status
+        value: ["OFFLINE", "UNKNOWN", "CLOUD_FUNCTION_STATUS_UNSPECIFIED"]
+        op: in

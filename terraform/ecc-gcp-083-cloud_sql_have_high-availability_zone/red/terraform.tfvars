@@ -1,0 +1,6 @@
+project          = "project_id"
+region           = "us-central1"
+zone             = "us-central1-a"
+instance_name    = "db-instance-083-red"
+database_version = "MYSQL_5_6"
+tier             = "db-f1-micro"

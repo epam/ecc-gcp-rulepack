@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-101-load_balancer_access_logging_disabled
+    description: |
+      Load Balancer Access Logging is Disabled
+    resource: gcp.loadbalancer-backend-service
+    filters:
+      - type: value
+        key: logConfig.enable
+        value: true
+        op: ne

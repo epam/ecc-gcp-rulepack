@@ -1,0 +1,5 @@
+project    = "project_id"
+region     = "us-central1"
+dataset    = "dataset_214_green"
+crypto_key = "crypto-key"
+key_ring   = "keyring"

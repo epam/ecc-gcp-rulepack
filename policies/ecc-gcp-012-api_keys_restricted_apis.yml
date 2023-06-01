@@ -1,0 +1,20 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-012-api_keys_restricted_apis
+    description: |
+      API Keys are not restricted to only APIs that application needs access
+    resource: gcp.api-key
+    filters:
+      - or:
+        - type: value
+          key: restrictions.apiTargets
+          value: absent
+        - type: value
+          key: restrictions.apiTargets[].service
+          value: "cloudapis.googleapis.com"
+          op: contains

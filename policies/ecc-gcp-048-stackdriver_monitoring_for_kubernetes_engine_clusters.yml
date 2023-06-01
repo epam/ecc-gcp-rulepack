@@ -1,0 +1,19 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# To achieve the results according to the source, you must also
+# apply ecc-gcp-047-cloud_operations_logging_disabled_for_gke_clusters
+
+policies:
+  - name: ecc-gcp-048-stackdriver_monitoring_for_kubernetes_engine_clusters
+    description: |
+      Stackdriver Kubernetes Monitoring is not Enabled
+    resource: gcp.gke-cluster
+    filters:
+      - type: value
+        key: monitoringService
+        op: ne
+        value: "monitoring.googleapis.com/kubernetes"

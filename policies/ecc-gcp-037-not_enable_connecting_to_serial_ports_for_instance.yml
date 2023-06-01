@@ -1,0 +1,20 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-037-not_enable_connecting_to_serial_ports_for_instance
+    description: |
+      'Enable connecting to serial ports' is enabled for a VM Instance
+    resource: gcp.instance
+    filters:
+      - type: value
+        key: metadata.items[?key == `serial-port-enable`].value
+        value:
+          - "TRUE"
+          - "True"
+          - "true"
+          - "1"
+        op: intersect

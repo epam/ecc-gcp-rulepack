@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-220-instance_template_configured_without_external_ip_address
+    description: |
+      Instance template configured with external IP addresses
+    resource: gcp.instance-template
+    filters:
+      - type: value
+        key: properties.networkInterfaces[].accessConfigs[].type
+        op: regex
+        value: '.*'

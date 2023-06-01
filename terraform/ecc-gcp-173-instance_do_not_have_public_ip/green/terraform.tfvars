@@ -1,0 +1,6 @@
+project       = "project_id"
+region        = "us-central1"
+zone          = "us-central1-a"
+instance_name = "without-external-ip-173-green"
+machine_type  = "f1-micro"
+network       = "default"

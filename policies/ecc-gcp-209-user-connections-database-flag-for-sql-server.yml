@@ -1,0 +1,25 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-209-user-connections-database-flag-for-sql-server
+    description: |
+      The 'user connections' database flag for Cloud SQL SQL Server instance is not Set to a Non-limiting Value
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "SQLSERVER"
+        op: contains
+      - type: value
+        key: settings.databaseFlags[].name
+        value: "user connections"
+        op: contains
+      - not:
+          - type: value
+            key: settings.databaseFlags[?name == 'user connections'].value | [0]
+            value: "0"
+            op: eq

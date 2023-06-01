@@ -1,0 +1,26 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-103-instance_without_deletion_protection
+    description: |
+      There is an instance without deletion protection
+    resource: gcp.instance
+    filters:
+      - or:
+          - type: value
+            key: deletionProtection
+            value: false
+            op: eq
+          - type: value
+            key: deletionProtection
+            value: 0
+            op: eq
+      - not:
+          - type: value
+            key: "disks[].licenses[] | {range: join(', ', @)}.range"
+            value: gke
+            op: contains

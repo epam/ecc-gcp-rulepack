@@ -1,0 +1,27 @@
+variable "project" {
+  type = string
+}
+
+variable "region" {
+  type = string
+}
+
+variable "zone" {
+  type = string
+}
+
+variable "instance_name" {
+  type = string
+}
+
+variable "network" {
+  type = string
+}
+
+variable "sa_id" {
+  type = string
+}
+
+variable "sa_name" {
+  type = string
+}

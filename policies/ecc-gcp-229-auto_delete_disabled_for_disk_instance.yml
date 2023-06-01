@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-229-auto_delete_disabled_for_disk_instance
+    description: |
+      Auto-Delete feature is not disabled for the disks attached to the VM instances
+    resource: gcp.instance
+    filters:
+      - type: value
+        key: disks[].autoDelete
+        op: contains
+        value: true

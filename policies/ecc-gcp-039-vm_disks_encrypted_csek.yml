@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-039-vm_disks_encrypted_csek
+    description: |
+      VM disks for critical VMs are not encrypted with Customer-Supplied Encryption Keys (CSEK)
+    resource: gcp.disk
+    filters:
+      - type: value
+        key: diskEncryptionKey.sha256
+        value: null
+        op: eq
+      - not:
+          - type: value
+            key: sourceImage
+            value: gke-node-images
+            op: contains

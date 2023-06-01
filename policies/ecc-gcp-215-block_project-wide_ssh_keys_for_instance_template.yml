@@ -1,0 +1,25 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-215-block_project-wide_ssh_keys_for_instance_template
+    description: |
+      'Block Project-wide SSH keys' is not enabled for instance template
+    resource: gcp.instance-template
+    filters:
+      - not:
+          - type: value
+            key: properties.metadata.items[?key == 'block-project-ssh-keys'].value[]
+            value:
+              - "TRUE"
+              - "True"
+              - "true"
+            op: intersect
+      - not:
+          - type: value
+            key: "properties.disks[].licenses[] | {range: join(', ', @)}.range"
+            value: gke
+            op: contains

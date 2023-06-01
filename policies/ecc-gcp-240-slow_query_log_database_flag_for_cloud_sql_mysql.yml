@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-240-slow_query_log_database_flag_for_cloud_sql_mysql
+    description: |
+      MySQL database instance has the 'slow_query_log' flag set to Off
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "MYSQL"
+        op: contains
+      - not:
+          - type: value
+            key: settings.databaseFlags[?name == 'slow_query_log'].value
+            value: "on"
+            op: contains

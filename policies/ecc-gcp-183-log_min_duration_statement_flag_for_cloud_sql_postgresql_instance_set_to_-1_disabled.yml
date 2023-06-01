@@ -1,0 +1,25 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-183-log_min_duration_statement_flag_for_cloud_sql_postgresql_instance_set_to_-1_disabled
+    description: |
+      The 'log_min_duration_statement' database flag for Cloud SQL PostgreSQL instance is not set to '-1' (disabled)
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "POSTGRES"
+        op: contains
+      - type: value
+        key: settings.databaseFlags[].name
+        value: "log_min_duration_statement"
+        op: contains
+      - not:
+          - type: value
+            key: settings.databaseFlags[?name == 'log_min_duration_statement'].value
+            value: "-1"
+            op: contains

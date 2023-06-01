@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-228-on_host_maintenance_set_to_migrate_for_instance
+    description: |
+      'On Host Maintenance' configuration setting is not set to 'Migrate' for all VM instances
+    resource: gcp.instance
+    filters:
+      - type: value
+        key: scheduling.onHostMaintenance
+        op: ne
+        value: "MIGRATE"

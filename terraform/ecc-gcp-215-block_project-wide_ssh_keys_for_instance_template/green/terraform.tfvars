@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central1"
+template_name = "instance-template-215-green"
+machine_type  = "f1-micro"
+network       = "default"

@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central1"
+firewall_name = "c7n-without-target-tags-122-red"
+protocol      = "all"
+network       = "default"

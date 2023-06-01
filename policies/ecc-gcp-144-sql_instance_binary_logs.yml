@@ -1,0 +1,24 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-144-sql_instance_binary_logs
+    description: |
+      MySQL DB Instance backup Binary logs configuration is not enabled
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "MYSQL"
+        op: contains
+      - type: value
+        key: settings.backupConfiguration.binaryLogEnabled
+        value: true
+        op: ne
+      - not:
+          - type: value
+            key: masterInstanceName
+            value: present

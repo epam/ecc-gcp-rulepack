@@ -1,0 +1,6 @@
+project                  = "project_id"
+region                   = "us-central1"
+first_network_name       = "test-network1-076-green"
+second_network_name      = "test-network2-076-green"
+network_peering_one_name = "peering1-076-green"
+network_peering_two_name = "peering2-076-green"

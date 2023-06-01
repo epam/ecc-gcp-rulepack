@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-236-mysql_use_the_latest_major_version
+    description: |
+      MySQL database servers are not using the latest major version of MySQL database
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: 'MYSQL.*'
+        op: regex
+      - not:
+          - type: value
+            key: databaseVersion
+            value: "MYSQL_8_"
+            op: contains

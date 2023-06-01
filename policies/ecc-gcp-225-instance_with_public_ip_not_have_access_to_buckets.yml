@@ -1,0 +1,27 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-225-instance_with_public_ip_not_have_access_to_buckets
+    description: |
+      VM instance with public IP address has access to GCS buckets
+    resource: gcp.instance
+    filters:
+      - type: value
+        key: networkInterfaces[].accessConfigs[].name
+        value:
+          - "External NAT"
+          - "external-nat"
+        op: intersect
+      - type: value
+        key: serviceAccounts[].scopes[]
+        op: intersect
+        value:
+          - "https://www.googleapis.com/auth/cloud-platform"
+          - "https://www.googleapis.com/auth/pubsub"
+          - "https://www.googleapis.com/auth/devstorage.full_control"
+          - "https://www.googleapis.com/auth/devstorage.read_only"
+          - "https://www.googleapis.com/auth/devstorage.read_write"

@@ -1,0 +1,17 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-436-instance-ip-assignment-set-to-privat
+    description: |
+      Instance IP assignment is not set to private
+    resource: gcp.sql-instance
+    filters:
+      - not:
+          - type: value
+            key: ipAddresses[].type
+            op: contains
+            value: "PRIVATE"

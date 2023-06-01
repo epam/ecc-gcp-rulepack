@@ -1,0 +1,6 @@
+project       = "project_id"
+region        = "us-central1"
+zone          = "us-central1-a"
+instance_name = "confidential-computing-disabled-197-red"
+machine_type  = "n2d-standard-2"
+network       = "default"

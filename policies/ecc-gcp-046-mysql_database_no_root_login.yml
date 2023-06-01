@@ -1,0 +1,29 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-046-mysql_database_no_root_login
+    description: |
+      MySQL Database Instance allows root login from any Host
+    resource: gcp.sql-user
+    filters:
+      - type: value
+        key: name
+        value: "root"
+        op: eq
+      - or:
+          - type: value
+            key: host
+            value: "%"
+            op: contains
+          - type: value
+            key: host
+            value: "0.0.0.0"
+            op: contains
+          - type: value
+            key: host
+            value: "/0"
+            op: contains
