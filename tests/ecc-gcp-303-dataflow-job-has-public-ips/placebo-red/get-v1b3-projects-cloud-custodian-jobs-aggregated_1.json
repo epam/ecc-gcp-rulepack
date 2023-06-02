@@ -1,0 +1,40 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 08:55:41 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1243",
+    "-content-encoding": "gzip",
+    "content-location": "https://dataflow.googleapis.com/v1b3/projects/cloud-custodian/jobs:aggregated?filter=ACTIVE&alt=json"
+  },
+  "body": {
+    "jobs": [
+      {
+        "id": "2023-01-19_00_55_34-14273589318414940546",
+        "projectId": "cloud-custodian",
+        "name": "dataflow-job-303-red",
+        "type": "JOB_TYPE_BATCH",
+        "currentState": "JOB_STATE_RUNNING",
+        "currentStateTime": "2023-01-19T08:55:41.589371Z",
+        "createTime": "2023-01-19T08:55:35.066108Z",
+        "location": "us-central1",
+        "jobMetadata": {
+          "sdkVersion": {
+            "version": "2.43.0",
+            "versionDisplayName": "Apache Beam SDK for Java",
+            "sdkSupportStatus": "SUPPORTED"
+          }
+        },
+        "startTime": "2023-01-19T08:55:35.066108Z"
+      }
+    ]
+  }
+}

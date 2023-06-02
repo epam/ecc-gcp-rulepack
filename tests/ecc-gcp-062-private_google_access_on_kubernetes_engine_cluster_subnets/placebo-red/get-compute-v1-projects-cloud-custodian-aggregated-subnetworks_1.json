@@ -1,0 +1,59 @@
+{
+  "headers": {
+    "etag": "eHZQwcdOz0jfpmX5_9P8PLFh-vk=/WXMhshehp1J4hqGsuoq6qJ66-Z0=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 14 Nov 2022 08:26:11 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "35638",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/subnetworks?alt=json"
+  },
+  "body": {
+    "kind": "compute#subnetworkAggregatedList",
+    "id": "projects/cloud-custodian/aggregated/subnetworks",
+    "items": {
+      "regions/us-central1": {
+        "subnetworks": [
+          {
+            "kind": "compute#subnetwork",
+            "id": "5994619156817530691",
+            "creationTimestamp": "2022-11-13T23:43:40.715-08:00",
+            "name": "not-private-subnetwork-062-red",
+            "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-062-red",
+            "ipCidrRange": "10.5.0.0/20",
+            "gatewayAddress": "10.5.0.1",
+            "region": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1",
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1/subnetworks/not-private-subnetwork-062-red",
+            "privateIpGoogleAccess": false,
+            "secondaryIpRanges": [
+              {
+                "rangeName": "gke-cluster-062-red-pods-20bd97c5",
+                "ipCidrRange": "10.0.0.0/14"
+              },
+              {
+                "rangeName": "gke-cluster-062-red-services-20bd97c5",
+                "ipCidrRange": "10.4.0.0/19"
+              }
+            ],
+            "fingerprint": "gfo_B0kGBHw=",
+            "enableFlowLogs": false,
+            "privateIpv6GoogleAccess": "DISABLE_GOOGLE_ACCESS",
+            "purpose": "PRIVATE",
+            "logConfig": {
+              "enable": false
+            },
+            "stackType": "IPV4_ONLY"
+          }
+        ]
+      }
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/subnetworks"
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 27 Jan 2023 13:36:52 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "8053",
+    "-content-encoding": "gzip",
+    "content-location": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances?alt=json"
+  },
+  "body": {
+    "items": [
+      {
+        "kind": "sql#instance",
+        "state": "RUNNABLE",
+        "databaseVersion": "MYSQL_5_7",
+        "settings": {
+          "authorizedGaeApplications": [],
+          "tier": "db-f1-micro",
+          "kind": "sql#settings",
+          "availabilityType": "ZONAL",
+          "pricingPlan": "PER_USE",
+          "replicationType": "SYNCHRONOUS",
+          "activationPolicy": "ALWAYS",
+          "ipConfiguration": {
+            "privateNetwork": "projects/cloud-custodian/global/networks/private-network-436-red",
+            "authorizedNetworks": [],
+            "ipv4Enabled": false,
+            "requireSsl": false
+          },
+          "locationPreference": {
+            "zone": "us-central1-a",
+            "kind": "sql#locationPreference"
+          },
+          "dataDiskType": "PD_SSD",
+          "backupConfiguration": {
+            "startTime": "15:00",
+            "kind": "sql#backupConfiguration",
+            "backupRetentionSettings": {
+              "retentionUnit": "COUNT",
+              "retainedBackups": 7
+            },
+            "enabled": false,
+            "transactionLogRetentionDays": 7
+          },
+          "connectorEnforcement": "NOT_REQUIRED",
+          "settingsVersion": "1",
+          "storageAutoResizeLimit": "0",
+          "storageAutoResize": true,
+          "dataDiskSizeGb": "10",
+          "deletionProtectionEnabled": false
+        },
+        "etag": "60c11712d1e0f8711f716bd884b5da2eabd219c452bf5a04a8ba1a82b55318f2",
+        "ipAddresses": [
+          {
+            "type": "PRIVATE",
+            "ipAddress": "10.73.0.3"
+          }
+        ],
+        "serverCaCert": {
+          "kind": "sql#sslCert",
+          "certSerialNumber": "0",
+          "cert": "-----BEGIN CERTIFICATE-----#-----END CERTIFICATE-----",
+          "commonName": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=599b5488-7739-4d9a-8afb-3742e30d2d7b",
+          "sha1Fingerprint": "6708ef80adf0067a7931713a76a583a36cc31a90",
+          "instance": "private-instance-b3dc2df8-436-green",
+          "createTime": "2023-01-27T13:09:24.113Z",
+          "expirationTime": "2033-01-24T13:10:24.113Z"
+        },
+        "instanceType": "CLOUD_SQL_INSTANCE",
+        "project": "cloud-custodian",
+        "serviceAccountEmailAddress": "test@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+        "backendType": "SECOND_GEN",
+        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/private-instance-b3dc2df8-436-green",
+        "connectionName": "cloud-custodian:us-central1:private-instance-b3dc2df8-436-green",
+        "name": "private-instance-b3dc2df8-436-green",
+        "region": "us-central1",
+        "gceZone": "us-central1-a",
+        "databaseInstalledVersion": "MYSQL_5_7_39",
+        "maintenanceVersion": "MYSQL_5_7_39.R20221108.00_02",
+        "createTime": "2023-01-27T13:07:22.866Z"
+      },
+      {
+        "kind": "sql#instance",
+        "state": "RUNNABLE",
+        "databaseVersion": "MYSQL_5_7",
+        "settings": {
+          "authorizedGaeApplications": [],
+          "tier": "db-f1-micro",
+          "kind": "sql#settings",
+          "availabilityType": "ZONAL",
+          "pricingPlan": "PER_USE",
+          "replicationType": "SYNCHRONOUS",
+          "activationPolicy": "ALWAYS",
+          "ipConfiguration": {
+            "privateNetwork": "projects/cloud-custodian/global/networks/private-network-436-red",
+            "authorizedNetworks": [],
+            "ipv4Enabled": false,
+            "requireSsl": false
+          },
+          "locationPreference": {
+            "zone": "us-central1-a",
+            "kind": "sql#locationPreference"
+          },
+          "dataDiskType": "PD_SSD",
+          "backupConfiguration": {
+            "startTime": "01:00",
+            "kind": "sql#backupConfiguration",
+            "backupRetentionSettings": {
+              "retentionUnit": "COUNT",
+              "retainedBackups": 7
+            },
+            "enabled": false,
+            "transactionLogRetentionDays": 7
+          },
+          "connectorEnforcement": "NOT_REQUIRED",
+          "settingsVersion": "1",
+          "storageAutoResizeLimit": "0",
+          "storageAutoResize": true,
+          "dataDiskSizeGb": "10",
+          "deletionProtectionEnabled": false
+        },
+        "etag": "728a78e44acbc46c0c9eb97f4293c3cd95e3cfa9610d4529de33e06ca5396c64",
+        "ipAddresses": [
+          {
+            "type": "PRIVATE",
+            "ipAddress": "10.105.0.3"
+          }
+        ],
+        "serverCaCert": {
+          "kind": "sql#sslCert",
+          "certSerialNumber": "0",
+          "cert": "-----BEGIN CERTIFICATE-----#-----END CERTIFICATE-----",
+          "commonName": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=b0c08a54-9a1a-41f4-a60b-4707276f2ac0",
+          "sha1Fingerprint": "b185a2946ef7c16a865a4fb65735e055b43e4b51",
+          "instance": "private-instance-8956e287-436-green",
+          "createTime": "2023-01-27T13:23:06.596Z",
+          "expirationTime": "2033-01-24T13:24:06.596Z"
+        },
+        "instanceType": "CLOUD_SQL_INSTANCE",
+        "project": "cloud-custodian",
+        "serviceAccountEmailAddress": "test@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+        "backendType": "SECOND_GEN",
+        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/private-instance-8956e287-436-green",
+        "connectionName": "cloud-custodian:us-central1:private-instance-8956e287-436-green",
+        "name": "private-instance-8956e287-436-green",
+        "region": "us-central1",
+        "gceZone": "us-central1-a",
+        "databaseInstalledVersion": "MYSQL_5_7_39",
+        "maintenanceVersion": "MYSQL_5_7_39.R20221108.00_02",
+        "createTime": "2023-01-27T13:21:09.735Z"
+      }
+    ]
+  }
+}

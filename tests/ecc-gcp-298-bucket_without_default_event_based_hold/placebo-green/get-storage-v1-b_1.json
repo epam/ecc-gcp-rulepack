@@ -1,0 +1,124 @@
+{
+  "headers": {
+    "x-guploader-uploadid": "ADPycdsEelrMzI5xRcJzA1iLNjS4K2vN6tuMLMOEn6rB9qZAbBLbpK3uxuD4b4taNYtMuLmwfxNT4A94-k-lMLJinLtnsA",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Wed, 18 Jan 2023 09:55:06 GMT",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "expires": "Wed, 18 Jan 2023 09:55:06 GMT",
+    "content-length": "47891",
+    "server": "UploadServer",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "status": "200",
+    "content-location": "https://storage.googleapis.com/storage/v1/b?project=cloud-custodian&projection=full&alt=json"
+  },
+  "body": {
+    "kind": "storage#buckets",
+    "items": [
+      {
+        "kind": "storage#bucket",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/bucket_default_event_based_hold_298_green",
+        "id": "bucket_default_event_based_hold_298_green",
+        "name": "bucket_default_event_based_hold_298_green",
+        "projectNumber": "443732426401",
+        "metageneration": "1",
+        "location": "US-CENTRAL1",
+        "storageClass": "STANDARD",
+        "etag": "CAE=",
+        "defaultEventBasedHold": true,
+        "timeCreated": "2023-01-18T08:09:01.309Z",
+        "updated": "2023-01-18T08:09:01.309Z",
+        "acl": [
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "bucket_default_event_based_hold_298_green/project-owners-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/bucket_default_event_based_hold_298_green/acl/project-owners-443732426401",
+            "bucket": "bucket_default_event_based_hold_298_green",
+            "entity": "project-owners-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "bucket_default_event_based_hold_298_green/project-editors-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/bucket_default_event_based_hold_298_green/acl/project-editors-443732426401",
+            "bucket": "bucket_default_event_based_hold_298_green",
+            "entity": "project-editors-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "bucket_default_event_based_hold_298_green/project-viewers-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/bucket_default_event_based_hold_298_green/acl/project-viewers-443732426401",
+            "bucket": "bucket_default_event_based_hold_298_green",
+            "entity": "project-viewers-443732426401",
+            "role": "READER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "viewers"
+            }
+          }
+        ],
+        "defaultObjectAcl": [
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-owners-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-editors-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-viewers-443732426401",
+            "role": "READER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "viewers"
+            }
+          }
+        ],
+        "owner": {
+          "entity": "project-owners-443732426401"
+        },
+        "labels": {
+          "custodiarule": "ecc-gcp-298-bucket_without_default_event_based_hold",
+          "compliancestatus": "green"
+        },
+        "iamConfiguration": {
+          "bucketPolicyOnly": {
+            "enabled": false
+          },
+          "uniformBucketLevelAccess": {
+            "enabled": false
+          },
+          "publicAccessPrevention": "inherited"
+        },
+        "locationType": "region"
+      }
+    ]
+  }
+}

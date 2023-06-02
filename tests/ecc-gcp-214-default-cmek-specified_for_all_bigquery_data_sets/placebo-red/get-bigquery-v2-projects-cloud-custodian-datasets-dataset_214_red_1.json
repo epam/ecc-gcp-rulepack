@@ -1,0 +1,55 @@
+{
+  "headers": {
+    "etag": "fvukgRs8c5zB0yTRgoPNoA==",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 06 Jan 2023 12:26:32 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "953",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigquery.googleapis.com/bigquery/v2/projects/cloud-custodian/datasets/dataset_214_red?alt=json"
+  },
+  "body": {
+    "kind": "bigquery#dataset",
+    "etag": "fvukgRs8c5zB0yTRgoPNoA==",
+    "id": "cloud-custodian:dataset_214_red",
+    "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/cloud-custodian/datasets/dataset_214_red",
+    "datasetReference": {
+      "datasetId": "dataset_214_red",
+      "projectId": "cloud-custodian"
+    },
+    "labels": {
+      "compliancestatus": "red",
+      "custodianrule": "ecc-gcp-214-default-cmek-specified_for_all_bigquery_data_sets"
+    },
+    "access": [
+      {
+        "role": "WRITER",
+        "specialGroup": "projectWriters"
+      },
+      {
+        "role": "OWNER",
+        "specialGroup": "projectOwners"
+      },
+      {
+        "role": "OWNER",
+        "userByEmail": "test@cloud-custodian.iam.gserviceaccount.com"
+      },
+      {
+        "role": "READER",
+        "specialGroup": "projectReaders"
+      }
+    ],
+    "creationTime": "1673006206919",
+    "lastModifiedTime": "1673006206919",
+    "location": "us-central1",
+    "type": "DEFAULT"
+  }
+}

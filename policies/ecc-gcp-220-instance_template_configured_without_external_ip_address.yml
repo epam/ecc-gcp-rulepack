@@ -12,5 +12,4 @@ policies:
     filters:
       - type: value
         key: properties.networkInterfaces[].accessConfigs[].type
-        op: regex
-        value: '.*'
+        value: not-null

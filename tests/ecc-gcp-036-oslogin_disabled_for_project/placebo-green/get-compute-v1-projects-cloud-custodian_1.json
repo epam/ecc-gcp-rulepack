@@ -1,0 +1,257 @@
+{
+  "headers": {
+    "etag": "Q45neBbTbUlwX5iqWcA53uhEf-o=/CusyCo8JKQQA_TvJDwRYN_G-52I=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 07 Nov 2022 14:52:04 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "5597",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian?alt=json"
+  },
+  "body": {
+    "kind": "compute#project",
+    "id": "879501200065641786",
+    "creationTimestamp": "2020-12-18T02:26:29.288-08:00",
+    "name": "cloud-custodian",
+    "commonInstanceMetadata": {
+      "kind": "compute#metadata",
+      "fingerprint": "GBSNvpZdsXw=",
+      "items": [
+        {
+          "key": "enable-guest-attributes",
+          "value": "TRUE"
+        },
+        {
+          "key": "enable-osconfig",
+          "value": "TRUE"
+        },
+        {
+          "key": "enable-oslogin",
+          "value": "TRUE"
+        },
+        {
+          "key": "sshKeys",
+          "value": ""
+        }
+      ]
+    },
+    "quotas": [
+      {
+        "metric": "SNAPSHOTS",
+        "limit": 5000,
+        "usage": 3
+      },
+      {
+        "metric": "NETWORKS",
+        "limit": 15,
+        "usage": 3
+      },
+      {
+        "metric": "FIREWALLS",
+        "limit": 200,
+        "usage": 6
+      },
+      {
+        "metric": "IMAGES",
+        "limit": 2000,
+        "usage": 0
+      },
+      {
+        "metric": "STATIC_ADDRESSES",
+        "limit": 21,
+        "usage": 0
+      },
+      {
+        "metric": "ROUTES",
+        "limit": 250,
+        "usage": 3
+      },
+      {
+        "metric": "FORWARDING_RULES",
+        "limit": 45,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_POOLS",
+        "limit": 150,
+        "usage": 0
+      },
+      {
+        "metric": "HEALTH_CHECKS",
+        "limit": 150,
+        "usage": 0
+      },
+      {
+        "metric": "IN_USE_ADDRESSES",
+        "limit": 69,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_INSTANCES",
+        "limit": 150,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_HTTP_PROXIES",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "URL_MAPS",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "BACKEND_SERVICES",
+        "limit": 75,
+        "usage": 0
+      },
+      {
+        "metric": "INSTANCE_TEMPLATES",
+        "limit": 300,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_VPN_GATEWAYS",
+        "limit": 15,
+        "usage": 0
+      },
+      {
+        "metric": "VPN_TUNNELS",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "BACKEND_BUCKETS",
+        "limit": 9,
+        "usage": 0
+      },
+      {
+        "metric": "ROUTERS",
+        "limit": 10,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_SSL_PROXIES",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_HTTPS_PROXIES",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "SSL_CERTIFICATES",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "SUBNETWORKS",
+        "limit": 175,
+        "usage": 0
+      },
+      {
+        "metric": "TARGET_TCP_PROXIES",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "SECURITY_POLICIES",
+        "limit": 10,
+        "usage": 1
+      },
+      {
+        "metric": "SECURITY_POLICY_RULES",
+        "limit": 100,
+        "usage": 9
+      },
+      {
+        "metric": "XPN_SERVICE_PROJECTS",
+        "limit": 1000,
+        "usage": 0
+      },
+      {
+        "metric": "PACKET_MIRRORINGS",
+        "limit": 45,
+        "usage": 0
+      },
+      {
+        "metric": "NETWORK_ENDPOINT_GROUPS",
+        "limit": 300,
+        "usage": 1
+      },
+      {
+        "metric": "INTERCONNECTS",
+        "limit": 6,
+        "usage": 0
+      },
+      {
+        "metric": "GLOBAL_INTERNAL_ADDRESSES",
+        "limit": 5000,
+        "usage": 2
+      },
+      {
+        "metric": "VPN_GATEWAYS",
+        "limit": 15,
+        "usage": 0
+      },
+      {
+        "metric": "MACHINE_IMAGES",
+        "limit": 2000,
+        "usage": 0
+      },
+      {
+        "metric": "SECURITY_POLICY_CEVAL_RULES",
+        "limit": 20,
+        "usage": 9
+      },
+      {
+        "metric": "EXTERNAL_VPN_GATEWAYS",
+        "limit": 15,
+        "usage": 0
+      },
+      {
+        "metric": "PUBLIC_ADVERTISED_PREFIXES",
+        "limit": 1,
+        "usage": 0
+      },
+      {
+        "metric": "PUBLIC_DELEGATED_PREFIXES",
+        "limit": 10,
+        "usage": 0
+      },
+      {
+        "metric": "STATIC_BYOIP_ADDRESSES",
+        "limit": 1024,
+        "usage": 0
+      },
+      {
+        "metric": "NETWORK_FIREWALL_POLICIES",
+        "limit": 30,
+        "usage": 0
+      },
+      {
+        "metric": "INTERNAL_TRAFFIC_DIRECTOR_FORWARDING_RULES",
+        "limit": 45,
+        "usage": 0
+      },
+      {
+        "metric": "GLOBAL_EXTERNAL_MANAGED_FORWARDING_RULES",
+        "limit": 45,
+        "usage": 0
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian",
+    "defaultServiceAccount": "443732426701-compute@developer.gserviceaccount.com",
+    "xpnProjectStatus": "UNSPECIFIED_XPN_PROJECT_STATUS",
+    "defaultNetworkTier": "PREMIUM"
+  }
+}

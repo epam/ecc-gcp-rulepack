@@ -1,0 +1,102 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 10 Jan 2023 14:26:03 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "16194",
+    "-content-encoding": "gzip",
+    "content-location": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances?alt=json"
+  },
+  "body": {
+    "items": [
+      {
+        "kind": "sql#instance",
+        "state": "RUNNABLE",
+        "databaseVersion": "MYSQL_5_7",
+        "settings": {
+          "authorizedGaeApplications": [],
+          "tier": "db-f1-micro",
+          "kind": "sql#settings",
+          "userLabels": {
+            "compliancestatus": "green",
+            "custodianrule": "ecc-gcp-234-sql_encrypted_with_cmek"
+          },
+          "availabilityType": "ZONAL",
+          "pricingPlan": "PER_USE",
+          "replicationType": "SYNCHRONOUS",
+          "activationPolicy": "ALWAYS",
+          "ipConfiguration": {
+            "authorizedNetworks": [],
+            "ipv4Enabled": true
+          },
+          "locationPreference": {
+            "zone": "us-central1-a",
+            "kind": "sql#locationPreference"
+          },
+          "dataDiskType": "PD_SSD",
+          "backupConfiguration": {
+            "startTime": "22:00",
+            "kind": "sql#backupConfiguration",
+            "backupRetentionSettings": {
+              "retentionUnit": "COUNT",
+              "retainedBackups": 7
+            },
+            "enabled": false,
+            "transactionLogRetentionDays": 7
+          },
+          "connectorEnforcement": "NOT_REQUIRED",
+          "settingsVersion": "1",
+          "storageAutoResizeLimit": "0",
+          "storageAutoResize": true,
+          "dataDiskSizeGb": "10",
+          "deletionProtectionEnabled": false
+        },
+        "etag": "bc43ffa6b457b7a327ae3895573ea98549a649794817f1843e70ca9668af3282",
+        "ipAddresses": [
+          {
+            "type": "PRIMARY",
+            "ipAddress": "104.198.173.240"
+          }
+        ],
+        "serverCaCert": {
+          "kind": "sql#sslCert",
+          "certSerialNumber": "0",
+          "cert": "-----BEGIN CERTIFICATE-----#-----END CERTIFICATE-----",
+          "commonName": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=aaa70aa6-3360-4c53-b57f-419a90d4b394",
+          "sha1Fingerprint": "f7a3aacf9f38ba12c0cba8dce0e6e0c3c8af6f65",
+          "instance": "mysql-db-21c99927-234-green",
+          "createTime": "2023-01-10T14:10:16.943Z",
+          "expirationTime": "2033-01-07T14:11:16.943Z"
+        },
+        "instanceType": "CLOUD_SQL_INSTANCE",
+        "project": "cloud-custodian",
+        "serviceAccountEmailAddress": "test@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+        "backendType": "SECOND_GEN",
+        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/mysql-db-21c99927-234-green",
+        "connectionName": "cloud-custodian:us-central1:mysql-db-21c99927-234-green",
+        "name": "mysql-db-21c99927-234-green",
+        "region": "us-central1",
+        "gceZone": "us-central1-a",
+        "diskEncryptionConfiguration": {
+          "kmsKeyName": "projects/cloud-custodian/locations/us-central1/keyRings/key-ring-21c99927-234-green/cryptoKeys/crypto-key-21c99927-234-green",
+          "kind": "sql#diskEncryptionConfiguration"
+        },
+        "diskEncryptionStatus": {
+          "kmsKeyVersionName": "projects/cloud-custodian/locations/us-central1/keyRings/key-ring-21c99927-234-green/cryptoKeys/crypto-key-21c99927-234-green/cryptoKeyVersions/1",
+          "kind": "sql#diskEncryptionStatus"
+        },
+        "databaseInstalledVersion": "MYSQL_5_7_39",
+        "maintenanceVersion": "MYSQL_5_7_39.R20221108.00_02",
+        "createTime": "2023-01-10T14:10:02.492Z"
+      }
+    ]
+  }
+}

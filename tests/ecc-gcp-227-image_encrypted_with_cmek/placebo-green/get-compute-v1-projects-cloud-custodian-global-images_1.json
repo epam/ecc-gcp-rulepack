@@ -1,0 +1,52 @@
+{
+  "headers": {
+    "etag": "tgDVrUts1rw89NFfH-leE-oprNE=/hB_QkF9iUsHnCKOg_h7muuSmCZ8=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 10 Jan 2023 10:17:30 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1134",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/images?alt=json"
+  },
+  "body": {
+    "kind": "compute#imageList",
+    "id": "projects/cloud-custodian/global/images",
+    "items": [
+      {
+        "kind": "compute#image",
+        "id": "8722613440684786692",
+        "creationTimestamp": "2023-01-10T02:16:12.653-08:00",
+        "name": "compute-image-227-green",
+        "sourceType": "RAW",
+        "rawDisk": {
+          "source": "",
+          "containerType": "TAR"
+        },
+        "status": "READY",
+        "archiveSizeBytes": "539099200",
+        "diskSizeGb": "3",
+        "imageEncryptionKey": {
+          "kmsKeyName": "projects/cloud-custodian/locations/us-central1/keyRings/keyring-key-5b8ac444-227-green/cryptoKeys/crypto-key-5b8ac444-227-green/cryptoKeyVersions/1"
+        },
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/images/compute-image-227-green",
+        "labels": {
+          "compliancestatus": "green",
+          "custodianrule": "ecc-gcp-227-image_encrypted_with_cmek"
+        },
+        "labelFingerprint": "eUMoeRvrwrU=",
+        "storageLocations": [
+          "us"
+        ]
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/images"
+  }
+}

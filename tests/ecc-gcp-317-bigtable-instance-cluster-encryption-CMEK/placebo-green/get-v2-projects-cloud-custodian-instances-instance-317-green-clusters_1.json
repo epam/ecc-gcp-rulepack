@@ -1,0 +1,31 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 10:16:24 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "486",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigtableadmin.googleapis.com/v2/projects/cloud-custodian/instances/instance-317-green/clusters?alt=json"
+  },
+  "body": {
+    "clusters": [
+      {
+        "name": "projects/cloud-custodian/instances/instance-317-green/clusters/instance-cluster-317-green",
+        "location": "projects/cloud-custodian/locations/us-central1-a",
+        "state": "READY",
+        "serveNodes": 1,
+        "defaultStorageType": "HDD",
+        "encryptionConfig": {
+          "kmsKeyName": "projects/cloud-custodian/locations/us-central1/keyRings/key-ring-8eecc7ce-317-green/cryptoKeys/crypto-key-8eecc7ce-317-green"
+        }
+      }
+    ]
+  }
+}

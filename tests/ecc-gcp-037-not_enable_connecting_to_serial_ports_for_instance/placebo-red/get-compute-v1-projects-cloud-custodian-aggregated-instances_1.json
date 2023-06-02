@@ -1,0 +1,110 @@
+{
+  "headers": {
+    "etag": "gbvibvo7YeNDI__mV6Xu5ZOik3U=/6TWCXHaXjxQrpL3h-b2_gJmV6pA=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 07 Nov 2022 16:24:24 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "49153",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/instances?alt=json"
+  },
+  "body": {
+    "kind": "compute#instanceAggregatedList",
+    "id": "projects/cloud-custodian/aggregated/instances",
+    "items": {
+      "zones/us-central1-b": {
+        "instances": [
+          {
+            "kind": "compute#instance",
+            "id": "2292111426426539980",
+            "creationTimestamp": "2022-11-07T08:24:04.324-08:00",
+            "name": "test",
+            "tags": {
+              "fingerprint": "42WmSpB8rSM="
+            },
+            "machineType": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-b/machineTypes/f1-micro",
+            "status": "RUNNING",
+            "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-b",
+            "canIpForward": false,
+            "networkInterfaces": [
+              {
+                "kind": "compute#networkInterface",
+                "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+                "subnetwork": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1/subnetworks/default",
+                "networkIP": "10.128.0.84",
+                "name": "nic0",
+                "fingerprint": "l-t7JpRMQ_U=",
+                "stackType": "IPV4_ONLY"
+              }
+            ],
+            "disks": [
+              {
+                "kind": "compute#attachedDisk",
+                "type": "PERSISTENT",
+                "mode": "READ_WRITE",
+                "source": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-b/disks/test",
+                "deviceName": "persistent-disk-0",
+                "index": 0,
+                "boot": true,
+                "autoDelete": true,
+                "licenses": [
+                  "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/licenses/debian-10-buster"
+                ],
+                "interface": "SCSI",
+                "guestOsFeatures": [
+                  {
+                    "type": "UEFI_COMPATIBLE"
+                  },
+                  {
+                    "type": "VIRTIO_SCSI_MULTIQUEUE"
+                  }
+                ],
+                "diskSizeGb": "10",
+                "architecture": "X86_64"
+              }
+            ],
+            "metadata": {
+              "kind": "compute#metadata",
+              "fingerprint": "QwR7_z8jzkw=",
+              "items": [
+                {
+                  "key": "serial-port-enable",
+                  "value": "true"
+                }
+              ]
+            },
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-b/instances/test",
+            "scheduling": {
+              "onHostMaintenance": "MIGRATE",
+              "automaticRestart": true,
+              "preemptible": false,
+              "provisioningModel": "STANDARD"
+            },
+            "cpuPlatform": "Intel Haswell",
+            "labelFingerprint": "42WmSpB8rSM=",
+            "startRestricted": false,
+            "deletionProtection": false,
+            "shieldedInstanceConfig": {
+              "enableSecureBoot": false,
+              "enableVtpm": true,
+              "enableIntegrityMonitoring": true
+            },
+            "shieldedInstanceIntegrityPolicy": {
+              "updateAutoLearnPolicy": true
+            },
+            "fingerprint": "KwKAfu5EJKo=",
+            "lastStartTimestamp": "2022-11-07T08:24:10.274-08:00"
+          }
+        ]
+      }
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/instances"
+  }
+}

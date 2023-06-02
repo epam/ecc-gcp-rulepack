@@ -1,0 +1,122 @@
+{
+  "headers": {
+    "x-guploader-uploadid": "ADPycds6D0hiEiVMB_HsFF3vdf08Wo3a1ogNRuN2Z_dX8D1Qb0JxR989FM6TxjJjvgAACSIHlz8xRDBXnzIif4-elFZd",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Mon, 19 Dec 2022 10:29:41 GMT",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "expires": "Mon, 19 Dec 2022 10:29:41 GMT",
+    "content-length": "47122",
+    "server": "UploadServer",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "status": "200",
+    "content-location": "https://storage.googleapis.com/storage/v1/b?project=cloud-custodian&projection=full&alt=json"
+  },
+  "body": {
+    "kind": "storage#buckets",
+    "items": [
+      {
+        "kind": "storage#bucket",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/with_label_163_green",
+        "id": "with_label_163_green",
+        "name": "with_label_163_green",
+        "projectNumber": "443732426401",
+        "metageneration": "1",
+        "location": "US-CENTRAL1",
+        "storageClass": "STANDARD",
+        "etag": "CAE=",
+        "timeCreated": "2022-12-19T10:19:14.679Z",
+        "updated": "2022-12-19T10:19:14.679Z",
+        "acl": [
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "with_label_163_green/project-owners-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/with_label_163_green/acl/project-owners-443732426401",
+            "bucket": "with_label_163_green",
+            "entity": "project-owners-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "with_label_163_green/project-editors-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/with_label_163_green/acl/project-editors-443732426401",
+            "bucket": "with_label_163_green",
+            "entity": "project-editors-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "with_label_163_green/project-viewers-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/with_label_163_green/acl/project-viewers-443732426401",
+            "bucket": "with_label_163_green",
+            "entity": "project-viewers-443732426401",
+            "role": "READER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "viewers"
+            }
+          }
+        ],
+        "defaultObjectAcl": [
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-owners-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-editors-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-viewers-443732426401",
+            "role": "READER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "viewers"
+            }
+          }
+        ],
+        "owner": {
+          "entity": "project-owners-443732426401"
+        },
+        "labels": {
+          "test": "foo"
+        },
+        "iamConfiguration": {
+          "bucketPolicyOnly": {
+            "enabled": false
+          },
+          "uniformBucketLevelAccess": {
+            "enabled": false
+          },
+          "publicAccessPrevention": "inherited"
+        },
+        "locationType": "region"
+      }
+    ]
+  }
+}

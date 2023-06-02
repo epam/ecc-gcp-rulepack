@@ -10,7 +10,10 @@ policies:
       Instance template is configured with default network
     resource: gcp.instance-template
     filters:
-      - type: value
-        key: properties.networkInterfaces[*].network[]
-        op: regex
-        value: "^.*/default"
+      - type: list-item
+        key: properties.networkInterfaces[]
+        attrs:
+          - type: value
+            key: network
+            op: regex
+            value: "^.*/default"

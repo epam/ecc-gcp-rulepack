@@ -1,0 +1,124 @@
+{
+  "headers": {
+    "x-guploader-uploadid": "ADPycdtIwFQ6MxAzWdTiUMVtBVe_h8E26XC4P90M7nGMr2uPqeRt-mECoF2pSvJQeQLt2Pf-as7UnUnQVd3NNxsLyJLU2Q",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Wed, 04 Jan 2023 12:35:12 GMT",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "expires": "Wed, 04 Jan 2023 12:35:12 GMT",
+    "content-length": "40425",
+    "server": "UploadServer",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "status": "200",
+    "content-location": "https://storage.googleapis.com/storage/v1/b?project=cloud-custodian&projection=full&alt=json"
+  },
+  "body": {
+    "kind": "storage#buckets",
+    "items": [
+      {
+        "kind": "storage#bucket",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/bucket-cust-189-green",
+        "id": "bucket-cust-189-green",
+        "name": "bucket-cust-189-green",
+        "projectNumber": "443732426401",
+        "metageneration": "1",
+        "location": "US",
+        "storageClass": "MULTI_REGIONAL",
+        "etag": "CAE=",
+        "timeCreated": "2023-01-04T12:16:16.642Z",
+        "updated": "2023-01-04T12:16:16.642Z",
+        "acl": [
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "bucket-cust-189-green/project-owners-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/bucket-cust-189-green/acl/project-owners-443732426401",
+            "bucket": "bucket-cust-189-green",
+            "entity": "project-owners-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "bucket-cust-189-green/project-editors-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/bucket-cust-189-green/acl/project-editors-443732426401",
+            "bucket": "bucket-cust-189-green",
+            "entity": "project-editors-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "bucket-cust-189-green/project-viewers-443732426401",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/bucket-cust-189-green/acl/project-viewers-443732426401",
+            "bucket": "bucket-cust-189-green",
+            "entity": "project-viewers-443732426401",
+            "role": "READER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "viewers"
+            }
+          }
+        ],
+        "defaultObjectAcl": [
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-owners-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-editors-443732426401",
+            "role": "OWNER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-viewers-443732426401",
+            "role": "READER",
+            "etag": "CAE=",
+            "projectTeam": {
+              "projectNumber": "443732426401",
+              "team": "viewers"
+            }
+          }
+        ],
+        "owner": {
+          "entity": "project-owners-443732426401"
+        },
+        "labels": {
+          "compliancestatus": "green",
+          "custodianrule": "ecc-gcp-189-multi_region_cloud_storage"
+        },
+        "iamConfiguration": {
+          "bucketPolicyOnly": {
+            "enabled": false
+          },
+          "uniformBucketLevelAccess": {
+            "enabled": false
+          },
+          "publicAccessPrevention": "inherited"
+        },
+        "locationType": "multi-region",
+        "rpo": "DEFAULT"
+      }
+    ]
+  }
+}

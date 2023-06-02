@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 05 May 2021 09:03:00 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "181",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudkms.googleapis.com/v1/projects/cloud-custodian/locations/us/cryptoKeys?alt=json"
+  },
+  "body": {
+    "cryptoKeys": [
+      {
+        "name": "projects/cloud-custodian/locations/us/keyRings/gcs-key/cryptoKeys/gcs-key",
+        "primary": {
+          "name": "projects/cloud-custodian/locations/us/keyRings/gcs-key/cryptoKeys/gcs-key/cryptoKeyVersions/1",
+          "state": "DESTROYED",
+          "createTime": "2021-02-12T11:03:58.166269861Z",
+          "destroyEventTime": "2021-02-13T11:14:15.550819Z",
+          "protectionLevel": "SOFTWARE",
+          "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION",
+          "generateTime": "2021-02-12T11:03:58.166269861Z"
+        },
+        "purpose": "ENCRYPT_DECRYPT",
+        "createTime": "2021-02-12T11:03:58.166269861Z",
+        "nextRotationTime": "2023-02-09T21:00:02.248761Z",
+        "rotationPeriod": "2592000s",
+        "versionTemplate": {
+          "protectionLevel": "SOFTWARE",
+          "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION"
+        },
+        "destroyScheduledDuration": "86400s"
+      }
+    ],
+    "totalSize": 1
+  }
+}

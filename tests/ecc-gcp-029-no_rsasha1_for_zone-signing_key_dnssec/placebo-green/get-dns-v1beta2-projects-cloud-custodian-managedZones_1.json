@@ -1,0 +1,59 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 04 Nov 2022 07:14:55 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "4425",
+    "-content-encoding": "gzip",
+    "content-location": "https://dns.googleapis.com/dns/v1beta2/projects/cloud-custodian/managedZones?alt=json"
+  },
+  "body": {
+    "managedZones": [
+      {
+        "name": "dns-not-rsasha1-029-green",
+        "dnsName": "test.029.green.com.",
+        "description": "Managed by Terraform",
+        "id": "3513323631496732801",
+        "nameServers": [
+          "ns-cloud-e1.googledomains.com.",
+          "ns-cloud-e2.googledomains.com.",
+          "ns-cloud-e3.googledomains.com.",
+          "ns-cloud-e4.googledomains.com."
+        ],
+        "creationTime": "2022-11-04T07:11:36.581Z",
+        "dnssecConfig": {
+          "state": "off",
+          "defaultKeySpecs": [
+            {
+              "keyType": "keySigning",
+              "algorithm": "ecdsap256sha256",
+              "keyLength": 2048,
+              "kind": "dns#dnsKeySpec"
+            },
+            {
+              "keyType": "zoneSigning",
+              "algorithm": "ecdsap256sha256",
+              "keyLength": 2048,
+              "kind": "dns#dnsKeySpec"
+            }
+          ],
+          "nonExistence": "nsec3",
+          "kind": "dns#managedZoneDnsSecConfig"
+        },
+        "visibility": "public",
+        "cloudLoggingConfig": {
+          "kind": "dns#managedZoneCloudLoggingConfig"
+        },
+        "kind": "dns#managedZone"
+      }
+    ],
+    "kind": "dns#managedZonesListResponse"
+  }
+}

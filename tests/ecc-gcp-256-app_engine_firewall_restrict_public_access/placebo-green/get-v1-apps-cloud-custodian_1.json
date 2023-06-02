@@ -1,0 +1,38 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 13 Jan 2023 08:28:43 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "687",
+    "-content-encoding": "gzip",
+    "content-location": "https://appengine.googleapis.com/v1/apps/cloud-custodian?alt=json"
+  },
+  "body": {
+    "name": "apps/cloud-custodian",
+    "id": "cloud-custodian",
+    "authDomain": "gmail.com",
+    "locationId": "us-central",
+    "codeBucket": "staging.cloud-custodian.appspot.com",
+    "servingStatus": "USER_DISABLED",
+    "defaultHostname": "cloud-custodian.uc.r.appspot.com",
+    "defaultBucket": "cloud-custodian.appspot.com",
+    "serviceAccount": "cloud-custodian@appspot.gserviceaccount.com",
+    "iap": {
+      "oauth2ClientId": "443732426401-ju7vvpn9uodtjcge3g5ij37b4ct5itqq.apps.googleusercontent.com"
+    },
+    "gcrDomain": "us.gcr.io",
+    "databaseType": "CLOUD_DATASTORE_COMPATIBILITY",
+    "featureSettings": {
+      "splitHealthChecks": true,
+      "useContainerOptimizedOs": true
+    }
+  }
+}

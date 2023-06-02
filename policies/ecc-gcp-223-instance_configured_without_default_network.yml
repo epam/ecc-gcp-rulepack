@@ -10,7 +10,10 @@ policies:
       VM instance is configured with default network
     resource: gcp.instance
     filters:
-      - type: value
-        key: networkInterfaces[*].network[]
-        op: regex
-        value: "^.*/default"
+      - type: list-item
+        key: networkInterfaces[]
+        attrs:
+          - type: value
+            key: network
+            op: regex
+            value: "^.*/default"
