@@ -1,7 +1,7 @@
 name: 😿 Fix Test Proposal
 description: Template for Fix test proposal
 title: "[Fix Test, name]: "
-labels: ["test", "fix"]
+labels: ["test", "bug"]
 body:
   - type: markdown
     attributes:

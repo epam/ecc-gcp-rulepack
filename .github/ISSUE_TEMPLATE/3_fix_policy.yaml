@@ -1,7 +1,7 @@
 name: 😿 Fix Policy Proposal
 description: Template for Fix policy proposal
 title: "[Fix Policy, name]: "
-labels: ["policy", "fix"]
+labels: ["policy", "bug"]
 body:
   - type: markdown
     attributes:

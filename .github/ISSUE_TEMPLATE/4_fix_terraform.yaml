@@ -1,7 +1,7 @@
 name: 😿 Fix Terraform Proposal
 description: Template for Fix terrafrom proposal
 title: "[Fix Terraform, name]: "
-labels: ["terraform", "fix"]
+labels: ["terraform", "bug"]
 body:
   - type: markdown
     attributes:

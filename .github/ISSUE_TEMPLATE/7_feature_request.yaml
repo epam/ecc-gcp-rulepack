@@ -1,7 +1,7 @@
 name: 😻 Feature request
 description: Suggest an idea for this project
 title: "[Feature Name]: "
-labels: ["feature"]
+labels: ["enhancement"]
 body:
   - type: textarea
     id: problem_description
