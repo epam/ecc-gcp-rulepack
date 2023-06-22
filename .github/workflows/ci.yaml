@@ -5,13 +5,13 @@ on:
     types: 
       - submitted
 jobs:
-  test_policy_red_green_flights:
+  test_policy_red_flights:
     runs-on: ubuntu-22.04
     container: python:3.8
     steps: 
       - uses: actions/checkout@v3
       - uses: ./.github/workflows/composite-action
-      - name: test_policy_red_green_flights
+      - name: test_policy_red_flights
         shell: bash
         run: |
           cd cloud-custodian
@@ -23,7 +23,6 @@ jobs:
           mkdir out
           RULE_NAMES=$(find ./gcp-custodian-policies/tests/ -maxdepth 1 -type d | tail -n +2 | awk -F '/' '{ print $NF }')
           RED_WHITELISTED_RULE_NAMES=$(cat ./gcp-custodian-policies/tests/.whitelisted_red)
-          GREEN_WHITELISTED_RULE_NAMES=$(cat ./gcp-custodian-policies/tests/.whitelisted_green)
           touch .red_passed .red_failed .whitelisted_red_failed
           echo "$RULE_NAMES" |
           while IFS= read -r policy ; do
@@ -40,6 +39,33 @@ jobs:
           done
 
           echo "red tests executed"
+          echo "red_passed:"
+          cat .red_passed
+          echo "whitelisted_red_failed:"
+          cat .whitelisted_red_failed
+          echo "red_failed:"
+          cat .red_failed
+          test -s .red_failed && exit 1
+          exit 0
+
+  test_policy_green_flights:
+    runs-on: ubuntu-22.04
+    container: python:3.8
+    steps: 
+      - uses: actions/checkout@v3
+      - uses: ./.github/workflows/composite-action
+      - name: test_policy_green_flights
+        shell: bash
+        run: |
+          cd cloud-custodian
+          export GOOGLE_CLOUD_PROJECT=cloud-custodian
+          export GOOGLE_APPLICATION_CREDENTIALS=tools/c7n_gcp/tests/data/credentials.json
+          python3.8 -m venv .venv && source .venv/bin/activate
+          pip install poetry
+          make install
+          mkdir out
+          RULE_NAMES=$(find ./gcp-custodian-policies/tests/ -maxdepth 1 -type d | tail -n +2 | awk -F '/' '{ print $NF }')
+          GREEN_WHITELISTED_RULE_NAMES=$(cat ./gcp-custodian-policies/tests/.whitelisted_green)
           touch .green_passed .green_failed .whitelisted_green_failed
 
           echo "$RULE_NAMES" |
@@ -56,12 +82,11 @@ jobs:
           done
 
           echo "green tests executed"
-          cat .red_passed
+          echo "green_passed:"
           cat .green_passed
-          cat .whitelisted_red_failed
+          echo "whitelisted_green_failed:"
           cat .whitelisted_green_failed
-          cat .red_failed
+          echo "green_failed:"
           cat .green_failed
-          test -s .red_failed && exit 1
           test -s .green_failed && exit 1
           exit 0
