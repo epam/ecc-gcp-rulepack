@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-186-cloud_sql_instance_do_not_have_public_ips"
+      compliancestatus = "red"
+    }
     tier = var.tier
     ip_configuration {
       ipv4_enabled = true

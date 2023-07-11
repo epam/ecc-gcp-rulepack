@@ -10,6 +10,10 @@ resource "google_sql_database_instance" "this" {
   root_password       = random_password.this.result
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-209-user-connections-database-flag-for-sql-server"
+      compliancestatus = "red"
+    }
     tier = var.tier
     database_flags {
       name  = "user connections"

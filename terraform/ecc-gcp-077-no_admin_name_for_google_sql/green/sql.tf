@@ -5,6 +5,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = "false"
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-077-no_admin_name_for_google_sql"
+      compliancestatus = "green"
+    }
     tier = "db-f1-micro"
   }
 }

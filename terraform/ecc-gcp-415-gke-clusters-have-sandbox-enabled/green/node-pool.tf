@@ -7,10 +7,10 @@ resource "google_container_node_pool" "this" {
 
   node_config {
     machine_type = "g1-small"
-    image_type = "COS_CONTAINERD"
+    image_type   = "COS_CONTAINERD"
 
     sandbox_config {
-        sandbox_type = "gvisor"
+      sandbox_type = "gvisor"
     }
   }
 }

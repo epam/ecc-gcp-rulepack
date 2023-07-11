@@ -9,7 +9,3 @@ variable "region" {
 variable "cluster_name" {
   type = string
 }
-
-variable "version" {
-  type = string
-}

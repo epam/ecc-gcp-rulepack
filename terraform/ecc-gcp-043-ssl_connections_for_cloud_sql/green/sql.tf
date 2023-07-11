@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-043-ssl_connections_for_cloud_sql"
+      compliancestatus = "green"
+    }
     tier = var.tier
     ip_configuration {
       require_ssl = true

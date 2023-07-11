@@ -16,7 +16,7 @@ resource "google_compute_instance_template" "this" {
   }
 
   shielded_instance_config {
-    enable_vtpm = true
+    enable_vtpm                 = true
     enable_integrity_monitoring = true
   }
 

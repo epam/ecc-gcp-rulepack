@@ -7,7 +7,7 @@ resource "google_compute_instance_template" "this" {
   }
 
   network_interface {
-    network = var.network
+    network  = var.network
     nic_type = var.nic
   }
 

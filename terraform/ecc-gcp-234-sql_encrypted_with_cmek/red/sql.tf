@@ -3,7 +3,7 @@ resource "random_id" "this" {
 }
 
 resource "google_sql_database_instance" "this" {
-  name                = "${var.dbname}-${random_id.this.hex}-234-red"
+  name                = "${var.dbname}-${random_id.this.hex}-${var.prefix}"
   database_version    = var.dbver
   region              = var.region
   deletion_protection = false

@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
   root_password       = random_password.this.result
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-211-remote-access-database-flag-for-sql-server"
+      compliancestatus = "red"
+    }
     tier = var.tier
   }
 }

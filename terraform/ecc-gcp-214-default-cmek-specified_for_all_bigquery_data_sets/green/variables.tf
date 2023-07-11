@@ -10,10 +10,7 @@ variable "dataset" {
   type = string
 }
 
-variable "crypto_key" {
+variable "prefix" {
   type = string
 }
 
-variable "key_ring" {
-  type = string
-}

@@ -6,14 +6,6 @@ variable "region" {
   type = string
 }
 
-variable "key-name" {
-  type = string
-}
-
-variable "secret" {
-  type = string
-}
-
-variable "s-label" {
+variable "prefix" {
   type = string
 }

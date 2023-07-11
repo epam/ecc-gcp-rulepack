@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-187-cloud_sql_instances_with_automated_backups"
+      compliancestatus = "red"
+    }
     tier = var.tier
   }
 }

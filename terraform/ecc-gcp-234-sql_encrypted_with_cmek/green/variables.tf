@@ -17,3 +17,7 @@ variable "dbver" {
 variable "tier" {
   type = string
 }
+
+variable "prefix" {
+  type = string
+}

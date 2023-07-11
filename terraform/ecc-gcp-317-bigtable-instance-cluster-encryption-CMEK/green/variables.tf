@@ -9,3 +9,7 @@ variable "region" {
 variable "zone" {
   type = string
 }
+
+variable "prefix" {
+  type = string
+}

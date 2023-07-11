@@ -1,5 +1,5 @@
 data "google_compute_image" "this" {
-  family  = "ubuntu-1804-lts"
+  family  = "ubuntu-2004-lts-arm64"
   project = "ubuntu-os-cloud"
 }
 

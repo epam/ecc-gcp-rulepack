@@ -11,4 +11,6 @@ resource "google_bigquery_dataset" "this" {
     custodianrule    = "ecc-gcp-214-default-cmek-specified_for_all_bigquery_data_sets"
     compliancestatus = "green"
   }
+
+  depends_on = [google_kms_crypto_key_iam_binding.this]
 }

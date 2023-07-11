@@ -1,10 +1,25 @@
+resource "random_id" "this" {
+  byte_length = 4
+}
+
+data "google_kms_key_ring" "this" {
+  name     = "keyring-${var.prefix}"
+  location = var.region
+}
+
 resource "google_kms_key_ring" "this" {
-  name     = var.ringname
+  count    = data.google_kms_key_ring.this.id != null ? 0 : 1
+  name     = "keyring-${var.prefix}"
   location = var.region
 }
 
 resource "google_kms_crypto_key" "this" {
-  name            = var.keyname
-  key_ring        = google_kms_key_ring.this.id
-  rotation_period = "100000s"
+  name            = "keyname-${random_id.this.hex}-${var.prefix}"
+  key_ring        = data.google_kms_key_ring.this.id != null ? data.google_kms_key_ring.this.id : google_kms_key_ring.this[0].id
+  rotation_period = "7776001s"
+
+  labels = {
+    custodiarule     = "ecc-gcp-066-kms_cryptokey_not_avaliable"
+    compliancestatus = "green"
+  }
 }

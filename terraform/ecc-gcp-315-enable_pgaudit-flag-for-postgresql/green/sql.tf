@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-315-enable_pgaudit-flag-for-postgresql"
+      compliancestatus = "green"
+    }
     database_flags {
       name  = "cloudsql.enable_pgaudit"
       value = "on"

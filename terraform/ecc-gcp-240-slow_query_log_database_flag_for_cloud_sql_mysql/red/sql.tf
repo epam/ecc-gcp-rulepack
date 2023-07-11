@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-240-slow_query_log_database_flag_for_cloud_sql_mysql"
+      compliancestatus = "red"
+    }
     tier = var.tier
   }
 }

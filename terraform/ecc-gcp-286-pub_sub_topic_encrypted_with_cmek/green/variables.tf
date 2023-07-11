@@ -6,10 +6,6 @@ variable "region" {
   type = string
 }
 
-variable "topic" {
-  type = string
-}
-
-variable "role" {
+variable "prefix" {
   type = string
 }

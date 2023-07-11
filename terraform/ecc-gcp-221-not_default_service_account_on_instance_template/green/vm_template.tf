@@ -16,7 +16,7 @@ resource "google_compute_instance_template" "this" {
   }
 
   service_account {
-    email = google_service_account.this.email
+    email  = google_service_account.this.email
     scopes = ["compute-ro", "monitoring"]
   }
 

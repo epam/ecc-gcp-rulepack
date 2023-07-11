@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-046-mysql_database_no_root_login"
+      compliancestatus = "green"
+    }
     tier = var.tier
   }
 }

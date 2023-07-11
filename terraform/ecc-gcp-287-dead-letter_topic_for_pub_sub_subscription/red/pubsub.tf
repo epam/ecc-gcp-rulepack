@@ -2,7 +2,7 @@ resource "google_pubsub_topic" "this" {
   name = "topic-287-red"
 }
 
-resource "google_pubsub_subscription" "this" {
+resource "google_pubsub_subscription" "example" {
   name  = "subscription-287-red"
   topic = google_pubsub_topic.this.name
 

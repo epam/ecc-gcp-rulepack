@@ -1,5 +1,3 @@
-project  = "project_id"
-region   = "us-central1"
-key-name = "crypto-key-291-green"
-secret   = "secret-291-green"
-s-label  = "green"
+project = "project_id"
+region  = "us-central1"
+prefix  = "291-green"

@@ -15,5 +15,6 @@ variable "name" {
 }
 
 variable "disk_key" {
-  type = string
+  type        = string
+  description = "Generate the key yourself. Useful link: https://cloud.google.com/compute/docs/disks/customer-supplied-encryption#rsa-encryption"
 }

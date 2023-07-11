@@ -1,9 +1,9 @@
 resource "google_bigtable_instance" "this" {
-  name                = "instance-317-red"
+  name                = "instance-${var.prefix}"
   deletion_protection = "false"
 
   cluster {
-    cluster_id   = "instance-cluster-317-red"
+    cluster_id   = "instance-cluster-${var.prefix}"
     num_nodes    = 1
     storage_type = "HDD"
     zone         = var.zone

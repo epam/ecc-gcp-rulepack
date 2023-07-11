@@ -1,0 +1,6 @@
+project   = "project_id"
+region    = "us-central1"
+serviceac = "service-account-id-009-red"
+dname     = "service-account-009-red"
+role1     = "roles/cloudkms.admin"
+role2     = "roles/cloudkms.cryptoKeyEncrypter"

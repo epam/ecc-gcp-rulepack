@@ -6,7 +6,8 @@ resource "google_sql_database_instance" "this" {
 
   settings {
     user_labels = {
-      foo = "bar"
+      custodiarule     = "ecc-gcp-140-sql_without_label_information"
+      compliancestatus = "green"
     }
     tier = "db-f1-micro"
   }

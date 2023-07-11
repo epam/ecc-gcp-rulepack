@@ -1,17 +1,15 @@
 resource "google_secret_manager_secret" "this" {
-  secret_id = var.secret
+  secret_id = "secret-${var.prefix}"
 
   labels = {
-    label = var.s-label
+    custodiarule     = "ecc-gcp-291-secret_manager_secret_encrypted_with_cmek"
+    compliancestatus = "green"
   }
 
   replication {
     user_managed {
       replicas {
-        location = "us-central1"
-      }
-      replicas {
-        location = "us-east1"
+        location = var.region
       }
     }
   }

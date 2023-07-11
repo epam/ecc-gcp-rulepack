@@ -5,6 +5,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-082-cloud_sql_retention_policy_is_at_least_7_days"
+      compliancestatus = "red"
+    }
     tier = var.tier
   }
 }

@@ -4,7 +4,7 @@ resource "random_id" "this" {
 
 resource "google_sql_database_instance" "this" {
   provider            = google-beta
-  name                = "${var.dbname}-${random_id.this.hex}-234-green"
+  name                = "${var.dbname}-${random_id.this.hex}-${var.prefix}"
   database_version    = var.dbver
   region              = var.region
   deletion_protection = false
@@ -17,4 +17,6 @@ resource "google_sql_database_instance" "this" {
       compliancestatus = "green"
     }
   }
+
+  depends_on = [google_kms_crypto_key_iam_binding.this]
 }

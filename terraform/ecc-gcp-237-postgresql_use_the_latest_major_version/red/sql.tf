@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-237-postgresql_use_the_latest_major_version"
+      compliancestatus = "red"
+    }
     tier = "db-f1-micro"
   }
 }

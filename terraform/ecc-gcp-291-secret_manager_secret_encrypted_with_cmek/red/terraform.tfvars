@@ -1,4 +1,3 @@
 project = "project_id"
 region  = "us-central1"
-secret  = "secret-291-red"
-s-label = "red"
+prefix  = "291-red"

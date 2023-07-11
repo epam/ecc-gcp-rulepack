@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-198-skip_show_database_database_flag_for_mysql
+    description: |
+      The 'skip_show_database' database flag for Cloud SQL MySQL instance is not set to 'on'
+    resource: gcp.sql-instance
+    filters:
+      - type: value
+        key: databaseVersion
+        value: "MYSQL"
+        op: contains
+      - not:
+          - type: value
+            key: settings.databaseFlags[?value=='on'].name
+            value: skip_show_database
+            op: contains

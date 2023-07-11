@@ -6,10 +6,6 @@ variable "region" {
   type = string
 }
 
-variable "ringname" {
-  type = string
-}
-
-variable "keyname" {
+variable "prefix" {
   type = string
 }

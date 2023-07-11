@@ -4,7 +4,7 @@ resource "google_container_cluster" "this" {
   initial_node_count = var.node_count
 
   resource_labels = {
-    custodianrule    = "ecc-gcp-132-kubernetes_cluster_application-layer_secrets_not_encrypted"
+    custodianrule    = "ecc-gcp-132-cluster_application-layer_secrets_not_encrypted"
     compliancestatus = "red"
   }
 }

@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-144-sql_instance_binary_logs"
+      compliancestatus = "green"
+    }
     tier = var.tier
     backup_configuration {
       enabled            = true

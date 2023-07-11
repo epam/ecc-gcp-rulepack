@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-199-log_error_verbosity_database_flag_for_postgre_sql"
+      compliancestatus = "green"
+    }
     database_flags {
       name  = "log_error_verbosity"
       value = "verbose"

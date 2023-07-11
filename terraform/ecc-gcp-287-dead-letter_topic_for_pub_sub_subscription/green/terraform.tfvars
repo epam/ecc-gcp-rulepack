@@ -1,2 +1,2 @@
 project = "project_id"
-region = "us-central1"
+region  = "us-central1"

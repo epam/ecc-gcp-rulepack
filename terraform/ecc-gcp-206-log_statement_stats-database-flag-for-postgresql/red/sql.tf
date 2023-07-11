@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-206-log_statement_stats-database-flag-for-postgresql"
+      compliancestatus = "red"
+    }
     database_flags {
       name  = "log_statement_stats"
       value = "on"

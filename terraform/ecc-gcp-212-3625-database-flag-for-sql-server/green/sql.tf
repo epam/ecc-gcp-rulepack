@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
   root_password       = random_password.this.result
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-212-3625-database-flag-for-sql-server"
+      compliancestatus = "green"
+    }
     tier = var.tier
     database_flags {
       name  = "3625"

@@ -9,6 +9,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = "false"
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-044-cloud_sql_not_open_to_the_world"
+      compliancestatus = "green"
+    }
     tier = var.tier
   }
 

@@ -14,7 +14,7 @@ resource "google_compute_instance_template" "this" {
   network_interface {
     network = var.network
     access_config {
-        network_tier = "PREMIUM"
+      network_tier = "PREMIUM"
     }
   }
 

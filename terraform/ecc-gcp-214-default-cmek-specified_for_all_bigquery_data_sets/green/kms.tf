@@ -1,18 +1,29 @@
 data "google_project" "this" {}
-data "google_bigquery_default_service_account" "this" {}
 
 resource "random_id" "this" {
   byte_length = 4
 }
 
+data "google_kms_key_ring" "this" {
+  name     = "keyring-${var.prefix}"
+  location = var.region
+}
+
 resource "google_kms_key_ring" "this" {
-  name     = "${var.key_ring}-${random_id.this.hex}-214-green"
+  count    = data.google_kms_key_ring.this.id != null ? 0 : 1
+  name     = "keyring-${var.prefix}"
   location = var.region
 }
 
 resource "google_kms_crypto_key" "this" {
-  name     = "${var.crypto_key}-${random_id.this.hex}-214-green"
-  key_ring = google_kms_key_ring.this.id
+  name            = "keyname-${random_id.this.hex}-${var.prefix}"
+  key_ring        = data.google_kms_key_ring.this.id != null ? data.google_kms_key_ring.this.id : google_kms_key_ring.this[0].id
+  rotation_period = "100000s"
+
+  labels = {
+    custodianrule    = "ecc-gcp-214-default-cmek-specified_for_all_bigquery_data_sets"
+    compliancestatus = "green"
+  }
 }
 
 resource "google_kms_crypto_key_iam_binding" "this" {
@@ -22,10 +33,4 @@ resource "google_kms_crypto_key_iam_binding" "this" {
   members = [
     "serviceAccount:bq-${data.google_project.this.number}@bigquery-encryption.iam.gserviceaccount.com",
   ]
-}
-
-resource "google_kms_crypto_key_iam_member" "this" {
-  crypto_key_id = google_kms_crypto_key.this.id
-  role          = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
-  member        = "serviceAccount:${data.google_bigquery_default_service_account.this.email}"
 }

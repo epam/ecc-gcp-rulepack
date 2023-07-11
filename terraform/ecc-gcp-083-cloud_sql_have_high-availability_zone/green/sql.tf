@@ -5,6 +5,10 @@ resource "google_sql_database_instance" "this" {
   deletion_protection = false
 
   settings {
+    user_labels = {
+      custodiarule     = "ecc-gcp-083-cloud_sql_have_high-availability_zone"
+      compliancestatus = "green"
+    }
     tier              = var.tier
     availability_type = "REGIONAL"
     backup_configuration {

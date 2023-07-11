@@ -5,4 +5,9 @@ resource "google_storage_bucket" "this" {
   encryption {
     default_kms_key_name = google_kms_crypto_key.this.id
   }
+
+  labels = {
+    custodiarule     = "ecc-gcp-141-storage_bucket_encrypted_using_default_kms"
+    compliancestatus = "green"
+  }
 }
