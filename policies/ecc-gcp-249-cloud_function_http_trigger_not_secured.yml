@@ -1,0 +1,23 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-249-cloud_function_http_trigger_not_secured
+    description: |
+      GCP Cloud Function HTTP trigger is not secured
+    resource: gcp.function
+    filters:
+      - type: value
+        key: httpsTrigger
+        value: present
+      - type: value
+        key: httpsTrigger.securityLevel
+        value: "SECURE_ALWAYS"
+        op: ne
+      - type: value
+        key: status
+        value: "ACTIVE"
+        op: eq

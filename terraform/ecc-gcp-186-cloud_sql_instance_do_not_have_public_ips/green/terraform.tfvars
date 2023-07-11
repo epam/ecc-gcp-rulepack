@@ -1,0 +1,7 @@
+project   = "project_id"
+region    = "us-central1"
+dbname    = "db-instance"
+dbver     = "MYSQL_5_7"
+tier      = "db-f1-micro"
+netname   = "test-network-186-green"
+ipadrname = "private-ip-address-186-green"

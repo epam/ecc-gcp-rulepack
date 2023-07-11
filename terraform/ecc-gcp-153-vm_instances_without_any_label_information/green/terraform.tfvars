@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central1"
+zone          = "us-central1-a"
+instance_name = "with-label-153-green"
+network       = "default"

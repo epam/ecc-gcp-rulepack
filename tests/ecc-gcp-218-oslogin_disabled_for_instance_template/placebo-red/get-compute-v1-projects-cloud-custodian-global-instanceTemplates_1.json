@@ -1,0 +1,80 @@
+{
+  "headers": {
+    "etag": "8tQMyWtSn9JF8nIBOp9yaDwF_AE=/xWe7k_MwdbNJXeiJMxgBXY2PcyE=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 06 Jan 2023 12:12:51 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "21168",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates?alt=json"
+  },
+  "body": {
+    "kind": "compute#instanceTemplateList",
+    "id": "projects/cloud-custodian/global/instanceTemplates",
+    "items": [
+      {
+        "kind": "compute#instanceTemplate",
+        "id": "1511926670021735002",
+        "creationTimestamp": "2023-01-06T03:57:41.377-08:00",
+        "name": "enable-oslogin-218-red",
+        "description": "",
+        "properties": {
+          "machineType": "f1-micro",
+          "networkInterfaces": [
+            {
+              "kind": "compute#networkInterface",
+              "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+              "name": "nic0"
+            }
+          ],
+          "disks": [
+            {
+              "kind": "compute#attachedDisk",
+              "type": "PERSISTENT",
+              "mode": "READ_WRITE",
+              "deviceName": "persistent-disk-0",
+              "index": 0,
+              "boot": true,
+              "initializeParams": {
+                "sourceImage": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/images/debian-10-buster-v20221206",
+                "diskType": "pd-standard"
+              },
+              "autoDelete": true,
+              "interface": "SCSI"
+            }
+          ],
+          "metadata": {
+            "kind": "compute#metadata",
+            "fingerprint": "ti_HkS4wjxA=",
+            "items": [
+              {
+                "key": "enable-oslogin",
+                "value": "false"
+              }
+            ]
+          },
+          "scheduling": {
+            "onHostMaintenance": "MIGRATE",
+            "automaticRestart": true,
+            "preemptible": false,
+            "provisioningModel": "STANDARD"
+          },
+          "labels": {
+            "compliancestatus": "red",
+            "custodianrule": "ecc-gcp-218-oslogin_disabled_for_instance_template"
+          }
+        },
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/enable-oslogin-218-red"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates"
+  }
+}

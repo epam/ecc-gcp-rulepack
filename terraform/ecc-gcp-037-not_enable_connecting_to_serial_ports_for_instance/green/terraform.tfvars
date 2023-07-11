@@ -1,0 +1,6 @@
+project       = "project_id"
+region        = "us-central-1"
+machine_type  = "f1-micro"
+zone          = "us-central1-b"
+network       = "default"
+instance_name = "no-connection-to-serial-ports-instances-037-green"

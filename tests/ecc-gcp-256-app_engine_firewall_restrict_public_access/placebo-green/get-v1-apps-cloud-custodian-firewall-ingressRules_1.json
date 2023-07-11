@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "etag": "8c6eea30913a8f4f",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 13 Jan 2023 08:45:53 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "326",
+    "-content-encoding": "gzip",
+    "content-location": "https://appengine.googleapis.com/v1/apps/cloud-custodian/firewall/ingressRules?alt=json"
+  },
+  "body": {
+    "ingressRules": [
+      {
+        "priority": 1,
+        "action": "ALLOW",
+        "sourceRange": "10.0.0.0/16",
+        "description": "This rule allows access from some IPv4 addresses"
+      },
+      {
+        "priority": 2147483647,
+        "action": "DENY",
+        "sourceRange": "*",
+        "description": "The default action."
+      }
+    ]
+  }
+}

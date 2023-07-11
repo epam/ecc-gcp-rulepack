@@ -1,0 +1,133 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 03 Nov 2022 08:25:41 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3323",
+    "-content-encoding": "gzip",
+    "content-location": "https://dns.googleapis.com/dns/v1beta2/projects/cloud-custodian/managedZones?alt=json"
+  },
+  "body": {
+    "managedZones": [
+      {
+        "name": "dns-not-rsasha1-028-red",
+        "dnsName": "test.028.red.com.",
+        "description": "Managed by Terraform",
+        "id": "8886718868219672717",
+        "nameServers": [
+          "ns-cloud-d1.googledomains.com.",
+          "ns-cloud-d2.googledomains.com.",
+          "ns-cloud-d3.googledomains.com.",
+          "ns-cloud-d4.googledomains.com."
+        ],
+        "creationTime": "2022-11-03T08:24:26.503Z",
+        "dnssecConfig": {
+          "state": "off",
+          "defaultKeySpecs": [
+            {
+              "keyType": "keySigning",
+              "algorithm": "rsasha1",
+              "keyLength": 2048,
+              "kind": "dns#dnsKeySpec"
+            },
+            {
+              "keyType": "zoneSigning",
+              "algorithm": "ecdsap256sha256",
+              "keyLength": 2048,
+              "kind": "dns#dnsKeySpec"
+            }
+          ],
+          "nonExistence": "nsec3",
+          "kind": "dns#managedZoneDnsSecConfig"
+        },
+        "visibility": "public",
+        "cloudLoggingConfig": {
+          "kind": "dns#managedZoneCloudLoggingConfig"
+        },
+        "kind": "dns#managedZone"
+      },
+      {
+        "name": "test-off-027-red",
+        "dnsName": "test.ecc.com.",
+        "description": "Managed by Terraform",
+        "id": "8028394407089989918",
+        "nameServers": [
+          "ns-cloud-e1.googledomains.com.",
+          "ns-cloud-e2.googledomains.com.",
+          "ns-cloud-e3.googledomains.com.",
+          "ns-cloud-e4.googledomains.com."
+        ],
+        "creationTime": "2022-11-03T07:56:59.852Z",
+        "dnssecConfig": {
+          "state": "off",
+          "defaultKeySpecs": [
+            {
+              "keyType": "keySigning",
+              "algorithm": "rsasha256",
+              "keyLength": 2048,
+              "kind": "dns#dnsKeySpec"
+            },
+            {
+              "keyType": "zoneSigning",
+              "algorithm": "rsasha256",
+              "keyLength": 1024,
+              "kind": "dns#dnsKeySpec"
+            }
+          ],
+          "nonExistence": "nsec3",
+          "kind": "dns#managedZoneDnsSecConfig"
+        },
+        "visibility": "public",
+        "cloudLoggingConfig": {
+          "kind": "dns#managedZoneCloudLoggingConfig"
+        },
+        "kind": "dns#managedZone"
+      },
+      {
+        "name": "test-on-027-green",
+        "dnsName": "test.ecc.com.",
+        "description": "Managed by Terraform",
+        "id": "2386564816183125466",
+        "nameServers": [
+          "ns-cloud-d1.googledomains.com.",
+          "ns-cloud-d2.googledomains.com.",
+          "ns-cloud-d3.googledomains.com.",
+          "ns-cloud-d4.googledomains.com."
+        ],
+        "creationTime": "2022-11-03T07:57:11.032Z",
+        "dnssecConfig": {
+          "state": "on",
+          "defaultKeySpecs": [
+            {
+              "keyType": "keySigning",
+              "algorithm": "rsasha256",
+              "keyLength": 2048,
+              "kind": "dns#dnsKeySpec"
+            },
+            {
+              "keyType": "zoneSigning",
+              "algorithm": "rsasha256",
+              "keyLength": 1024,
+              "kind": "dns#dnsKeySpec"
+            }
+          ],
+          "nonExistence": "nsec3",
+          "kind": "dns#managedZoneDnsSecConfig"
+        },
+        "visibility": "public",
+        "cloudLoggingConfig": {
+          "kind": "dns#managedZoneCloudLoggingConfig"
+        },
+        "kind": "dns#managedZone"
+      }
+    ],
+    "kind": "dns#managedZonesListResponse"
+  }
+}

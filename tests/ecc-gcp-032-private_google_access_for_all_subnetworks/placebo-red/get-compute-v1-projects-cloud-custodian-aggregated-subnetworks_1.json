@@ -1,0 +1,53 @@
+{
+  "headers": {
+    "etag": "MfPFK1YaN1eyddM9o6bDM_Z0JqA=/lzPOZhmOvbdiJ7QAhWd6uXj11xk=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 31 Oct 2022 17:00:38 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "35249",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/subnetworks?alt=json"
+  },
+  "body": {
+    "kind": "compute#subnetworkAggregatedList",
+    "id": "projects/cloud-custodian/aggregated/subnetworks",
+    "items": {
+      "regions/us-central1": {
+        "subnetworks": [
+          {
+            "kind": "compute#subnetwork",
+            "id": "89412490621707307",
+            "creationTimestamp": "2022-10-19T22:21:08.788-07:00",
+            "name": "subnet-033-red",
+            "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/net-033-red",
+            "ipCidrRange": "10.2.0.0/16",
+            "gatewayAddress": "10.2.0.1",
+            "region": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1",
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1/subnetworks/subnet-033-red",
+            "privateIpGoogleAccess": false,
+            "fingerprint": "qqB9AuMk5g4=",
+            "enableFlowLogs": true,
+            "privateIpv6GoogleAccess": "DISABLE_GOOGLE_ACCESS",
+            "purpose": "PRIVATE",
+            "logConfig": {
+              "enable": true,
+              "aggregationInterval": "INTERVAL_5_SEC",
+              "flowSampling": 1,
+              "metadata": "INCLUDE_ALL_METADATA",
+              "filterExpr": "true"
+            },
+            "stackType": "IPV4_ONLY"
+          }
+        ]
+      }
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/subnetworks"
+  }
+}

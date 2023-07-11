@@ -1,0 +1,20 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-033-vpc_flow_logs_for_every_subnet
+    description: |
+      VPC Flow logs are not enabled for every subnet in a VPC Network
+    resource: gcp.subnet
+    filters:
+      - type: value
+        key: purpose
+        op: eq
+        value: "PRIVATE"
+      - type: value
+        key: enableFlowLogs
+        op: ne
+        value: true

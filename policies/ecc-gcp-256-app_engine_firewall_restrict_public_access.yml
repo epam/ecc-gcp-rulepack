@@ -1,0 +1,24 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-256-app_engine_firewall_restrict_public_access
+    description: |
+      Cloud App Engine application firewall does not restrict public access
+    resource: gcp.app-engine-firewall-ingress-rule
+    filters:
+      - type: value
+        key: action
+        value: "ALLOW"
+        op: eq
+      - type: value
+        key: priority
+        value: 2147483647
+        op: ne
+      - type: value
+        key: sourceRange
+        op: in
+        value: ["0.0.0.0/0", "0.0.0.0", "*", "::/0"]

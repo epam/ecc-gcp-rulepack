@@ -1,0 +1,58 @@
+{
+  "headers": {
+    "etag": "EEVJSL2ONvwtk1uytOJO6t7C56E=/BhVfRWxic-OaITHT49x6pn7B1oM=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 16 Nov 2022 07:51:48 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "13871",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/backendServices?alt=json"
+  },
+  "body": {
+    "kind": "compute#backendServiceAggregatedList",
+    "id": "projects/cloud-custodian/aggregated/backendServices",
+    "items": {
+      "global": {
+        "backendServices": [
+          {
+            "kind": "compute#backendService",
+            "id": "6476140142373972761",
+            "creationTimestamp": "2022-11-15T23:49:10.622-08:00",
+            "name": "backend-service-070-green",
+            "description": "",
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/backendServices/backend-service-070-green",
+            "healthChecks": [
+              "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/httpHealthChecks/health-check-070-green"
+            ],
+            "timeoutSec": 30,
+            "port": 80,
+            "protocol": "HTTP",
+            "fingerprint": "7dwfZQSKmN4=",
+            "portName": "http",
+            "enableCDN": false,
+            "sessionAffinity": "NONE",
+            "affinityCookieTtlSec": 0,
+            "loadBalancingScheme": "EXTERNAL",
+            "connectionDraining": {
+              "drainingTimeoutSec": 300
+            },
+            "iap": {
+              "enabled": false,
+              "oauth2ClientId": "",
+              "oauth2ClientSecretSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            "securityPolicy": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/securityPolicies/security-policy-070-green"
+          }
+        ]
+      }
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/backendServices"
+  }
+}

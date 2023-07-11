@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-082-cloud_sql_retention_policy_is_at_least_7_days
+    description: |
+      Cloud SQL retention policy is less then 7 days
+    resource: gcp.sql-instance
+    filters:
+      - or:
+          - type: value
+            key: settings.backupConfiguration.enabled
+            value: false
+            op: eq
+          - type: value
+            key: settings.backupConfiguration.backupRetentionSettings.retainedBackups
+            value: 7
+            op: lt

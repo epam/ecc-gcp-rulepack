@@ -1,0 +1,33 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 13 Jan 2023 09:34:15 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "566",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigtableadmin.googleapis.com/v2/projects/cloud-custodian/instances/bigtable-instance-258-red/clusters/bigtable-instance-258-red-c1/backups?alt=json"
+  },
+  "body": {
+    "backups": [
+      {
+        "name": "projects/cloud-custodian/instances/bigtable-instance-258-red/clusters/bigtable-instance-258-red-c1/backups/bigtable-table-backup-258-red",
+        "sourceTable": "projects/cloud-custodian/instances/bigtable-instance-258-red/tables/bigtable-table-258-red",
+        "expireTime": "2023-01-20T09:14:32.070Z",
+        "startTime": "2023-01-13T09:14:32.566146Z",
+        "endTime": "2023-01-13T09:14:33.680183Z",
+        "state": "READY",
+        "encryptionInfo": {
+          "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+        }
+      }
+    ]
+  }
+}

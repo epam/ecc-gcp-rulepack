@@ -1,0 +1,95 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 09 Jan 2023 11:59:46 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3918",
+    "-content-encoding": "gzip",
+    "content-location": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances?alt=json"
+  },
+  "body": {
+    "items": [
+      {
+        "kind": "sql#instance",
+        "state": "RUNNABLE",
+        "databaseVersion": "SQLSERVER_2017_EXPRESS",
+        "settings": {
+          "authorizedGaeApplications": [],
+          "tier": "db-custom-1-3840",
+          "kind": "sql#settings",
+          "availabilityType": "ZONAL",
+          "pricingPlan": "PER_USE",
+          "replicationType": "SYNCHRONOUS",
+          "activationPolicy": "ALWAYS",
+          "ipConfiguration": {
+            "authorizedNetworks": [],
+            "ipv4Enabled": true
+          },
+          "locationPreference": {
+            "zone": "us-central1-f",
+            "kind": "sql#locationPreference"
+          },
+          "databaseFlags": [
+            {
+              "name": "user connections",
+              "value": "0"
+            }
+          ],
+          "dataDiskType": "PD_SSD",
+          "backupConfiguration": {
+            "startTime": "01:00",
+            "kind": "sql#backupConfiguration",
+            "backupRetentionSettings": {
+              "retentionUnit": "COUNT",
+              "retainedBackups": 7
+            },
+            "enabled": false,
+            "transactionLogRetentionDays": 7
+          },
+          "connectorEnforcement": "NOT_REQUIRED",
+          "settingsVersion": "1",
+          "storageAutoResizeLimit": "0",
+          "storageAutoResize": true,
+          "dataDiskSizeGb": "10",
+          "deletionProtectionEnabled": false
+        },
+        "etag": "4c12bd1119e98cad2494be7f25b1b1b64eb3113c2a8e5dec06251bf4e2661201",
+        "ipAddresses": [
+          {
+            "type": "PRIMARY",
+            "ipAddress": "35.223.88.193"
+          }
+        ],
+        "serverCaCert": {
+          "kind": "sql#sslCert",
+          "certSerialNumber": "0",
+          "cert": "-----BEGIN CERTIFICATE-----#-----END CERTIFICATE-----",
+          "commonName": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=e69cd17d-cc69-44d0-8766-b20fcf4a6d0d",
+          "sha1Fingerprint": "c5d9acd72ca56fc97253b12f846efa1414876abe",
+          "instance": "sql-db-fd9ac92d-209-green",
+          "createTime": "2023-01-09T11:53:57.496Z",
+          "expirationTime": "2033-01-06T11:54:57.496Z"
+        },
+        "instanceType": "CLOUD_SQL_INSTANCE",
+        "project": "cloud-custodian",
+        "serviceAccountEmailAddress": "test@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+        "backendType": "SECOND_GEN",
+        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/sql-db-fd9ac92d-209-green",
+        "connectionName": "cloud-custodian:us-central1:sql-db-fd9ac92d-209-green",
+        "name": "sql-db-fd9ac92d-209-green",
+        "region": "us-central1",
+        "gceZone": "us-central1-f",
+        "databaseInstalledVersion": "SQLSERVER_2017_EXPRESS_CU31",
+        "maintenanceVersion": "SQLSERVER_2017_EXPRESS_CU31.R20221108.00_02",
+        "createTime": "2023-01-09T11:53:09.492Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 17 Jan 2023 13:19:53 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3182",
+    "-content-encoding": "gzip",
+    "content-location": "https://run.googleapis.com/apis/serving.knative.dev/v1/namespaces/cloud-custodian/services?alt=json"
+  },
+  "body": {
+    "apiVersion": "serving.knative.dev/v1",
+    "kind": "ServiceList",
+    "items": [
+      {
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Service",
+        "metadata": {
+          "name": "cloudrun-266-green",
+          "namespace": "443732426401",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/443732426401/services/cloudrun-266-green",
+          "uid": "9ce1698d-8b3f-41aa-8d13-81c0c3140085",
+          "resourceVersion": "AAXydY1nMxo",
+          "generation": 1,
+          "labels": {
+            "compliancestatus": "green",
+            "custodiarule": "ecc-gcp-266-run_service_with_allow_all_traffic_ingress_setting",
+            "cloud.googleapis.com/location": "us-central1"
+          },
+          "annotations": {
+            "serving.knative.dev/creator": "test@test.com",
+            "serving.knative.dev/lastModifier": "test@test.com",
+            "run.googleapis.com/operation-id": "10ade462-e772-48fe-959d-cff6a9aa3780",
+            "run.googleapis.com/ingress": "internal",
+            "run.googleapis.com/ingress-status": "internal"
+          },
+          "creationTimestamp": "2023-01-17T13:19:16.534547Z"
+        },
+        "spec": {
+          "template": {
+            "metadata": {
+              "annotations": {
+                "autoscaling.knative.dev/maxScale": "100"
+              }
+            },
+            "spec": {
+              "containerConcurrency": 80,
+              "timeoutSeconds": 300,
+              "serviceAccountName": "443732426401-compute@developer.gserviceaccount.com",
+              "containers": [
+                {
+                  "image": "us-docker.pkg.dev/cloudrun/container/hello",
+                  "resources": {
+                    "limits": {
+                      "memory": "512Mi",
+                      "cpu": "1000m"
+                    }
+                  },
+                  "ports": [
+                    {
+                      "name": "http1",
+                      "containerPort": 8080
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          "traffic": [
+            {
+              "percent": 100,
+              "latestRevision": true
+            }
+          ]
+        },
+        "status": {
+          "observedGeneration": 1,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastTransitionTime": "2023-01-17T13:19:40.847209Z"
+            },
+            {
+              "type": "ConfigurationsReady",
+              "status": "True",
+              "lastTransitionTime": "2023-01-17T13:19:26.524357Z"
+            },
+            {
+              "type": "RoutesReady",
+              "status": "True",
+              "lastTransitionTime": "2023-01-17T13:19:40.999450Z"
+            }
+          ],
+          "latestReadyRevisionName": "cloudrun-266-green-m5q4z",
+          "latestCreatedRevisionName": "cloudrun-266-green-m5q4z",
+          "traffic": [
+            {
+              "revisionName": "cloudrun-266-green-m5q4z",
+              "percent": 100,
+              "latestRevision": true
+            }
+          ],
+          "url": "https://cloudrun-266-green-7vdccu4y3a-uc.a.run.app",
+          "address": {
+            "url": "https://cloudrun-266-green-7vdccu4y3a-uc.a.run.app"
+          }
+        }
+      }
+    ]
+  }
+}

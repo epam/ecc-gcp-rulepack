@@ -1,0 +1,36 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 13 Oct 2022 12:06:25 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1598",
+    "-content-encoding": "gzip",
+    "content-location": "https://apikeys.googleapis.com/v2/projects/cloud-custodian/locations/global/keys?alt=json"
+  },
+  "body": {
+    "keys": [
+      {
+        "name": "projects/cloud-custodian/locations/global/keys/25e5cc2f-0b26-4db2-a378-8246ac1135a7",
+        "displayName": "API key 3",
+        "createTime": "2022-07-27T09:12:41.940610Z",
+        "uid": "25e5cc2f-0b26-4db2-a378-8246ac1135a7",
+        "updateTime": "2022-07-27T10:01:29.485116Z",
+        "restrictions": {
+          "apiTargets": [
+            {
+              "service": "apikeys"
+            }
+          ]
+        },
+        "etag": "W/\"wd0e3FDk6JOYEPDrJLB5zA==\""
+      }
+    ]
+  }
+}

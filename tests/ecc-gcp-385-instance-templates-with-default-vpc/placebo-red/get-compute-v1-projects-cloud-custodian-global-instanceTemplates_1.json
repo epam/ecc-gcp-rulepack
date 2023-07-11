@@ -1,0 +1,73 @@
+{
+  "headers": {
+    "etag": "VukEbkZjx7ScHDhhnoj_beYrND4=/9pETlLne4a6iHyfYOelMQ3mkWxk=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 09:18:58 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3390",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates?alt=json"
+  },
+  "body": {
+    "kind": "compute#instanceTemplateList",
+    "id": "projects/cloud-custodian/global/instanceTemplates",
+    "items": [
+      {
+        "kind": "compute#instanceTemplate",
+        "id": "2545295977538380528",
+        "creationTimestamp": "2023-01-20T01:17:19.478-08:00",
+        "name": "template-385-red",
+        "description": "",
+        "properties": {
+          "machineType": "f1-micro",
+          "networkInterfaces": [
+            {
+              "kind": "compute#networkInterface",
+              "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+              "name": "nic0"
+            }
+          ],
+          "disks": [
+            {
+              "kind": "compute#attachedDisk",
+              "type": "PERSISTENT",
+              "mode": "READ_WRITE",
+              "deviceName": "persistent-disk-0",
+              "index": 0,
+              "boot": true,
+              "initializeParams": {
+                "sourceImage": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/images/debian-10-buster-v20221206",
+                "diskType": "pd-standard"
+              },
+              "autoDelete": true,
+              "interface": "SCSI"
+            }
+          ],
+          "metadata": {
+            "kind": "compute#metadata",
+            "fingerprint": "fRPqG8Ocr0I="
+          },
+          "scheduling": {
+            "onHostMaintenance": "MIGRATE",
+            "automaticRestart": true,
+            "preemptible": false,
+            "provisioningModel": "STANDARD"
+          },
+          "labels": {
+            "compliancestatus": "red"
+          }
+        },
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-385-red"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates"
+  }
+}

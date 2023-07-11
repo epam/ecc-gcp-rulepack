@@ -1,0 +1,21 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-188-bq_datasets_are_not_anon_or_pub_accessible
+    description: |
+      BigQuery datasets are anonymously or publicly accessible
+    resource: gcp.bq-dataset
+    filters:
+      - or:
+          - type: value
+            key: 'access[].iamMember | join(`, `, @)'
+            value: allUsers
+            op: contains
+          - type: value
+            key: 'access[].specialGroup | join(`, `, @)'
+            value: allAuthenticatedUsers
+            op: contains

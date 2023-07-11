@@ -1,0 +1,36 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# To achieve the results according to the source, you must also
+# apply ecc-gcp-036-oslogin_disabled_for_project
+
+policies:
+  - name: ecc-gcp-194-oslogin_disabled_for_instance
+    description: |
+      OS Login is not enabled for an instance
+    resource: gcp.instance
+    filters:
+      - or:
+        - type: value
+          key: metadata.items[?key == `enable-oslogin`].value[]
+          value:
+            - "FALSE"
+            - "False"
+            - "false"
+          op: intersect
+        - not:
+          - type: value
+            key: metadata.items[].key
+            value: enable-oslogin
+            op: contains
+      - not:
+        - type: value
+          key: name
+          value: gke
+          op: contains
+        - type: value
+          key: labels."goog-gke-node"
+          value: present

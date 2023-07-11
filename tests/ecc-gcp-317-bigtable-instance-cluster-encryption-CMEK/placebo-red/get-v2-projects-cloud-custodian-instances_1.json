@@ -1,0 +1,32 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 10:18:18 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "394",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigtableadmin.googleapis.com/v2/projects/cloud-custodian/instances?alt=json"
+  },
+  "body": {
+    "instances": [
+      {
+        "name": "projects/cloud-custodian/instances/instance-317-red",
+        "displayName": "instance-317-red",
+        "state": "READY",
+        "type": "PRODUCTION",
+        "labels": {
+          "custodiarule": "ecc-gcp-317-bigtable-instance-cluster-encryption-cmek",
+          "compliancestatus": "red"
+        },
+        "createTime": "2023-01-20T10:18:03.741107Z"
+      }
+    ]
+  }
+}

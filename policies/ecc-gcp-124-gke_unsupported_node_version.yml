@@ -1,0 +1,44 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-124-gke_unsupported_node_version
+    description: |
+      There is unsupported GKE node version
+    resource: gcp.gke-cluster
+    filters:
+      - or:
+          - and:
+              - type: value
+                key: releaseChannel.channel
+                value: "RAPID"
+                op: eq
+              - type: value
+                key: currentNodeVersion
+                value: ["1.26.1-gke.1500", "1.25.6-gke.1000"]
+                op: ni
+          - and:
+              - type: value
+                key: releaseChannel.channel
+                value: "STABLE"
+                op: eq
+              - type: value
+                key: currentNodeVersion
+                value: ["1.24.9-gke.3200", "1.23.16-gke.1100"]
+                op: ni
+          - and:
+              - type: value
+                key: releaseChannel.channel
+                value: "REGULAR"
+                op: eq
+              - type: value
+                key: currentNodeVersion
+                value: ["1.24.9-gke.3200", "1.25.6-gke.1000"]
+                op: ni
+          - type: value
+            key: releaseChannel.channel
+            value: ["RAPID", "STABLE", "REGULAR"]
+            op: ni

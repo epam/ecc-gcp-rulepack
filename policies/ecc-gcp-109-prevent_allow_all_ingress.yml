@@ -1,0 +1,29 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-109-prevent_allow_all_ingress
+    description: |
+      Ingress access is allowed
+    resource: gcp.firewall
+    filters:
+      - type: value
+        key: direction
+        value: "INGRESS"
+        op: eq
+      - type: value
+        key: allowed[].IPProtocol
+        value: ["all", "tcp", "udp"]
+        op: intersect
+      - or:
+          - type: value
+            key: allowed[].ports[]
+            value: empty
+          - type: value
+            key: allowed[].ports[]
+            value: "0-65535"
+            op: in
+            value_type: swap

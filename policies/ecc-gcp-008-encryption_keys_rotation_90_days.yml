@@ -1,0 +1,18 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-008-encryption_keys_rotation_90_days
+    description: |
+      KMS encryption keys are not rotated within a period of 90 days
+    resource: gcp.kms-cryptokey
+    filters:
+      - type: value
+        key: rotationPeriod
+        value_type: integer
+        value_regex: "([0-9]+)s"
+        op: gt
+        value: 7776000

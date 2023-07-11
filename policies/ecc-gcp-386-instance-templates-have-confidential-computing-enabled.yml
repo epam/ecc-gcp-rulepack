@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-386-instance-templates-have-confidential-computing-enabled
+    description: |
+      Compute Instance Templates have not Confidential Computing enabled
+    resource: gcp.instance-template
+    filters:
+      - type: value
+        key: properties.confidentialInstanceConfig.enableConfidentialCompute
+        op: ne
+        value: true

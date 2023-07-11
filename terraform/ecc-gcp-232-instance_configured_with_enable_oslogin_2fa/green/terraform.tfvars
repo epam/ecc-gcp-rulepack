@@ -1,0 +1,6 @@
+project       = "project_id"
+region        = "us-central-1"
+zone          = "us-central1-a"
+instance_name = "oslogin-2fa-true-232-green"
+machine_type  = "f1-micro"
+network       = "default"

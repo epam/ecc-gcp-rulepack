@@ -1,0 +1,49 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 12 Jan 2023 08:54:52 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "5342",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudfunctions.googleapis.com/v1/projects/cloud-custodian/locations/-/functions?alt=json"
+  },
+  "body": {
+    "functions": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/functions/function-248-green",
+        "sourceArchiveUrl": "gs://bucket-248-green/index.zip",
+        "eventTrigger": {
+          "eventType": "google.storage.object.finalize",
+          "resource": "projects/cloud-custodian/buckets/bucket-248-green",
+          "service": "storage.googleapis.com",
+          "failurePolicy": {}
+        },
+        "status": "ACTIVE",
+        "entryPoint": "hello_world",
+        "timeout": "60s",
+        "availableMemoryMb": 128,
+        "serviceAccountEmail": "cloud-custodian@appspot.gserviceaccount.com",
+        "updateTime": "2023-01-12T08:29:24.918Z",
+        "versionId": "1",
+        "labels": {
+          "compliancestatus": "green",
+          "custodiarule": "ecc-gcp-248-cloud_functions_configured_with_event_trigger"
+        },
+        "runtime": "python37",
+        "maxInstances": 3000,
+        "ingressSettings": "ALLOW_ALL",
+        "buildId": "c3aec227-f030-41b8-af00-ccf120b4b208",
+        "buildName": "projects/cloud-custodian/locations/us-central1/builds/c3aec227-f030-41b8-af00-ccf120b4b208",
+        "dockerRegistry": "CONTAINER_REGISTRY"
+      }
+    ]
+  }
+}

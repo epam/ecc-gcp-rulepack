@@ -1,0 +1,65 @@
+{
+  "headers": {
+    "etag": "qyDgMRADn7NeNIjhC60Tzyluob0=/lNCgYZN6_WuQ3gJFRy492dK5ULc=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 18 Nov 2022 11:00:29 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "12601",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/networks?alt=json"
+  },
+  "body": {
+    "kind": "compute#networkList",
+    "id": "projects/cloud-custodian/global/networks",
+    "items": [
+      {
+        "kind": "compute#network",
+        "id": "615023815140498366",
+        "creationTimestamp": "2022-11-18T02:58:25.363-08:00",
+        "name": "test-network1-076-red",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/test-network1-076-red",
+        "selfLinkWithId": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/615023815140498366",
+        "autoCreateSubnetworks": false,
+        "peerings": [
+          {
+            "name": "peering-076-red",
+            "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/test-network2-076-red",
+            "state": "INACTIVE",
+            "stateDetails": "[2022-11-18T02:58:47.668-08:00]: Waiting for peer network to connect.",
+            "autoCreateRoutes": true,
+            "exportCustomRoutes": false,
+            "importCustomRoutes": false,
+            "exchangeSubnetRoutes": true,
+            "exportSubnetRoutesWithPublicIp": true,
+            "importSubnetRoutesWithPublicIp": false
+          }
+        ],
+        "routingConfig": {
+          "routingMode": "REGIONAL"
+        },
+        "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+      },
+      {
+        "kind": "compute#network",
+        "id": "3278366055098670014",
+        "creationTimestamp": "2022-11-18T02:58:25.365-08:00",
+        "name": "test-network2-076-red",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/test-network2-076-red",
+        "selfLinkWithId": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/3278366055098670014",
+        "autoCreateSubnetworks": false,
+        "routingConfig": {
+          "routingMode": "REGIONAL"
+        },
+        "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks"
+  }
+}

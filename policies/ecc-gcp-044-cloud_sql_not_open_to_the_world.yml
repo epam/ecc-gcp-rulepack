@@ -1,0 +1,26 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# Check whether Cloud SQL instance is open for the world
+# Check the key values settings.ipConfiguration.authorizedNetworks []. Value
+# Verification is carried out according to the recommendation on page 142.
+# The key value should not be 0.0.0.0 or <Network>/0
+
+policies:
+  - name: ecc-gcp-044-cloud_sql_not_open_to_the_world
+    description: |
+      Cloud SQL database Instances are open to the world
+    resource: gcp.sql-instance
+    filters:
+      - or:
+          - type: value
+            key: settings.ipConfiguration.authorizedNetworks[].value | join(`, `, @)
+            value: 0.0.0.0
+            op: contains
+          - type: value
+            key: settings.ipConfiguration.authorizedNetworks[].value | join(`, `, @)
+            value: /0
+            op: contains

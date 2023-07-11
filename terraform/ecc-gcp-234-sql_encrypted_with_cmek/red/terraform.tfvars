@@ -1,0 +1,6 @@
+project = "project_id"
+region  = "us-central1"
+dbname  = "mysql-db"
+dbver   = "MYSQL_5_7"
+tier    = "db-f1-micro"
+prefix  = "234-red"

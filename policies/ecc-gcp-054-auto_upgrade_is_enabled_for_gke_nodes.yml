@@ -1,0 +1,15 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-054-auto_upgrade_is_enabled_for_gke_nodes
+    description: |
+      Node Auto-Upgrade is not enabled for GKE nodes
+    resource: gcp.gke-cluster
+    filters:
+      - type: value
+        key: nodePools[].management.autoUpgrade | [0]
+        value: absent

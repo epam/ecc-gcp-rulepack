@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 08 Nov 2022 10:51:04 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "366",
+    "-content-encoding": "gzip",
+    "content-location": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/db-instance-a17c5373-046-green/users?alt=json"
+  },
+  "body": {
+    "kind": "sql#usersList",
+    "items": [
+      {
+        "kind": "sql#user",
+        "etag": "11f58d4e668890ef379a09ed0acf14697b53c7f42828a9b466059c79c75b973f",
+        "name": "root",
+        "host": "256.256.256.0",
+        "instance": "db-instance-a17c5373-046-green",
+        "project": "cloud-custodian",
+        "passwordPolicy": {
+          "status": {}
+        }
+      }
+    ]
+  }
+}

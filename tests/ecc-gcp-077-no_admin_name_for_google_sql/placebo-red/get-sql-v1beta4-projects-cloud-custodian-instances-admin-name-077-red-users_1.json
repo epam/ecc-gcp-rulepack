@@ -1,0 +1,33 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 18 Nov 2022 11:16:55 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "348",
+    "-content-encoding": "gzip",
+    "content-location": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/admin-name-077-red/users?alt=json"
+  },
+  "body": {
+    "kind": "sql#usersList",
+    "items": [
+      {
+        "kind": "sql#user",
+        "etag": "3b54c82972d320cc86ff22b49e0775555435b3ce1db9095f9b21d48d889241ef",
+        "name": "admin",
+        "host": "my.com",
+        "instance": "admin-name-077-red",
+        "project": "cloud-custodian",
+        "passwordPolicy": {
+          "status": {}
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "headers": {
+    "etag": "y8rlmAQUPFLE8abv_sExrAkuTHc=/zSW-UMQslpBUKRa2XrQdD1RN038=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 07 Nov 2022 09:51:32 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "49537",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/instances?alt=json"
+  },
+  "body": {
+    "kind": "compute#instanceAggregatedList",
+    "id": "projects/cloud-custodian/aggregated/instances",
+    "items": {
+      "zones/us-central1-a": {
+        "instances": [
+          {
+            "kind": "compute#instance",
+            "id": "674931822869965326",
+            "creationTimestamp": "2022-11-07T01:50:26.219-08:00",
+            "name": "no-project-wide-ssh-keys-for-instances-035-green",
+            "tags": {
+              "fingerprint": "42WmSpB8rSM="
+            },
+            "machineType": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/machineTypes/f1-micro",
+            "status": "RUNNING",
+            "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+            "canIpForward": false,
+            "networkInterfaces": [
+              {
+                "kind": "compute#networkInterface",
+                "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+                "subnetwork": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1/subnetworks/default",
+                "networkIP": "10.128.0.45",
+                "name": "nic0",
+                "fingerprint": "VHUVIRR24HM=",
+                "stackType": "IPV4_ONLY"
+              }
+            ],
+            "disks": [
+              {
+                "kind": "compute#attachedDisk",
+                "type": "PERSISTENT",
+                "mode": "READ_WRITE",
+                "source": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/disks/no-project-wide-ssh-keys-for-instances-035-green",
+                "deviceName": "persistent-disk-0",
+                "index": 0,
+                "boot": true,
+                "autoDelete": true,
+                "licenses": [
+                  "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/licenses/debian-10-buster"
+                ],
+                "interface": "SCSI",
+                "guestOsFeatures": [
+                  {
+                    "type": "UEFI_COMPATIBLE"
+                  },
+                  {
+                    "type": "VIRTIO_SCSI_MULTIQUEUE"
+                  }
+                ],
+                "diskSizeGb": "10",
+                "architecture": "X86_64"
+              }
+            ],
+            "metadata": {
+              "kind": "compute#metadata",
+              "fingerprint": "23ecidmYQUo=",
+              "items": [
+                {
+                  "key": "block-project-ssh-keys",
+                  "value": "true"
+                }
+              ]
+            },
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instances/no-project-wide-ssh-keys-for-instances-035-green",
+            "scheduling": {
+              "onHostMaintenance": "MIGRATE",
+              "automaticRestart": true,
+              "preemptible": false,
+              "provisioningModel": "STANDARD"
+            },
+            "cpuPlatform": "Intel Haswell",
+            "labelFingerprint": "42WmSpB8rSM=",
+            "startRestricted": false,
+            "deletionProtection": false,
+            "shieldedInstanceConfig": {
+              "enableSecureBoot": false,
+              "enableVtpm": true,
+              "enableIntegrityMonitoring": true
+            },
+            "shieldedInstanceIntegrityPolicy": {
+              "updateAutoLearnPolicy": true
+            },
+            "fingerprint": "AWeqCx-PIkg=",
+            "lastStartTimestamp": "2022-11-07T01:50:30.627-08:00"
+          }
+        ]
+      }
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/instances"
+  }
+}

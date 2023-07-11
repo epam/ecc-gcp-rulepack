@@ -1,0 +1,63 @@
+{
+  "headers": {
+    "etag": "c8EKSgDQzhkOGnaOHzfS9rUZSlE=/c-VA9btzA5iiKC8P1QcifLlBdTM=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 08 Nov 2022 18:15:46 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "53341",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/disks?alt=json"
+  },
+  "body": {
+    "kind": "compute#diskAggregatedList",
+    "id": "projects/cloud-custodian/aggregated/disks",
+    "items": {
+      "zones/us-central1-a": {
+        "disks": [
+          {
+            "kind": "compute#disk",
+            "id": "1515983837875087246",
+            "creationTimestamp": "2022-11-08T10:01:05.671-08:00",
+            "name": "not-encrypted-csek-039-red",
+            "sizeGb": "10",
+            "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+            "status": "READY",
+            "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/disks/not-encrypted-csek-039-red",
+            "sourceImage": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/images/debian-10-buster-v20221102",
+            "sourceImageId": "5368580991425150327",
+            "type": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/diskTypes/pd-standard",
+            "licenses": [
+              "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/licenses/debian-10-buster"
+            ],
+            "guestOsFeatures": [
+              {
+                "type": "UEFI_COMPATIBLE"
+              },
+              {
+                "type": "VIRTIO_SCSI_MULTIQUEUE"
+              }
+            ],
+            "labels": {
+              "compliancestatus": "red",
+              "custodiarule": "ecc-gcp-039-vm_disks_encrypted_csek"
+            },
+            "labelFingerprint": "SHXBOKbThLA=",
+            "licenseCodes": [
+              "5543610867827062957"
+            ],
+            "physicalBlockSizeBytes": "4096",
+            "architecture": "X86_64"
+          }
+        ]
+      }
+    },
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/aggregated/disks"
+  }
+}

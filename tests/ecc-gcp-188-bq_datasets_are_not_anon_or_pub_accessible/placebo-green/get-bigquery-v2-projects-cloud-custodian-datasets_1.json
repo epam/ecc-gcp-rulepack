@@ -1,0 +1,38 @@
+{
+  "headers": {
+    "etag": "QV5wTGJdn1a8WKC/k7dYow==",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 04 Jan 2023 12:41:55 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "865",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigquery.googleapis.com/bigquery/v2/projects/cloud-custodian/datasets?alt=json"
+  },
+  "body": {
+    "kind": "bigquery#datasetList",
+    "etag": "QV5wTGJdn1a8WKC/k7dYow==",
+    "datasets": [
+      {
+        "kind": "bigquery#dataset",
+        "id": "cloud-custodian:dataset_188_green",
+        "datasetReference": {
+          "datasetId": "dataset_188_green",
+          "projectId": "cloud-custodian"
+        },
+        "labels": {
+          "compliancestatus": "green",
+          "custodianrule": "ecc-gcp-188-bq_datasets_are_not_anon_or_pub_accessible"
+        },
+        "location": "US"
+      }
+    ]
+  }
+}

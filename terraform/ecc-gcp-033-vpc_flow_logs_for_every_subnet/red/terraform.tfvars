@@ -1,0 +1,5 @@
+project      = "project_id"
+region       = "us-central1"
+network_name = "testnet-033-red"
+subnet_name  = "testsubnet-033-red"
+ip           = "10.2.0.0/16"

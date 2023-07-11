@@ -1,0 +1,48 @@
+resource "google_compute_global_forwarding_rule" "this" {
+  name       = "global-rule-092-red"
+  target     = google_compute_target_ssl_proxy.this.id
+  port_range = "443"
+
+  labels = {
+    custodianrule    = "ecc-gcp-092-remove_weak_ciphers_for_load_balancer"
+    compliancestatus = "red"
+  }
+}
+
+resource "google_compute_ssl_policy" "this" {
+  name            = "ssl-policy-092-red"
+  profile         = "MODERN"
+  min_tls_version = "TLS_1_0"
+}
+
+resource "google_compute_managed_ssl_certificate" "this" {
+  name = "cert-092-red"
+
+  managed {
+    domains = ["sslcert.tf-test.club."]
+  }
+}
+
+resource "google_compute_target_ssl_proxy" "this" {
+  name             = "test-proxy-092-red"
+  backend_service  = google_compute_backend_service.this.id
+  ssl_certificates = [google_compute_managed_ssl_certificate.this.id]
+  ssl_policy       = google_compute_ssl_policy.this.id
+}
+
+resource "google_compute_backend_service" "this" {
+  name          = "balancer-092-red"
+  protocol      = "SSL"
+  health_checks = [google_compute_health_check.this.id]
+}
+
+resource "google_compute_health_check" "this" {
+  name = "ssl-health-check-092-red"
+
+  timeout_sec        = 1
+  check_interval_sec = 1
+
+  ssl_health_check {
+    port = "443"
+  }
+}

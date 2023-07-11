@@ -1,0 +1,15 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-286-pub_sub_topic_encrypted_with_cmek
+    description: |
+      Pub/Sub topic is not encrypted using a customer-managed encryption key
+    resource: gcp.pubsub-topic
+    filters:
+      - type: value
+        key: "kmsKeyName"
+        value: absent
