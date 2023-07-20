@@ -1,0 +1,17 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-273-armor_security_policy_adaptive_protection_enabled
+    description: |
+      Cloud Armor Security Policy have not Adaptive Protection enabled
+    resource: gcp.security-policy
+    filters:
+      - not:
+          - type: value
+            key: adaptiveProtectionConfig.layer7DdosDefenseConfig.enable
+            value: true
+            op: eq

@@ -1,0 +1,7 @@
+project     = "project_id"
+region      = "us-central1"
+said        = "service-account-260-red"
+saname      = "Service Account 260"
+tname       = "table-260-red"
+iname       = "instance-260-red"
+clusterzone = "us-central1-b"

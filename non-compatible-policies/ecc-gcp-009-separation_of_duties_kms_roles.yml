@@ -1,0 +1,29 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-009-separation_of_duties_kms_roles
+    description: |
+      Separation of duties is not enforced while assigning KMS related roles to users
+    resource: gcp.project-iam-policy-bindings-by-members
+    filters:
+      - type: value
+        key: roles
+        op: contains
+        value: "roles/cloudkms.admin"
+      - or:
+          - type: value
+            key: roles
+            op: contains
+            value: "roles/cloudkms.cryptoKeyEncrypter"
+          - type: value
+            key: roles
+            op: contains
+            value: "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+          - type: value
+            key: roles
+            op: contains
+            value: "roles/cloudkms.cryptoKeyDecrypter"

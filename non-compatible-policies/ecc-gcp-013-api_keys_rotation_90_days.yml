@@ -1,0 +1,15 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-013-api_keys_rotation_90_days
+    description: |
+      API keys are not rotated every 90 days
+    resource: gcp.gcp-apikeys
+    filters:
+      - not:
+        - type: time-range
+          value: 90

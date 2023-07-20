@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central1"
+cluster_name  = "cluster-129-red"
+firewall_name = "firewall-129-red"
+network_name  = "network-129-red"

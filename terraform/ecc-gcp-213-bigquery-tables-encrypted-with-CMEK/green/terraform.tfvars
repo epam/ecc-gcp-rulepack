@@ -1,0 +1,5 @@
+project = "project_id"
+region  = "us-central1"
+dataset = "dataset_213_green"
+table   = "table_213_green"
+prefix  = "213-green"

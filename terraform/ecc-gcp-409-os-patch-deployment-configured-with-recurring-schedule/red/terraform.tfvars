@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central-1"
+zone          = "us-central1-a"
+instance_name = "instance-409-red"
+network       = "default"

@@ -1,0 +1,24 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-090-use_secure_chiphers_in_cdn
+    description: |
+      Weak ciphers are used in CDN
+    resource: gcp.loadbalancer-backend-frontend-ssl
+    filters:
+      - type: value
+        key: minTlsVersion
+        value: [TLS_1_1, TLS_1_2]
+        op: ni
+      - type: value
+        key: '"c7n:loadbalancer-backend-frontend"."c7n:loadbalancer-backend-service".enableCDN'
+        value: true
+        op: eq
+      - type: value
+        key: '"c7n:loadbalancer-backend-frontend"."c7n:loadbalancer-backend-service".protocol'
+        value: HTTPS
+        op: eq
