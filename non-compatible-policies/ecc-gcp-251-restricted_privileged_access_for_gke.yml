@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-251-restricted_privileged_access_for_gke
+    description: |
+      GKE node is configured with privileged service account
+    resource: gcp.gke-nodepool
+    filters:
+      - type: iam-gke-nodepool-filter
+        key: role
+        value: ["roles/viewer", "roles/editor", "roles/owner"]
+        op: in

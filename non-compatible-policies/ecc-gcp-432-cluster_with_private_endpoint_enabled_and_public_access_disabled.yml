@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-432-cluster_with_private_endpoint_enabled_and_public_access_disabled
+    description: |
+      Clusters are created without Private Endpoint Enabled and Public Access Disabled
+    resource: gcp.gke-cluster
+    filters:
+      - type: value
+        key: privateClusterConfig.enablePrivateEndpoint
+        value: true
+        op: ne

@@ -1,0 +1,19 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+# To achieve the results according to the source, you must also
+# apply epam-gcp-312-datafusion-stackdriver-monitoring
+
+policies:
+  - name: ecc-gcp-311-datafusion-stackdriver-logging
+    description: |
+      Datafusion does not have stack driver logging enabled
+    resource: gcp.datafusion-instance
+    filters:
+      - type: value
+        key: enableStackdriverLogging
+        value: true
+        op: ne

@@ -1,0 +1,6 @@
+project   = "project_id"
+region    = "us-central1"
+serviceac = "service-account-id-007-red"
+dname     = "service-account-007-red"
+role1     = "roles/iam.serviceAccountAdmin"
+role2     = "roles/iam.serviceAccountUser"

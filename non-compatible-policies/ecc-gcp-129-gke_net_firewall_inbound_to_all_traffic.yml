@@ -1,0 +1,23 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-129-gke_net_firewall_inbound_to_all_traffic
+    description: |
+      Kubernetes Engine Clusters network firewall inbound rule is overly permissive to all traffic
+    resource: gcp.firewall
+    filters:
+      - attached-to-cluster
+      - type: value
+        key: allowed[].IPProtocol
+        value: "all"
+        op: in
+        value_type: swap
+      - type: value
+        key: sourceRanges[]
+        value: "0.0.0.0/0"
+        op: in
+        value_type: swap

@@ -1,0 +1,5 @@
+project    = "project_id"
+region     = "us-central1"
+metricname = "test_metric_017_green"
+alertname  = "Alert_Policy_017_green"
+conname    = "condition_017_green"

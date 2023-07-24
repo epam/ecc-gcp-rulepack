@@ -1,0 +1,55 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-170-no_weak_ciphers_https_or_ssl
+    description: |
+      HTTPS or SSL proxy load balancers permit SSL policies with weak cipher suites
+    resource: gcp.loadbalancer-target-https-proxy-ssl-policy
+    filters:
+      - not:
+          - and:
+              - type: value
+                key: profile
+                value: MODERN
+                op: eq
+              - type: value
+                key: minTlsVersion
+                value: [TLS_1_0, TLS_1_1]
+                op: ni
+      - not:
+          - type: value
+            key: profile
+            value: RESTRICTED
+            op: eq
+      - not:
+          - and:
+              - type: value
+                key: profile
+                value: CUSTOM
+                op: eq
+              - not:
+                  - or:
+                      - type: value
+                        key: customFeatures
+                        value: TLS_RSA_WITH_AES_128_GCM_SHA256
+                        op: contains
+                      - type: value
+                        key: customFeatures
+                        value: TLS_RSA_WITH_AES_256_GCM_SHA384
+                        op: contains
+                      - type: value
+                        key: customFeatures
+                        value: TLS_RSA_WITH_AES_128_CBC_SHA
+                        op: contains
+                      - type: value
+                        key: customFeatures
+                        value: TLS_RSA_WITH_AES_256_CBC_SHA
+                        op: contains
+                      - type: value
+                        key: customFeatures
+                        value: TLS_RSA_WITH_3DES_EDE_CBC_SHA
+                        op: contains

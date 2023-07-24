@@ -1,0 +1,5 @@
+project   = "project_id"
+region    = "us-central1"
+serviceac = "service-account-id-004-red"
+role      = "roles/editor"
+dname     = "service-account-004-red"

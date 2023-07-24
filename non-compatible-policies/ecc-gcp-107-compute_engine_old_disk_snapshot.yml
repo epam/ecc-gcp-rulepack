@@ -1,0 +1,23 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-107-compute_engine_old_disk_snapshot
+    description: |
+      There are volumes that have not had a backup or snapshot in the past 14 days
+    resource: gcp.snapshot
+    filters:
+      - type: reduce
+        sort-by: "creationTimestamp"
+        order: desc
+        group-by: "sourceDiskId"
+        limit: 1
+      - type: value
+        key: creationTimestamp
+        op: gt
+        value_type: age
+        value: 14
+      - type: disk-availability

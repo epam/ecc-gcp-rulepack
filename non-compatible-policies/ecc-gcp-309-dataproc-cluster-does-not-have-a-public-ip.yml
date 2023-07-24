@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-309-dataproc-cluster-does-not-have-a-public-ip
+    description: |
+      Google Cloud Dataproc cluster has a public IP
+    resource: gcp.dataproc-clusters
+    filters:
+      - type: value
+        key: config.gceClusterConfig.internalIpOnly
+        op: ne
+        value: true

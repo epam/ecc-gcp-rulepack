@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-268-run_service_restrict_public_access
+    description: |
+      Cloud Run service allows public access
+    resource: gcp.namespace-service
+    filters:
+      - type: namespace-service-iam-filter
+        key: members
+        op: intersect
+        value: [allAuthenticatedUsers, allUsers]
