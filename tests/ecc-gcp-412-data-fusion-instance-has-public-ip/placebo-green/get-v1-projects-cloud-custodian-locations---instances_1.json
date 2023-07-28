@@ -1,0 +1,50 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 01 Feb 2023 11:15:49 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "2338",
+    "-content-encoding": "gzip",
+    "content-location": "https://datafusion.googleapis.com/v1/projects/cloud-custodian/locations/-/instances?alt=json"
+  },
+  "body": {
+    "instances": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/instances/instance-412-green",
+        "type": "BASIC",
+        "privateInstance": true,
+        "networkConfig": {
+          "network": "default",
+          "ipAllocation": "10.112.64.0/22"
+        },
+        "labels": {
+          "compliancestatus": "green",
+          "custodiarule": "ecc-gcp-412-data-fusion-instance-has-public-ip"
+        },
+        "createTime": "2023-02-01T10:27:42.704810675Z",
+        "updateTime": "2023-02-01T10:50:11.371189114Z",
+        "state": "DELETING",
+        "serviceEndpoint": "https://instance-412-green-cloud-custodian-dot-usc1.datafusion.googleusercontent.com",
+        "version": "6.7.2",
+        "serviceAccount": "cloud-datafusion-management-sa@tenantProjectId.iam.gserviceaccount.com",
+        "availableVersion": [
+          {
+            "versionNumber": "6.8.0"
+          }
+        ],
+        "apiEndpoint": "https://instance-412-green-cloud-custodian-dot-usc1.datafusion.googleusercontent.com/api",
+        "gcsBucket": "gs://df-1318087532271072693-evsougfcdqi63elcaizbbqaaaa",
+        "p4ServiceAccount": "service-443732426401@gcp-sa-datafusion.iam.gserviceaccount.com",
+        "tenantProjectId": "tenantProjectId"
+      }
+    ]
+  }
+}

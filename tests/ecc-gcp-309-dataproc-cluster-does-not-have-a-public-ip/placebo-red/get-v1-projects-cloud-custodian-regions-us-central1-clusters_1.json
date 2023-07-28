@@ -1,0 +1,695 @@
+{
+  "headers": {
+    "x-debug-tracking-id": "3881491118248187023;o=0",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 03 Jun 2022 09:50:33 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "6910",
+    "-content-encoding": "gzip",
+    "content-location": "https://dataproc.googleapis.com/v1/projects/cloud-custodian/regions/us-central1/clusters?alt=json"
+  },
+  "body": {
+    "clusters": [
+      {
+        "projectId": "cloud-custodian",
+        "clusterName": "dataproc-cluster-309-red",
+        "config": {
+          "configBucket": "dataproc-staging-us-central1-443732426401-ycm9atvs",
+          "tempBucket": "dataproc-temp-us-central1-443732426401-xltujtvk",
+          "gceClusterConfig": {
+            "zoneUri": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+            "networkUri": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+            "serviceAccountScopes": [
+              "https://www.googleapis.com/auth/bigquery",
+              "https://www.googleapis.com/auth/bigtable.admin.table",
+              "https://www.googleapis.com/auth/bigtable.data",
+              "https://www.googleapis.com/auth/cloud.useraccounts.readonly",
+              "https://www.googleapis.com/auth/devstorage.full_control",
+              "https://www.googleapis.com/auth/devstorage.read_write",
+              "https://www.googleapis.com/auth/logging.write"
+            ]
+          },
+          "masterConfig": {
+            "numInstances": 1,
+            "instanceNames": [
+              "dataproc-cluster-309-red-m"
+            ],
+            "imageUri": "https://www.googleapis.com/compute/v1/projects/cloud-dataproc/global/images/dataproc-2-0-deb10-20230114-155100-rc01",
+            "machineTypeUri": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/machineTypes/n1-standard-4",
+            "diskConfig": {
+              "bootDiskSizeGb": 1000,
+              "bootDiskType": "pd-standard"
+            },
+            "minCpuPlatform": "AUTOMATIC",
+            "preemptibility": "NON_PREEMPTIBLE"
+          },
+          "workerConfig": {
+            "numInstances": 2,
+            "instanceNames": [
+              "dataproc-cluster-309-red-w-0",
+              "dataproc-cluster-309-red-w-1"
+            ],
+            "imageUri": "https://www.googleapis.com/compute/v1/projects/cloud-dataproc/global/images/dataproc-2-0-deb10-20230114-155100-rc01",
+            "machineTypeUri": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/machineTypes/n1-standard-4",
+            "diskConfig": {
+              "bootDiskSizeGb": 1000,
+              "bootDiskType": "pd-standard"
+            },
+            "minCpuPlatform": "AUTOMATIC",
+            "preemptibility": "NON_PREEMPTIBLE"
+          },
+          "softwareConfig": {
+            "imageVersion": "2.0.54-debian10",
+            "properties": {
+              "capacity-scheduler:yarn.scheduler.capacity.root.default.ordering-policy": "fair",
+              "core:fs.gs.block.size": "134217728",
+              "core:fs.gs.metadata.cache.enable": "false",
+              "core:hadoop.ssl.enabled.protocols": "TLSv1,TLSv1.1,TLSv1.2",
+              "distcp:mapreduce.map.java.opts": "-Xmx768m",
+              "distcp:mapreduce.map.memory.mb": "1024",
+              "distcp:mapreduce.reduce.java.opts": "-Xmx768m",
+              "distcp:mapreduce.reduce.memory.mb": "1024",
+              "hadoop-env:HADOOP_DATANODE_OPTS": "-Xmx512m",
+              "hdfs:dfs.datanode.address": "0.0.0.0:9866",
+              "hdfs:dfs.datanode.http.address": "0.0.0.0:9864",
+              "hdfs:dfs.datanode.https.address": "0.0.0.0:9865",
+              "hdfs:dfs.datanode.ipc.address": "0.0.0.0:9867",
+              "hdfs:dfs.namenode.handler.count": "20",
+              "hdfs:dfs.namenode.http-address": "0.0.0.0:9870",
+              "hdfs:dfs.namenode.https-address": "0.0.0.0:9871",
+              "hdfs:dfs.namenode.lifeline.rpc-address": "dataproc-cluster-309-red-m:8050",
+              "hdfs:dfs.namenode.secondary.http-address": "0.0.0.0:9868",
+              "hdfs:dfs.namenode.secondary.https-address": "0.0.0.0:9869",
+              "hdfs:dfs.namenode.service.handler.count": "10",
+              "hdfs:dfs.namenode.servicerpc-address": "dataproc-cluster-309-red-m:8051",
+              "hive:hive.fetch.task.conversion": "none",
+              "mapred-env:HADOOP_JOB_HISTORYSERVER_HEAPSIZE": "3840",
+              "mapred:mapreduce.job.maps": "21",
+              "mapred:mapreduce.job.reduce.slowstart.completedmaps": "0.95",
+              "mapred:mapreduce.job.reduces": "7",
+              "mapred:mapreduce.jobhistory.recovery.store.class": "org.apache.hadoop.mapreduce.v2.hs.HistoryServerLeveldbStateStoreService",
+              "mapred:mapreduce.map.cpu.vcores": "1",
+              "mapred:mapreduce.map.java.opts": "-Xmx2524m",
+              "mapred:mapreduce.map.memory.mb": "3156",
+              "mapred:mapreduce.reduce.cpu.vcores": "1",
+              "mapred:mapreduce.reduce.java.opts": "-Xmx2524m",
+              "mapred:mapreduce.reduce.memory.mb": "3156",
+              "mapred:mapreduce.task.io.sort.mb": "256",
+              "mapred:yarn.app.mapreduce.am.command-opts": "-Xmx2524m",
+              "mapred:yarn.app.mapreduce.am.resource.cpu-vcores": "1",
+              "mapred:yarn.app.mapreduce.am.resource.mb": "3156",
+              "spark-env:SPARK_DAEMON_MEMORY": "3840m",
+              "spark:spark.driver.maxResultSize": "1920m",
+              "spark:spark.driver.memory": "3840m",
+              "spark:spark.executor.cores": "2",
+              "spark:spark.executor.instances": "2",
+              "spark:spark.executor.memory": "5739m",
+              "spark:spark.executorEnv.OPENBLAS_NUM_THREADS": "1",
+              "spark:spark.extraListeners": "com.google.cloud.spark.performance.DataprocMetricsListener",
+              "spark:spark.scheduler.mode": "FAIR",
+              "spark:spark.sql.cbo.enabled": "true",
+              "spark:spark.ui.port": "0",
+              "spark:spark.yarn.am.memory": "640m",
+              "yarn-env:YARN_NODEMANAGER_HEAPSIZE": "1536",
+              "yarn-env:YARN_RESOURCEMANAGER_HEAPSIZE": "3840",
+              "yarn-env:YARN_TIMELINESERVER_HEAPSIZE": "3840",
+              "yarn:yarn.nodemanager.address": "0.0.0.0:8026",
+              "yarn:yarn.nodemanager.resource.cpu-vcores": "4",
+              "yarn:yarn.nodemanager.resource.memory-mb": "12624",
+              "yarn:yarn.resourcemanager.nodemanager-graceful-decommission-timeout-secs": "86400",
+              "yarn:yarn.scheduler.maximum-allocation-mb": "12624",
+              "yarn:yarn.scheduler.minimum-allocation-mb": "1"
+            }
+          },
+          "endpointConfig": {}
+        },
+        "status": {
+          "state": "RUNNING",
+          "stateStartTime": "2023-01-25T15:10:08.814972Z"
+        },
+        "clusterUuid": "36e6bcc5-e6f7-4fa6-ae53-764dd70c1be8",
+        "statusHistory": [
+          {
+            "state": "CREATING",
+            "stateStartTime": "2023-01-25T15:07:44.964024Z"
+          }
+        ],
+        "labels": {
+          "compliancestatus": "green",
+          "custodiarule": "ecc-gcp-309-dataproc-cluster-does-not-have-a-public-ip",
+          "goog-dataproc-cluster-name": "dataproc-cluster-309-red",
+          "goog-dataproc-cluster-uuid": "36e6bcc5-e6f7-4fa6-ae53-764dd70c1be8",
+          "goog-dataproc-location": "us-central1",
+          "goog-dataproc-autozone": "enabled"
+        },
+        "metrics": {
+          "hdfsMetrics": {
+            "dfs-capacity-used": "49152",
+            "dfs-capacity-present": "2000963633152",
+            "dfs-nodes-decommissioned": "0",
+            "dfs-capacity-remaining": "2000963584000",
+            "dfs-nodes-decommissioning": "0",
+            "dfs-blocks-missing": "0",
+            "dfs-blocks-pending-deletion": "0",
+            "dfs-capacity-total": "2113237753856",
+            "dfs-nodes-running": "2",
+            "dfs-blocks-under-replication": "0",
+            "dfs-blocks-missing-repl-one": "0",
+            "dfs-blocks-corrupt": "0",
+            "dfs-blocks-default-replication-factor": "2"
+          },
+          "yarnMetrics": {
+            "yarn-nodes-shutdown": "0",
+            "yarn-nodes-unhealthy": "0",
+            "yarn-memory-mb-available": "25248",
+            "yarn-containers-reserved": "0",
+            "yarn-memory-mb-pending": "0",
+            "yarn-memory-mb-total": "25248",
+            "yarn-nodes-rebooted": "0",
+            "yarn-apps-completed": "0",
+            "yarn-containers-pending": "0",
+            "yarn-vcores-allocated": "0",
+            "yarn-apps-running": "0",
+            "yarn-vcores-reserved": "0",
+            "yarn-memory-mb-reserved": "0",
+            "yarn-nodes-active": "2",
+            "yarn-apps-pending": "0",
+            "yarn-apps-failed": "0",
+            "yarn-containers-allocated": "0",
+            "yarn-memory-mb-allocated": "0",
+            "yarn-vcores-pending": "0",
+            "yarn-apps-killed": "0",
+            "yarn-nodes-lost": "0",
+            "yarn-nodes-decommissioned": "0",
+            "yarn-nodes-new": "0",
+            "yarn-vcores-total": "8",
+            "yarn-vcores-available": "8",
+            "yarn-apps-submitted": "0",
+            "yarn-nodes-decommissioning": "0"
+          }
+        },
+        "c7n:gcp-regions": {
+          "kind": "compute#region",
+          "id": "1000",
+          "creationTimestamp": "1969-12-31T16:00:00.000-08:00",
+          "name": "us-central1",
+          "description": "us-central1",
+          "status": "UP",
+          "zones": [
+            "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+            "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-b",
+            "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-c",
+            "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-f"
+          ],
+          "quotas": [
+            {
+              "metric": "CPUS",
+              "limit": 72,
+              "usage": 12
+            },
+            {
+              "metric": "DISKS_TOTAL_GB",
+              "limit": 40960,
+              "usage": 3010
+            },
+            {
+              "metric": "STATIC_ADDRESSES",
+              "limit": 21,
+              "usage": 1
+            },
+            {
+              "metric": "IN_USE_ADDRESSES",
+              "limit": 69,
+              "usage": 0
+            },
+            {
+              "metric": "SSD_TOTAL_GB",
+              "limit": 20480,
+              "usage": 70
+            },
+            {
+              "metric": "INSTANCE_TEMPLATES",
+              "limit": 150,
+              "usage": 0
+            },
+            {
+              "metric": "LOCAL_SSD_TOTAL_GB",
+              "limit": 20000,
+              "usage": 0
+            },
+            {
+              "metric": "INSTANCE_GROUPS",
+              "limit": 300,
+              "usage": 0
+            },
+            {
+              "metric": "INSTANCE_GROUP_MANAGERS",
+              "limit": 150,
+              "usage": 0
+            },
+            {
+              "metric": "INSTANCES",
+              "limit": 720,
+              "usage": 6
+            },
+            {
+              "metric": "AUTOSCALERS",
+              "limit": 150,
+              "usage": 0
+            },
+            {
+              "metric": "REGIONAL_AUTOSCALERS",
+              "limit": 100,
+              "usage": 0
+            },
+            {
+              "metric": "REGIONAL_INSTANCE_GROUP_MANAGERS",
+              "limit": 150,
+              "usage": 0
+            },
+            {
+              "metric": "TARGET_TCP_PROXIES",
+              "limit": 30,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_K80_GPUS",
+              "limit": 8,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_LOCAL_SSD_TOTAL_GB",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITMENTS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "NETWORK_ENDPOINT_GROUPS",
+              "limit": 300,
+              "usage": 0
+            },
+            {
+              "metric": "INTERNAL_ADDRESSES",
+              "limit": 5000,
+              "usage": 1
+            },
+            {
+              "metric": "NVIDIA_P100_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_LOCAL_SSD_GB",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_K80_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_P100_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_P100_VWS_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_V100_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_P4_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_P4_VWS_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "NODE_GROUPS",
+              "limit": 100,
+              "usage": 0
+            },
+            {
+              "metric": "NODE_TEMPLATES",
+              "limit": 100,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_V100_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_P4_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_P100_VWS_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_P4_VWS_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "INTERCONNECT_ATTACHMENTS_PER_REGION",
+              "limit": 16,
+              "usage": 0
+            },
+            {
+              "metric": "INTERCONNECT_ATTACHMENTS_TOTAL_MBPS",
+              "limit": 80000,
+              "usage": 0
+            },
+            {
+              "metric": "RESOURCE_POLICIES",
+              "limit": 250,
+              "usage": 1
+            },
+            {
+              "metric": "IN_USE_SNAPSHOT_SCHEDULES",
+              "limit": 50,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_T4_GPUS",
+              "limit": 4,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_T4_VWS_GPUS",
+              "limit": 2,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_T4_GPUS",
+              "limit": 4,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_T4_VWS_GPUS",
+              "limit": 2,
+              "usage": 0
+            },
+            {
+              "metric": "IN_USE_BACKUP_SCHEDULES",
+              "limit": 50,
+              "usage": 0
+            },
+            {
+              "metric": "PUBLIC_DELEGATED_PREFIXES",
+              "limit": 10,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_K80_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_P100_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_P4_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_V100_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_T4_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "C2_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "N2_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_N2_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_C2_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "RESERVATIONS",
+              "limit": 100,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_LICENSES",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "N2D_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_N2D_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "SERVICE_ATTACHMENTS",
+              "limit": 600,
+              "usage": 0
+            },
+            {
+              "metric": "STATIC_BYOIP_ADDRESSES",
+              "limit": 1024,
+              "usage": 0
+            },
+            {
+              "metric": "AFFINITY_GROUPS",
+              "limit": 9.223372036854776e+18,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_A100_GPUS",
+              "limit": 1,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_A100_GPUS",
+              "limit": 16,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_A100_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "M1_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "M2_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "A2_CPUS",
+              "limit": 12,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_A2_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_MEMORY_OPTIMIZED_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "NETWORK_FIREWALL_POLICIES",
+              "limit": 30,
+              "usage": 0
+            },
+            {
+              "metric": "PSC_INTERNAL_LB_FORWARDING_RULES",
+              "limit": 600,
+              "usage": 0
+            },
+            {
+              "metric": "EXTERNAL_NETWORK_LB_FORWARDING_RULES",
+              "limit": 45,
+              "usage": 0
+            },
+            {
+              "metric": "EXTERNAL_PROTOCOL_FORWARDING_RULES",
+              "limit": 45,
+              "usage": 0
+            },
+            {
+              "metric": "PD_EXTREME_TOTAL_PROVISIONED_IOPS",
+              "limit": 540000,
+              "usage": 0
+            },
+            {
+              "metric": "E2_CPUS",
+              "limit": 72,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_E2_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "EXTERNAL_MANAGED_FORWARDING_RULES",
+              "limit": 25,
+              "usage": 0
+            },
+            {
+              "metric": "C2D_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_C2D_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "N2A_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "SECURITY_POLICIES_PER_REGION",
+              "limit": 10,
+              "usage": 0
+            },
+            {
+              "metric": "SECURITY_POLICY_RULES_PER_REGION",
+              "limit": 100,
+              "usage": 0
+            },
+            {
+              "metric": "T2D_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_T2D_CPUS",
+              "limit": 24,
+              "usage": 0
+            },
+            {
+              "metric": "T2A_CPUS",
+              "limit": 16,
+              "usage": 0
+            },
+            {
+              "metric": "M3_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_M3_CPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "NVIDIA_A100_80GB_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "PREEMPTIBLE_NVIDIA_A100_80GB_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "COMMITTED_NVIDIA_A100_80GB_GPUS",
+              "limit": 0,
+              "usage": 0
+            },
+            {
+              "metric": "REGIONAL_INTERNAL_MANAGED_BACKEND_SERVICES",
+              "limit": 75,
+              "usage": 0
+            },
+            {
+              "metric": "REGIONAL_EXTERNAL_MANAGED_BACKEND_SERVICES",
+              "limit": 75,
+              "usage": 0
+            },
+            {
+              "metric": "REGIONAL_EXTERNAL_NETWORK_LB_BACKEND_SERVICES",
+              "limit": 75,
+              "usage": 0
+            },
+            {
+              "metric": "REGIONAL_INTERNAL_LB_BACKEND_SERVICES",
+              "limit": 75,
+              "usage": 0
+            },
+            {
+              "metric": "STATIC_EXTERNAL_IPV6_ADDRESS_RANGES",
+              "limit": 5000,
+              "usage": 0
+            }
+          ],
+          "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1",
+          "supportsPzs": false
+        }
+      }
+    ]
+  }
+}

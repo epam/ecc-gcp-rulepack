@@ -1,0 +1,57 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 09:36:55 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1452",
+    "-content-encoding": "gzip",
+    "content-location": "https://osconfig.googleapis.com/v1/projects/cloud-custodian/patchDeployments?alt=json"
+  },
+  "body": {
+    "patchDeployments": [
+      {
+        "name": "projects/cloud-custodian/patchDeployments/patch-deploy-green-409",
+        "instanceFilter": {
+          "instances": [
+            "projects/cloud-custodian/zones/us-central1-a/instances/instance-409-green"
+          ]
+        },
+        "patchConfig": {
+          "apt": {
+            "type": "DIST",
+            "excludes": [
+              "python"
+            ]
+          }
+        },
+        "recurringSchedule": {
+          "timeZone": {
+            "id": "America/New_York"
+          },
+          "timeOfDay": {
+            "minutes": 30,
+            "seconds": 30,
+            "nanos": 20
+          },
+          "frequency": "MONTHLY",
+          "monthly": {
+            "monthDay": 1
+          },
+          "nextExecuteTime": "2023-02-01T05:30:30.000000020Z"
+        },
+        "createTime": "2023-01-20T09:36:20.395653Z",
+        "updateTime": "2023-01-20T09:36:20.395653Z",
+        "state": "ACTIVE"
+      }
+    ],
+    "nextPageToken": "ChVwcm9qZWN0cy80NDM3MzI0MjY0MDESFHBhdGNoLWRlcGxveS1yZWQtNDA5"
+  }
+}
