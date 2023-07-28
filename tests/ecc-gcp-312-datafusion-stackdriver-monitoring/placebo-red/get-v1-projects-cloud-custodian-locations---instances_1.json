@@ -1,0 +1,46 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 09:15:52 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1147",
+    "-content-encoding": "gzip",
+    "content-location": "https://datafusion.googleapis.com/v1/projects/cloud-custodian/locations/-/instances?alt=json"
+  },
+  "body": {
+    "instances": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/instances/instance-312-red",
+        "type": "DEVELOPER",
+        "networkConfig": {},
+        "labels": {
+          "compliancestatus": "red",
+          "custodiarule": "ecc-gcp-312-datafusion-stackdriver-monitoring"
+        },
+        "createTime": "2023-01-20T09:01:00.799788462Z",
+        "updateTime": "2023-01-20T09:15:07.835591563Z",
+        "state": "ACTIVE",
+        "serviceEndpoint": "https://instance-312-red-cloud-custodian-dot-usc1.datafusion.googleusercontent.com",
+        "zone": "us-central1-a",
+        "version": "6.7.2",
+        "serviceAccount": "cloud-datafusion-management-sa@tenantProjectId.iam.gserviceaccount.com",
+        "availableVersion": [
+          {
+            "versionNumber": "6.8.0"
+          }
+        ],
+        "apiEndpoint": "https://instance-312-red-cloud-custodian-dot-usc1.datafusion.googleusercontent.com/api",
+        "gcsBucket": "gs://df-4989110438112866057-vxn2vieyuei63avbaizbbqaaaa",
+        "p4ServiceAccount": "service-443732426401@gcp-sa-datafusion.iam.gserviceaccount.com",
+        "tenantProjectId": "tenantProjectId"
+      }
+    ]
+  }
+}
