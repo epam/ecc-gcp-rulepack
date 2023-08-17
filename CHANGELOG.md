@@ -17,12 +17,6 @@
 ### :open_file_folder: Other Changes
 - [`e5a5f8f`](https://github.com/epam/ecc-gcp-rulepack/commit/e5a5f8f24ae2c106be16e63edb20d3eef8a46d91) - Added non-compatible policies and terraforms
 - [`04c62f0`](https://github.com/epam/ecc-gcp-rulepack/commit/04c62f0f6197ac75c857ae3e34c425e4809db7f1) - Added least privilege iam files
-- [`3e6062c`](https://github.com/epam/ecc-gcp-rulepack/commit/3e6062cb21d0bd9c8b87e24d5cc47efe02ff989f) - Merge pull request [#4](https://github.com/epam/ecc-gcp-rulepack/pull/4) from epam/non-compatible
-
-Non compatible *(commit by [@Vit-ts](https://github.com/Vit-ts))*
-- [`0d780ca`](https://github.com/epam/ecc-gcp-rulepack/commit/0d780ca1139ef6a5f5032b189c90e0722dc8ea56) - Merge pull request [#6](https://github.com/epam/ecc-gcp-rulepack/pull/6) from epam/feature/new_policies
-
-Feature/new policies *(commit by [@Vit-ts](https://github.com/Vit-ts))*
 
 
 ## [v1.0] - 2023-07-11
