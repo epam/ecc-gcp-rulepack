@@ -14,3 +14,4 @@ policies:
         key: nodePools[?management.autoUpgrade == `true`].initialNodeCount
         value: [2, 1]
         op: intersect
+    comment: '0150072000'

@@ -14,3 +14,4 @@ policies:
         key: privateClusterConfig.enablePrivateEndpoint
         value: true
         op: ne
+    comment: '0130071200'

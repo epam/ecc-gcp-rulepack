@@ -19,3 +19,4 @@ policies:
             key: settings.databaseFlags[?name == 'cloudsql.enable_pgaudit'].value
             value: "on"
             op: contains
+    comment: '0119061000'

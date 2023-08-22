@@ -20,3 +20,4 @@ policies:
             value: 10000000
             value_type: integer
             op: lt
+    comment: '0123042010'

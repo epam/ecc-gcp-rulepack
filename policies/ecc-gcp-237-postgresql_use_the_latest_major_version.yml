@@ -18,3 +18,4 @@ policies:
         key: databaseVersion
         value: "POSTGRES_14"
         op: ne
+    comment: '0121062000'

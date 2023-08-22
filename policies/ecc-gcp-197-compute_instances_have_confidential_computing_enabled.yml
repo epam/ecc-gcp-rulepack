@@ -22,3 +22,4 @@ policies:
           - type: value
             key: "confidentialInstanceConfig.enableConfidentialCompute"
             value: absent
+    comment: '0123031000'

@@ -19,3 +19,4 @@ policies:
             key: "disks[].licenses[] | {range: join(', ', @)}.range"
             value: gke
             op: contains
+    comment: '0130031000'

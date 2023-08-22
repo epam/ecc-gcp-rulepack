@@ -19,3 +19,4 @@ policies:
             key: settings.databaseFlags[?name == 'log_lock_waits'].value
             value: "on"
             op: contains
+    comment: '0119060800'

@@ -11,3 +11,4 @@ policies:
     resource: gcp.project
     filters:
       - type: precondition-check-filter
+    comment: '0119011000'

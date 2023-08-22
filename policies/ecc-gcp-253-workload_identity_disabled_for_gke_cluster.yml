@@ -19,3 +19,4 @@ policies:
                 key: nodePools[].config.workloadMetadataConfig.mode
                 value: "GKE_METADATA"
                 op: contains
+    comment: '0133071200'

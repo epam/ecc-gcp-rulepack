@@ -14,3 +14,4 @@ policies:
         key: peerings[].state
         value: INACTIVE
         op: contains
+    comment: '0130022000'

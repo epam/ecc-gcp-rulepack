@@ -18,3 +18,4 @@ policies:
         key: scheduling.preemptible
         value: 1
         op: eq
+    comment: '0147032000'

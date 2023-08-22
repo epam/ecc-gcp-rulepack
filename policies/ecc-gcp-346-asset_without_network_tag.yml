@@ -13,3 +13,4 @@ policies:
       - type: value
         key: tags.items
         value: absent
+    comment: '0110032000'

@@ -18,3 +18,4 @@ policies:
         key: dnssecConfig.defaultKeySpecs[].algorithm
         value: "rsasha1"
         op: contains
+    comment: '0129021000'

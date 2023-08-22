@@ -18,3 +18,4 @@ policies:
         key: settings.databaseFlags[?value=='on'].name
         value: local_infile
         op: contains
+    comment: '0120061000'

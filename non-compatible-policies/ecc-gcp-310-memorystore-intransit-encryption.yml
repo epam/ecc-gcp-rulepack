@@ -14,3 +14,4 @@ policies:
         key: transitEncryptionMode
         op: ne
         value: "SERVER_AUTHENTICATION"
+    comment: '0144062000'

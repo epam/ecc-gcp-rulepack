@@ -18,3 +18,4 @@ policies:
         key: settings.availabilityType
         value: REGIONAL
         op: ne
+    comment: '0120062000'

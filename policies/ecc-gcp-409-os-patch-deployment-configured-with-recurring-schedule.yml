@@ -13,3 +13,4 @@ policies:
       - type: value
         key: recurringSchedule
         value: absent
+    comment: '0120032000'

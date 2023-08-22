@@ -13,3 +13,4 @@ policies:
       - type: value
         key: properties.networkInterfaces[].accessConfigs[].type
         value: not-null
+    comment: '0140032000'

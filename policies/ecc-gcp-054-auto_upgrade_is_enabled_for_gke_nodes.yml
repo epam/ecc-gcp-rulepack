@@ -13,3 +13,4 @@ policies:
       - type: value
         key: nodePools[].management.autoUpgrade | [0]
         value: absent
+    comment: '0121071200'

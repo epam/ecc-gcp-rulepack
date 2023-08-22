@@ -14,3 +14,4 @@ policies:
         key: scheduling.automaticRestart
         op: ne
         value: true
+    comment: '0120032000'

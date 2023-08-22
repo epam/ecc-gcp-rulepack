@@ -19,3 +19,4 @@ policies:
             key: settings.backupConfiguration.backupRetentionSettings.retainedBackups
             value: 7
             op: lt
+    comment: '0122062000'

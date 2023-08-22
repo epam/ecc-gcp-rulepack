@@ -15,3 +15,4 @@ policies:
           nodePools!=`null` &&
           length(nodePools[?config.bootDiskKmsKey==`null` && (config.diskType==`pd-standard` || config.diskType==`pd-ssd`)])>=`1`
         value: true
+    comment: '0143071200'

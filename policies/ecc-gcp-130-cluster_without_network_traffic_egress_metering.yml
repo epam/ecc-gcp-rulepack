@@ -17,3 +17,4 @@ policies:
         key: resourceUsageExportConfig.enableNetworkEgressMetering
         op: ne
         value: true
+    comment: '0132072000'

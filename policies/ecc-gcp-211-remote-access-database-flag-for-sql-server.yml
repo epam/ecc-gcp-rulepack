@@ -22,3 +22,4 @@ policies:
           - type: value
             key: settings.databaseFlags[?name=='remote access'].name
             value: absent
+    comment: '0139061000'

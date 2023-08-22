@@ -11,3 +11,4 @@ policies:
     resource: gcp.project
     filters:
       - type: log-project-sink-filter
+    comment: '0123011000'

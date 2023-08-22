@@ -24,3 +24,4 @@ policies:
             key: settings.databaseFlags[?name == 'log_error_verbosity'].value
             value: default
             op: contains
+    comment: '0119061000'

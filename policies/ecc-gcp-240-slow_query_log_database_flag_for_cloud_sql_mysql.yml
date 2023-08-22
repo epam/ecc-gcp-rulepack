@@ -19,3 +19,4 @@ policies:
             key: settings.databaseFlags[?name == 'slow_query_log'].value
             value: "on"
             op: contains
+    comment: '0119062000'

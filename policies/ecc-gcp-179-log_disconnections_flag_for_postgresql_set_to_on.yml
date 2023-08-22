@@ -19,3 +19,4 @@ policies:
             key: settings.databaseFlags[?name == 'log_disconnections'].value
             value: "on"
             op: contains
+    comment: '0119061000'
