@@ -14,3 +14,4 @@ policies:
         key: nodeConfig.shieldedInstanceConfig.enableIntegrityMonitoring
         value: true
         op: ne
+    comment: '0132071200'

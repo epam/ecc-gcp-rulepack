@@ -14,3 +14,4 @@ policies:
         key: runtime
         value: ["go111", "nodejs8", "nodejs6"]
         op: in
+    comment: '0120032000'

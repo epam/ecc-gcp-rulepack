@@ -19,3 +19,4 @@ policies:
             key: settings.databaseFlags[?name == 'log_statement'].value
             value: "ddl"
             op: contains
+    comment: '0119061010'

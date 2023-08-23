@@ -13,3 +13,4 @@ policies:
       - type: "encryption-configuration-bigquery-filter"
         key: encryptionConfiguration.kmsKeyName
         value: absent
+    comment: '0125051000'

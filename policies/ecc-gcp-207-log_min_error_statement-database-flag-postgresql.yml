@@ -38,3 +38,4 @@ policies:
             key: settings.databaseFlags[?name == 'log_min_error_statement'].value
             value: "panic"
             op: contains
+    comment: '0119061000'

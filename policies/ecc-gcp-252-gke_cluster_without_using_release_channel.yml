@@ -14,3 +14,4 @@ policies:
           - type: value
             key: releaseChannel.channel
             value: present
+    comment: '0121072000'

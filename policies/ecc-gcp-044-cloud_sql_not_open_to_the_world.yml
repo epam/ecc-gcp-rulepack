@@ -24,3 +24,4 @@ policies:
             key: settings.ipConfiguration.authorizedNetworks[].value | join(`, `, @)
             value: /0
             op: contains
+    comment: '0133061000'

@@ -15,3 +15,4 @@ policies:
             key: filter
             op: eq
             value: "resource.type=\"gce_firewall_rule\" AND jsonPayload.event_subtype=\"compute.firewalls.patch\" OR jsonPayload.event_subtype=\"compute.firewalls.insert\""
+    comment: '0119011000'

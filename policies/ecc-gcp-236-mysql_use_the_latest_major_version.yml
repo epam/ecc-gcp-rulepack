@@ -19,3 +19,4 @@ policies:
             key: databaseVersion
             value: "MYSQL_8_"
             op: contains
+    comment: '0121062000'

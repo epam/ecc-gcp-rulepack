@@ -13,3 +13,4 @@ policies:
       - type: value
         key: resourceLabels
         value: absent
+    comment: '0110070700'

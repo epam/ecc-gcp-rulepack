@@ -19,3 +19,4 @@ policies:
             key: properties.shieldedInstanceConfig.enableIntegrityMonitoring
             op: eq
             value: true
+    comment: '0123032000'

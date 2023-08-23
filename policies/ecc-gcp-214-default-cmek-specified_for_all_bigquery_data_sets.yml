@@ -14,3 +14,4 @@ policies:
           - type: value
             key: defaultEncryptionConfiguration.kmsKeyName
             value: present
+    comment: '0125051000'

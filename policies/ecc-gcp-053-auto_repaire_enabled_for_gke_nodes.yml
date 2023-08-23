@@ -13,3 +13,4 @@ policies:
       - type: value
         key: nodePools[].management.autoRepair | [0]
         value: absent
+    comment: '0150071200'

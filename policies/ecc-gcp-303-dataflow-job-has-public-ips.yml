@@ -18,3 +18,4 @@ policies:
           - type: value
             key: "environment.workerPools[].ipConfiguration | {range: join(', ', @)}.range"
             value: empty
+    comment: '0140052000'

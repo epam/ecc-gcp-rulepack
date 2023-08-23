@@ -36,3 +36,4 @@ policies:
                 key: "destinationRanges | {range: join(', ', @)}.range"
                 value: /0
                 op: contains
+    comment: '0142022000'

@@ -42,3 +42,4 @@ policies:
             key: releaseChannel.channel
             value: ["RAPID", "STABLE", "REGULAR"]
             op: ni
+    comment: '0121072000'

@@ -15,3 +15,4 @@ policies:
         value_type: size
         op: lt
         value: 2
+    comment: '0150072000'

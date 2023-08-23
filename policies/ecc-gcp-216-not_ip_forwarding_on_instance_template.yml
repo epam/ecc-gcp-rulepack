@@ -14,3 +14,4 @@ policies:
         key: properties.canIpForward
         value: true
         op: eq
+    comment: '0130032000'

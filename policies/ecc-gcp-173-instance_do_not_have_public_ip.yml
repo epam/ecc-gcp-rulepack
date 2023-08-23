@@ -24,3 +24,4 @@ policies:
           - type: value
             key: labels."goog-gke-node"
             value: present
+    comment: '0140031000'

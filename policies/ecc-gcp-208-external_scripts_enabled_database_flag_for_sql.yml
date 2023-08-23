@@ -18,3 +18,4 @@ policies:
         key: settings.databaseFlags[?name=='external scripts enabled'].value
         value: "on"
         op: contains
+    comment: '0123061000'

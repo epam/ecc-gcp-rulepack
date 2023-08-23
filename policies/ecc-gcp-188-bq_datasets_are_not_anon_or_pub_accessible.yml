@@ -19,3 +19,4 @@ policies:
             key: 'access[].specialGroup | join(`, `, @)'
             value: allAuthenticatedUsers
             op: contains
+    comment: '0133051000'

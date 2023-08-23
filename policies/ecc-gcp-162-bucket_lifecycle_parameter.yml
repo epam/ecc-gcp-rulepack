@@ -13,3 +13,4 @@ policies:
       - type: value
         key: lifecycle.rule
         value: absent
+    comment: '0107042100'

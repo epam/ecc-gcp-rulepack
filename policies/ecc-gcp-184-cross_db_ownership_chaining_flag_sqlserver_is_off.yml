@@ -23,3 +23,4 @@ policies:
             key: settings.databaseFlags[?name == 'cross db ownership chaining'].value
             value: "off"
             op: contains
+    comment: '0120061000'

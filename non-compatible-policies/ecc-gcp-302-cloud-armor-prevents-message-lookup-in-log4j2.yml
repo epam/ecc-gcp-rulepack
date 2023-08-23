@@ -14,3 +14,4 @@ policies:
         key: "rules[?match.expr.expression==`evaluatePreconfiguredExpr('cve-canary')`].action | {range: join(', ', @)}.range"
         value: "deny(403)"
         op: ne
+    comment: '0123022000'

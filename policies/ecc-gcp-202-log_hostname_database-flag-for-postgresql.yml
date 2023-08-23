@@ -22,3 +22,4 @@ policies:
         key: settings.databaseFlags[?name == 'log_hostname'].value
         value: "on"
         op: contains
+    comment: '0119060910'

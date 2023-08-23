@@ -18,3 +18,4 @@ policies:
         key: settings.databaseFlags[?name == 'log_planner_stats'].value
         value: "on"
         op: contains
+    comment: '0119060800'
