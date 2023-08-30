@@ -1,0 +1,5 @@
+project       = "project_id"
+region        = "us-central1"
+zone          = "us-central1-a"
+snapshot_name = "snapshot-445-red"
+disk_name     = "disk-445-red"
