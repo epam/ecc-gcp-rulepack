@@ -1,0 +1,19 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-444-disk_with_snapshots_not_created_more_than_90_days_ago
+    description: |
+      VM disk with snapshots created more than 90 days ago
+    resource: gcp.snapshot
+    filters:
+      - type: value
+        key: creationTimestamp
+        op: gt
+        value_type: age
+        value: 90
+      - type: disk-availability
+    comment: '0102032000'
