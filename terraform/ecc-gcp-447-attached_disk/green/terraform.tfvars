@@ -1,0 +1,7 @@
+project       = "project_id"
+region        = "us-central1"
+zone          = "us-central1-a"
+disk_name     = "disk-447-green"
+instance_name = "instance-447-green"
+machine_type  = "f1-micro"
+network       = "default"
