@@ -1,0 +1,22 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-442-suspended_instances_for_more_than_a_week
+    description: |
+      VM instances are Suspended for more than a week
+    resource: gcp.instance
+    filters:
+      - type: value
+        key: status
+        value: "SUSPENDED"
+        op: eq
+      - type: value
+        key: lastStartTimestamp
+        value_type: age
+        value: 7
+        op: gt
+    comment: '0103032000'
