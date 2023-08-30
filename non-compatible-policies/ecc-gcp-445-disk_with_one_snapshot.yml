@@ -1,0 +1,20 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-445-disk_with_one_snapshot
+    description: |
+      VM disk with more than one snapshot
+    resource: gcp.snapshot
+    filters:
+      - type: reduce
+        group-by: "sourceDiskId"
+        limit: 2
+      - type: reduce
+        group-by: "sourceDiskId"
+        discard: 1
+      - type: disk-availability
+    comment: '0102032000'
