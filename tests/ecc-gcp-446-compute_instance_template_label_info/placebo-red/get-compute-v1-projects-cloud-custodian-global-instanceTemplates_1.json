@@ -1,0 +1,105 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 29 Aug 2023 12:12:15 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "21168",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates?alt=json"
+  },
+  "body": {
+    "kind": "compute#instanceTemplateList",
+    "id": "projects/cloud-custodian/global/instanceTemplates",
+    "items": [
+      {
+        "kind": "compute#instanceTemplate",
+        "id": "7605208193127444518",
+        "creationTimestamp": "2023-08-29T03:56:09.654-07:00",
+        "name": "instance-template-446-red",
+        "description": "",
+        "properties": {
+          "description": "",
+          "machineType": "e2-micro",
+          "canIpForward": false,
+          "networkInterfaces": [
+            {
+              "kind": "compute#networkInterface",
+              "network": "https://www.googleapis.com/compute/v1/projects/gcp-lab-custodian/global/networks/default",
+              "name": "nic0",
+              "accessConfigs": [
+                {
+                  "kind": "compute#accessConfig",
+                  "type": "ONE_TO_ONE_NAT",
+                  "name": "External NAT",
+                  "networkTier": "PREMIUM"
+                }
+              ],
+              "stackType": "IPV4_ONLY"
+            }
+          ],
+          "disks": [
+            {
+              "kind": "compute#attachedDisk",
+              "type": "PERSISTENT",
+              "mode": "READ_WRITE",
+              "deviceName": "instance-template-446-red",
+              "index": 0,
+              "boot": true,
+              "initializeParams": {
+                "sourceImage": "projects/debian-cloud/global/images/debian-11-bullseye-v20230814",
+                "diskSizeGb": "10",
+                "diskType": "pd-balanced"
+              },
+              "autoDelete": true
+            }
+          ],
+          "metadata": {
+            "kind": "compute#metadata",
+            "fingerprint": "fRPqG8Ocr0I="
+          },
+          "serviceAccounts": [
+            {
+              "email": "443732426401-compute@developer.gserviceaccount.com",
+              "scopes": [
+                "https://www.googleapis.com/auth/devstorage.read_only",
+                "https://www.googleapis.com/auth/logging.write",
+                "https://www.googleapis.com/auth/monitoring.write",
+                "https://www.googleapis.com/auth/servicecontrol",
+                "https://www.googleapis.com/auth/service.management.readonly",
+                "https://www.googleapis.com/auth/trace.append"
+              ]
+            }
+          ],
+          "scheduling": {
+            "onHostMaintenance": "TERMINATE",
+            "automaticRestart": false,
+            "preemptible": true,
+            "provisioningModel": "SPOT",
+            "instanceTerminationAction": "STOP"
+          },
+          "reservationAffinity": {
+            "consumeReservationType": "ANY_RESERVATION"
+          },
+          "shieldedInstanceConfig": {
+            "enableSecureBoot": false,
+            "enableVtpm": true,
+            "enableIntegrityMonitoring": true
+          },
+          "confidentialInstanceConfig": {
+            "enableConfidentialCompute": false
+          },
+          "keyRevocationActionType": "NONE"
+        },
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/gcp-lab-custodian/global/instanceTemplates/instance-template-446-red"
+      }
+    ]
+  }
+}
