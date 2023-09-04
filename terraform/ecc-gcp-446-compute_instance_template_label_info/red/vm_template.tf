@@ -9,6 +9,11 @@ resource "google_compute_instance_template" "this" {
 
   disk {
     source_image = data.google_compute_image.this.self_link
+
+    labels = {
+      custodianrule    = "ecc-gcp-446-compute_instance_template_label_info"
+      compliancestatus = "red"
+    }
   }
 
   network_interface {
