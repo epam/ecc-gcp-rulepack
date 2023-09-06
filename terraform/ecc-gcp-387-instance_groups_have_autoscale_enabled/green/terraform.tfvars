@@ -1,0 +1,7 @@
+project         = "project_id"
+region          = "us-central1"
+machine_type    = "f1-micro"
+template_name   = "template-387-green"
+network         = "default"
+autoscaler_name = "autoscaler-387-green"
+group_name      = "group-387-green"
