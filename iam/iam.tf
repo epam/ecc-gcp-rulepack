@@ -82,6 +82,12 @@ resource "google_project_iam_custom_role" "this" {
     "accessapproval.settings.get",
     "accessapproval.requests.get",
     "serviceusage.services.list",
+    "secretmanager.secrets.list",
+    "compute.instanceGroupManagers.list",
+    "redis.instances.list",
+    "artifactregistry.repositories.list",
+    "osconfig.patchDeployments.list",
+    "compute.networks.getEffectiveFirewalls",
 
   ]
 }
