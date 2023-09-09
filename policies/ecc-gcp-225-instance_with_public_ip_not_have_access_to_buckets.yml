@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-225-instance_with_public_ip_not_have_access_to_buckets
+    comment: '030033032000'
     description: |
       VM instance with public IP address has access to GCS buckets
     resource: gcp.instance
@@ -25,4 +26,3 @@ policies:
           - "https://www.googleapis.com/auth/devstorage.full_control"
           - "https://www.googleapis.com/auth/devstorage.read_only"
           - "https://www.googleapis.com/auth/devstorage.read_write"
-    comment: '0133032000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-066-kms_cryptokey_not_avaliable
+    comment: '030029102000'
     description: |
       KMS cryptokeys is "Not avaliable"
     resource: gcp.kms-cryptokey
@@ -14,4 +15,3 @@ policies:
         key: primary.state
         op: in
         value: [DESTROYED, DISABLED, DESTROY_SCHEDULED, PENDING_GENERATION]
-    comment: '0129102000'

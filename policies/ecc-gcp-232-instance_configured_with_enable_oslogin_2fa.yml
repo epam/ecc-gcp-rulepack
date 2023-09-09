@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-232-instance_configured_with_enable_oslogin_2fa
+    comment: '030036032000'
     description: |
       OS Login is not configured with Two-Factor Authentication (2FA) for production VM instances
     resource: gcp.instance
@@ -18,4 +19,3 @@ policies:
               - "True"
               - "true"
             op: intersect
-    comment: '0136032000'

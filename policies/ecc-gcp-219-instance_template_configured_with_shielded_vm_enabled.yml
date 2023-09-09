@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-219-instance_template_configured_with_shielded_vm_enabled
+    comment: '030023032000'
     description: |
       Instance template configured without Shielded VM features
     resource: gcp.instance-template
@@ -19,4 +20,3 @@ policies:
             key: properties.shieldedInstanceConfig.enableIntegrityMonitoring
             op: eq
             value: true
-    comment: '0123032000'

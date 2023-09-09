@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-190-retention_policy_with_bucket_lock
+    comment: '030047011000'
     description: |
       Retention policies on log buckets are not configured using Bucket Lock
     resource: gcp.logging-sink-bucket
@@ -14,4 +15,3 @@ policies:
         key: retentionPolicy.isLocked
         op: ne
         value: true
-    comment: '0147011000'

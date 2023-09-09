@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-195-clouddns_logging_is_enabled_for_all_vpc_networks
+    comment: '030019021000'
     description: |
       Cloud DNS logging is not enabled for all VPC networks
     resource: gcp.vpc
@@ -15,4 +16,3 @@ policies:
             key: enableLogging
             op: eq
             value: true
-    comment: '0119021000'

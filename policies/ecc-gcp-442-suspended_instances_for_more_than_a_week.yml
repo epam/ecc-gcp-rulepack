@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-442-suspended_instances_for_more_than_a_week
+    comment: '030003032000'
     description: |
       VM instances are Suspended for more than a week
     resource: gcp.instance
@@ -19,4 +20,3 @@ policies:
         value_type: age
         value: 7
         op: gt
-    comment: '0103032000'

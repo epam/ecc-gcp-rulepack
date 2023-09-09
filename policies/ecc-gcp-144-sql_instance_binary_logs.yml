@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-144-sql_instance_binary_logs
+    comment: '030019062000'
     description: |
       MySQL DB Instance backup Binary logs configuration is not enabled
     resource: gcp.sql-instance
@@ -22,4 +23,3 @@ policies:
           - type: value
             key: masterInstanceName
             value: present
-    comment: '0119062000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-035-block_project-wide_ssh_keys_for_instances
+    comment: '030044031000'
     description: |
       "Block Project-wide SSH keys" is not enabled for VM instances
     resource: gcp.instance
@@ -23,4 +24,3 @@ policies:
             key: "disks[].licenses[] | {range: join(', ', @)}.range"
             value: gke
             op: contains
-    comment: '0144031000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-309-dataproc-cluster-does-not-have-a-public-ip
+    comment: '030040152000'
     description: |
       Google Cloud Dataproc cluster has a public IP
     resource: gcp.dataproc-clusters
@@ -14,4 +15,3 @@ policies:
         key: config.gceClusterConfig.internalIpOnly
         op: ne
         value: true
-    comment: '0140152000'

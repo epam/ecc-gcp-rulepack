@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-038-not_ip_forwarding_on_instance
+    comment: '030030031000'
     description: |
       IP forwarding is enabled on Instances
     resource: gcp.instance
@@ -19,4 +20,3 @@ policies:
             key: "disks[].licenses[] | {range: join(', ', @)}.range"
             value: gke
             op: contains
-    comment: '0130031000'

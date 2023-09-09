@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-062-private_google_access_on_kubernetes_engine_cluster_subnets
+    comment: '030040070700'
     description: |
       Private Google Access is not set on Kubernetes Engine Cluster Subnets
     resource: gcp.subnet
@@ -18,4 +19,3 @@ policies:
         key: privateIpGoogleAccess
         value: false
         op: eq
-    comment: '0140070700'

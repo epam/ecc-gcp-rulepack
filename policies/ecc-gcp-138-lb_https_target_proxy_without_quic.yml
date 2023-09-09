@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-138-lb_https_target_proxy_without_quic
+    comment: '030023022000'
     description: |
       Load balancer HTTPS target proxy is not configured with QUIC protocol
     resource: gcp.loadbalancer-target-https-proxy
@@ -14,4 +15,3 @@ policies:
         key: quicOverride
         value: "ENABLE"
         op: ne
-    comment: '0123022000'

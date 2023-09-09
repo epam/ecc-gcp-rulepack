@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-257-app_engine_identity_aware_proxy_disabled
+    comment: '030033162000'
     description: |
       App Engine Identity-Aware Proxy is disabled
     resource: gcp.app-engine
@@ -18,4 +19,3 @@ policies:
         key: iap.enabled
         value: true
         op: ne
-    comment: '0133162000'

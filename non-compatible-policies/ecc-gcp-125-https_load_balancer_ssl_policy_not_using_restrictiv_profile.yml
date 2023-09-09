@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-125-https_load_balancer_ssl_policy_not_using_restrictiv_profile
+    comment: '030023022000'
     description: |
       HTTPS Load balancer SSL Policy is not using a restrictive profile
     resource: gcp.loadbalancer-target-https-proxy-ssl-policy
@@ -14,4 +15,3 @@ policies:
         key: profile
         value: "RESTRICTED"
         op: eq
-    comment: '0123022000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-237-postgresql_use_the_latest_major_version
+    comment: '030021062000'
     description: |
       PostgreSQL database servers are not using the latest major version of PostgreSQL database
     resource: gcp.sql-instance
@@ -18,4 +19,3 @@ policies:
         key: databaseVersion
         value: "POSTGRES_14"
         op: ne
-    comment: '0121062000'

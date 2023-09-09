@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-287-dead-letter_topic_for_pub_sub_subscription
+    comment: '030031052000'
     description: |
       There is not a dead-letter topic configured for each Pub/Sub subscription
     resource: gcp.pubsub-subscription
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: deadLetterPolicy
         value: absent
-    comment: '0131052000'

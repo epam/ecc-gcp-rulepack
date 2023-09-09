@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-126-gke_clusters_have_enable_alpha_cluster
+    comment: '030021071200'
     description: |
       Alpha clusters are used for production workloads
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: enableKubernetesAlpha
         value: true
         op: eq
-    comment: '0121071200'

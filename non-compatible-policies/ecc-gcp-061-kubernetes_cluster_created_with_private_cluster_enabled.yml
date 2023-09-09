@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-061-kubernetes_cluster_created_with_private_cluster_enabled
+    comment: '030040070700'
     description: |
       Kubernetes Cluster is created without Private cluster enabled
     resource: gcp.gke-cluster-beta-api
@@ -14,4 +15,3 @@ policies:
         key: privateCluster
         value: true
         op: ne
-    comment: '0140070700'

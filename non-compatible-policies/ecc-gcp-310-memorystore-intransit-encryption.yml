@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-310-memorystore-intransit-encryption
+    comment: '030044062000'
     description: |
       GCP Memorystore for Redis has in-transit encryption disabled
     resource: gcp.redis-instance
@@ -14,4 +15,3 @@ policies:
         key: transitEncryptionMode
         op: ne
         value: "SERVER_AUTHENTICATION"
-    comment: '0144062000'

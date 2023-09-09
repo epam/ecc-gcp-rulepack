@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-191-integrity_monitoring_for_shielded_gke_nodes
+    comment: '030032071200'
     description: |
       Integrity Monitoring for Shielded GKE Nodes is not Enabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: nodeConfig.shieldedInstanceConfig.enableIntegrityMonitoring
         value: true
         op: ne
-    comment: '0132071200'

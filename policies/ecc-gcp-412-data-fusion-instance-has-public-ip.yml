@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-412-data-fusion-instance-has-public-ip
+    comment: '030040052000'
     description: |
       Datafusion instance has public ip
     resource: gcp.datafusion-instance
@@ -14,4 +15,3 @@ policies:
         key: privateInstance
         value: true
         op: ne
-    comment: '0140052000'

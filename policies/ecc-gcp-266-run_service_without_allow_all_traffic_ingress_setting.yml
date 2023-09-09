@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-266-run_service_without_allow_all_traffic_ingress_setting
+    comment: '030040082000'
     description: |
       Cloud Run service is configured with the allow all traffic ingress setting
     resource: gcp.cloud-run-service
@@ -14,4 +15,3 @@ policies:
         key: metadata.annotations."run.googleapis.com/ingress"
         op: eq
         value: "all"
-    comment: '0140082000'

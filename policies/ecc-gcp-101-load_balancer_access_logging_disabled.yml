@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-101-load_balancer_access_logging_disabled
+    comment: '030019022000'
     description: |
       Load Balancer Access Logging is Disabled
     resource: gcp.loadbalancer-backend-service
@@ -14,4 +15,3 @@ policies:
         key: logConfig.enable
         value: true
         op: ne
-    comment: '0119022000'

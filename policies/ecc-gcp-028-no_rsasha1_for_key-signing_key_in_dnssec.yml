@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-028-no_rsasha1_for_key-signing_key_in_dnssec
+    comment: '030029021000'
     description: |
       RSASHA1 is used for key-signing key in Cloud DNS DNSSEC
     resource: gcp.dns-managed-zone
@@ -18,4 +19,3 @@ policies:
         key: dnssecConfig.defaultKeySpecs[].algorithm
         value: "rsasha1"
         op: contains
-    comment: '0129021000'

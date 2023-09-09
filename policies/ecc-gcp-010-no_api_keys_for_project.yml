@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-010-no_api_keys_for_project
+    comment: '030026001000'
     description: |
       API keys are created for a project
     resource: gcp.api-key
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: name
         value: present
-    comment: '0126001000'

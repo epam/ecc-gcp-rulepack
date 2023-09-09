@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-306-pubsub-topic-is-not-anonymously-or-publicly-accessible
+    comment: '030033052000'
     description: |
       GCP Pub/Sub Topic is anonymously or publicly accessible
     resource: gcp.pubsub-topic
@@ -14,4 +15,3 @@ policies:
         key: members
         value: [allUsers, allAuthenticatedUsers]
         op: intersect
-    comment: '0133052000'

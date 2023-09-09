@@ -9,29 +9,29 @@
 
 policies:
   - name: ecc-gcp-194-oslogin_disabled_for_instance
+    comment: '030023031000'
     description: |
       OS Login is not enabled for an instance
     resource: gcp.instance
     filters:
       - or:
-        - type: value
-          key: metadata.items[?key == `enable-oslogin`].value[]
-          value:
-            - "FALSE"
-            - "False"
-            - "false"
-          op: intersect
-        - not:
           - type: value
-            key: metadata.items[].key
-            value: enable-oslogin
-            op: contains
+            key: metadata.items[?key == `enable-oslogin`].value[]
+            value:
+              - "FALSE"
+              - "False"
+              - "false"
+            op: intersect
+          - not:
+              - type: value
+                key: metadata.items[].key
+                value: enable-oslogin
+                op: contains
       - not:
-        - type: value
-          key: name
-          value: gke
-          op: contains
-        - type: value
-          key: labels."goog-gke-node"
-          value: present
-    comment: '0123031000'
+          - type: value
+            key: name
+            value: gke
+            op: contains
+          - type: value
+            key: labels."goog-gke-node"
+            value: present

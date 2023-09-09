@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-443-enabled_kms_primary_key_version
+    comment: '030009102000'
     description: |
       KMS primary key version is Disabled
     resource: gcp.kms-cryptokey
@@ -14,4 +15,3 @@ policies:
         key: primary.state
         op: eq
         value: "DISABLED"
-    comment: '0109102000'

@@ -6,9 +6,9 @@
 
 policies:
   - name: ecc-gcp-313-access-transparency
+    comment: '030019011000'
     description: |
       'Access Transparency' is not Enabled
     resource: gcp.project
     filters:
       - type: precondition-check-filter
-    comment: '0119011000'

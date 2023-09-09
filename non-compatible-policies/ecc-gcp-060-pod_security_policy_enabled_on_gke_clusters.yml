@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-060-pod_security_policy_enabled_on_gke_clusters
+    comment: '030023071200'
     description: |
       Pod Security Policy is not Enabled and set as appropriate
     resource: gcp.gke-cluster-beta-api
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: podSecurityPolicyConfig
         value: absent
-    comment: '0123071200'

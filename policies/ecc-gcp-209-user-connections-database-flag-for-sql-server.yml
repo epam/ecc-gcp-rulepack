@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-209-user-connections-database-flag-for-sql-server
+    comment: '030020061000'
     description: |
       The 'user connections' database flag for Cloud SQL SQL Server instance is not Set to a Non-limiting Value
     resource: gcp.sql-instance
@@ -23,4 +24,3 @@ policies:
             key: settings.databaseFlags[?name == 'user connections'].value | [0]
             value: "0"
             op: eq
-    comment: '0120061000'

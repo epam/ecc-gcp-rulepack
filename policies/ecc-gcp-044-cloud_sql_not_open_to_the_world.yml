@@ -11,6 +11,7 @@
 
 policies:
   - name: ecc-gcp-044-cloud_sql_not_open_to_the_world
+    comment: '030033061000'
     description: |
       Cloud SQL database Instances are open to the world
     resource: gcp.sql-instance
@@ -24,4 +25,3 @@ policies:
             key: settings.ipConfiguration.authorizedNetworks[].value | join(`, `, @)
             value: /0
             op: contains
-    comment: '0133061000'

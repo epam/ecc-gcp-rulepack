@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-143-primitive_iam_roles_should_not_be_used
+    comment: '030033002000'
     description: |
       Primitive IAM roles are used
     resource: gcp.project-iam-policy-bindings-by-members
@@ -23,4 +24,3 @@ policies:
             key: roles
             value: "roles/owner"
             op: contains
-    comment: '0133002000'

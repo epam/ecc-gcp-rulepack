@@ -6,32 +6,32 @@
 
 policies:
   - name: ecc-gcp-011-api_keys_specified_hosts_and_apps
+    comment: '030026001000'
     description: |
       API keys are not restricted to use by only specified Hosts and Apps
     resource: gcp.api-key
     filters:
       - or:
-        - type: value
-          key: restrictions
-          value: absent
-        - type: value
-          key: restrictions.browserKeyRestrictions.allowedReferrers
-          value: "*"
-          op: contains
-        - type: value
-          key: not_null(restrictions.browserKeyRestrictions.allowedReferrers, ['']) | join(', ', @)
-          value: '\*\..*'
-          op: regex
-        - type: value
-          key: restrictions.serverKeyRestrictions.allowedIps
-          value: "0.0.0.0"
-          op: contains
-        - type: value
-          key: restrictions.serverKeyRestrictions.allowedIps
-          value: "0.0.0.0/0"
-          op: contains
-        - type: value
-          key: restrictions.serverKeyRestrictions.allowedIps
-          value: "::0"
-          op: contains
-    comment: '0126001000'
+          - type: value
+            key: restrictions
+            value: absent
+          - type: value
+            key: restrictions.browserKeyRestrictions.allowedReferrers
+            value: "*"
+            op: contains
+          - type: value
+            key: not_null(restrictions.browserKeyRestrictions.allowedReferrers, ['']) | join(', ', @)
+            value: '\*\..*'
+            op: regex
+          - type: value
+            key: restrictions.serverKeyRestrictions.allowedIps
+            value: "0.0.0.0"
+            op: contains
+          - type: value
+            key: restrictions.serverKeyRestrictions.allowedIps
+            value: "0.0.0.0/0"
+            op: contains
+          - type: value
+            key: restrictions.serverKeyRestrictions.allowedIps
+            value: "::0"
+            op: contains

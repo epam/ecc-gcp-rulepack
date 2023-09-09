@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-234-sql_encrypted_with_cmek
+    comment: '030043062000'
     description: |
       Cloud SQL database instance data encryption is not set to customer managed encryption key
     resource: gcp.sql-instance
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: diskEncryptionConfiguration.kmsKeyName
         value: absent
-    comment: '0143062000'

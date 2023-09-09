@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-298-bucket_without_default_event_based_hold
+    comment: '030023042000'
     description: |
       GCP storage bucket is not configured with default Event-Based Hold
     resource: gcp.bucket
@@ -14,4 +15,3 @@ policies:
         key: defaultEventBasedHold
         value: true
         op: ne
-    comment: '0123042000'

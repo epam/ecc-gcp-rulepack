@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-092-remove_weak_ciphers_for_load_balancer
+    comment: '030023022000'
     description: |
       Weak ciphers are used for Load Balancer
     resource: gcp.loadbalancer-ssl-policy
@@ -14,4 +15,3 @@ policies:
         key: minTlsVersion
         value: TLS_1_0
         op: contains
-    comment: '0123022000'
