@@ -1,0 +1,16 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-446-compute_instance_template_label_info
+    description: |
+      Compute instance template without label info
+    resource: gcp.instance-template
+    filters:
+      - type: value
+        key: properties.labels
+        value: absent
+    comment: '0110032000'

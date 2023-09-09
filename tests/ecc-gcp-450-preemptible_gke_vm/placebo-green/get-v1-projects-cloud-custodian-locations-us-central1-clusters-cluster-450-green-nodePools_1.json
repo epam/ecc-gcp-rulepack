@@ -1,0 +1,80 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 31 Aug 2023 11:06:59 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "4292",
+    "-content-encoding": "gzip",
+    "content-location": "https://container.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/clusters/cluster-450-green/nodePools?alt=json"
+  },
+  "body": {
+    "nodePools": [
+      {
+        "name": "my-node-pool",
+        "config": {
+          "machineType": "e2-micro",
+          "diskSizeGb": 100,
+          "oauthScopes": [
+            "https://www.googleapis.com/auth/devstorage.read_only",
+            "https://www.googleapis.com/auth/logging.write",
+            "https://www.googleapis.com/auth/monitoring",
+            "https://www.googleapis.com/auth/service.management.readonly",
+            "https://www.googleapis.com/auth/servicecontrol",
+            "https://www.googleapis.com/auth/trace.append"
+          ],
+          "metadata": {
+            "disable-legacy-endpoints": "true"
+          },
+          "imageType": "COS_CONTAINERD",
+          "serviceAccount": "default",
+          "preemptible": true,
+          "diskType": "pd-balanced",
+          "shieldedInstanceConfig": {
+            "enableIntegrityMonitoring": true
+          },
+          "loggingConfig": {
+            "variantConfig": {
+              "variant": "DEFAULT"
+            }
+          },
+          "windowsNodeConfig": {}
+        },
+        "initialNodeCount": 1,
+        "management": {
+          "autoUpgrade": true,
+          "autoRepair": true
+        },
+        "podIpv4CidrSize": 24,
+        "locations": [
+          "us-central1-c",
+          "us-central1-a",
+          "us-central1-f"
+        ],
+        "networkConfig": {
+          "enablePrivateNodes": false
+        },
+        "selfLink": "https://container.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/clusters/cluster-450-green/nodePools/my-node-pool",
+        "version": "1.27.3-gke.100",
+        "instanceGroupUrls": [
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-c/instanceGroupManagers/gke-cluster-450-green-my-node-pool-df117c52-grp",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers/gke-cluster-450-green-my-node-pool-da334590-grp",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-f/instanceGroupManagers/gke-cluster-450-green-my-node-pool-d29be9db-grp"
+        ],
+        "status": "RUNNING",
+        "upgradeSettings": {
+          "maxSurge": 1,
+          "strategy": "SURGE"
+        },
+        "etag": "50f98692-e74c-41b6-a362-526302487906"
+      }
+    ]
+  }
+}

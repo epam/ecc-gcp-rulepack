@@ -1,0 +1,92 @@
+{
+  "headers": {
+    "etag": "lqPNNo-YBXFDkd_R54TGq7Ag8qE=/ym6Gtzz3u74GCTo803jQSazC1ZA=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 06 Sep 2023 07:02:27 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "2548",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers?alt=json"
+  },
+  "body": {
+    "id": "projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers",
+    "items": [
+      {
+        "kind": "compute#instanceGroupManager",
+        "id": "8780675209433030084",
+        "creationTimestamp": "2023-09-05T23:58:51.862-07:00",
+        "name": "group-387-green",
+        "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+        "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-387-green",
+        "versions": [
+          {
+            "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-387-green",
+            "targetSize": {
+              "calculated": 1
+            }
+          }
+        ],
+        "instanceGroup": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroups/group-387-green",
+        "baseInstanceName": "app-387-green",
+        "fingerprint": "HehXYAJ9JK8=",
+        "currentActions": {
+          "none": 1,
+          "creating": 0,
+          "creatingWithoutRetries": 0,
+          "verifying": 0,
+          "recreating": 0,
+          "deleting": 0,
+          "abandoning": 0,
+          "restarting": 0,
+          "refreshing": 0,
+          "suspending": 0,
+          "resuming": 0,
+          "stopping": 0,
+          "starting": 0
+        },
+        "status": {
+          "isStable": true,
+          "versionTarget": {
+            "isReached": true
+          },
+          "stateful": {
+            "hasStatefulConfig": false,
+            "perInstanceConfigs": {
+              "allEffective": true
+            }
+          },
+          "autoscaler": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/autoscalers/autoscaler-387-green"
+        },
+        "targetSize": 1,
+        "listManagedInstancesResults": "PAGELESS",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers/group-387-green",
+        "updatePolicy": {
+          "type": "OPPORTUNISTIC",
+          "minimalAction": "REPLACE",
+          "maxSurge": {
+            "fixed": 1,
+            "calculated": 1
+          },
+          "maxUnavailable": {
+            "fixed": 1,
+            "calculated": 1
+          },
+          "replacementMethod": "SUBSTITUTE"
+        },
+        "instanceLifecyclePolicy": {
+          "forceUpdateOnRepair": "NO"
+        }
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers",
+    "kind": "compute#instanceGroupManagerList"
+  }
+}
