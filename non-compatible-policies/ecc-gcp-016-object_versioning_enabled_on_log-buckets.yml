@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-016-object_versioning_enabled_on_log-buckets
+    comment: '030023010700'
     description: |
       Object versioning is disabled on log-buckets
     resource: gcp.logging-sink-bucket
@@ -14,4 +15,3 @@ policies:
         key: versioning.enabled
         value: true
         op: ne
-    comment: '0123010700'

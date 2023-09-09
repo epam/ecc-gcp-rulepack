@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-068-all_keys_have_expiry_date
+    comment: '030029102000'
     description: |
       Expiry date is not set on all keys
     resource: gcp.kms-cryptokey
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: nextRotationTime
         value: absent
-    comment: '0129102000'

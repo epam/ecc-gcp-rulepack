@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-276-armor_security_policy_have_non-default_rules_defined
+    comment: '030027022000'
     description: |
       Cloud Armor Security Policy have not non-default rules defined
     resource: gcp.security-policy
@@ -14,4 +15,3 @@ policies:
         key: length(rules[?priority!=`2147483647`])
         value: 0
         op: eq
-    comment: '0130022000'

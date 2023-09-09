@@ -6,9 +6,9 @@
 
 policies:
   - name: ecc-gcp-015-sinks_for_all_log_entries
+    comment: '030023011000'
     description: |
       The project does not have a sink configured for all log entries.
     resource: gcp.project
     filters:
       - type: log-project-sink-filter
-    comment: '0123011000'

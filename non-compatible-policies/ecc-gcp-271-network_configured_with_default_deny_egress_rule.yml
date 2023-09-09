@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-271-network_configured_with_default_deny_egress_rule
+    comment: '030042022000'
     description: |
       Network is not configured with default deny egress rule in firewall
     resource: gcp.vpc
@@ -36,4 +37,3 @@ policies:
                 key: "destinationRanges | {range: join(', ', @)}.range"
                 value: /0
                 op: contains
-    comment: '0142022000'

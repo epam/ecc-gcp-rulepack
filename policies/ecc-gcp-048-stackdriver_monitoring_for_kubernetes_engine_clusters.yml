@@ -9,6 +9,7 @@
 
 policies:
   - name: ecc-gcp-048-stackdriver_monitoring_for_kubernetes_engine_clusters
+    comment: '030032071200'
     description: |
       Stackdriver Kubernetes Monitoring is not Enabled
     resource: gcp.gke-cluster
@@ -17,4 +18,3 @@ policies:
         key: monitoringService
         op: ne
         value: "monitoring.googleapis.com/kubernetes"
-    comment: '0132071200'

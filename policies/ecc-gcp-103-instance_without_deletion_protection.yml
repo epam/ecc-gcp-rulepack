@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-103-instance_without_deletion_protection
+    comment: '030047032000'
     description: |
       There is an instance without deletion protection
     resource: gcp.instance
@@ -24,4 +25,3 @@ policies:
             key: "disks[].licenses[] | {range: join(', ', @)}.range"
             value: gke
             op: contains
-    comment: '0147032000'

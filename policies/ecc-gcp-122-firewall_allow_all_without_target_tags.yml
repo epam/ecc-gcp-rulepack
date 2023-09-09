@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-122-firewall_allow_all_without_target_tags
+    comment: '030042022000'
     description: |
       Firewall rules allow inbound traffic from anywhere with no target tags set
     resource: gcp.firewall
@@ -18,4 +19,3 @@ policies:
       - type: value
         key: targetTags
         value: absent
-    comment: '0142022000'

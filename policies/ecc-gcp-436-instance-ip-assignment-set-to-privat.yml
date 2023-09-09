@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-436-instance-ip-assignment-set-to-privat
+    comment: '030040061000'
     description: |
       Instance IP assignment is not set to private
     resource: gcp.sql-instance
@@ -15,4 +16,3 @@ policies:
             key: ipAddresses[].type
             op: contains
             value: "PRIVATE"
-    comment: '0140061000'

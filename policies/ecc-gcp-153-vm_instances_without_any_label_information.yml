@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-153-vm_instances_without_any_label_information
+    comment: '030010032000'
     description: |
       There are VM Instances without any Label information
     resource: gcp.instance
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: labels
         value: absent
-    comment: '0110032000'

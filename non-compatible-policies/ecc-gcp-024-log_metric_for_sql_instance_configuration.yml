@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-024-log_metric_for_sql_instance_configuration
+    comment: '030019011000'
     description: |
       The project does not have Log metric filter and alerts for SQL instance configuration changes
     resource: gcp.project
@@ -15,4 +16,3 @@ policies:
             key: filter
             op: eq
             value: "protoPayload.methodName=\"cloudsql.instances.update\""
-    comment: '0119011000'

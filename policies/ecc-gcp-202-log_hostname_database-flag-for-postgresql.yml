@@ -10,6 +10,7 @@
 
 policies:
   - name: ecc-gcp-202-log_hostname_database-flag-for-postgresql
+    comment: '030019060910'
     description: |
       The 'log_hostname' database flag for Cloud SQL PostgreSQL instance is not set appropriately
     resource: gcp.sql-instance
@@ -22,4 +23,3 @@ policies:
         key: settings.databaseFlags[?name == 'log_hostname'].value
         value: "on"
         op: contains
-    comment: '0119060910'

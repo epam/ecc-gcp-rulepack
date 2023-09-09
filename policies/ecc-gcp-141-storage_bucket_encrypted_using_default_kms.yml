@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-141-storage_bucket_encrypted_using_default_kms
+    comment: '030043042000'
     description: |
       Storage bucket is encrypted using google-managed key instead of customer-managed key
     resource: gcp.bucket
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: encryption.defaultKmsKeyName
         value: absent
-    comment: '0143042000'

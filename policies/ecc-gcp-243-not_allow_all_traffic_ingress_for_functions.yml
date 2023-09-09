@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-243-not_allow_all_traffic_ingress_for_functions
+    comment: '030023032000'
     description: |
       Cloud Functions function is configured with the allow all traffic ingress setting
     resource: gcp.function
@@ -14,4 +15,3 @@ policies:
         key: ingressSettings
         value: "ALLOW_ALL"
         op: eq
-    comment: '0123032000'

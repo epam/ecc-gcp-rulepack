@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-059-vpc-native_clusters
+    comment: '030041071200'
     description: |
       Kubernetes Cluster is created without Alias IP ranges enabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: ipAllocationPolicy.useIpAliases
         op: ne
         value: true
-    comment: '0141071200'

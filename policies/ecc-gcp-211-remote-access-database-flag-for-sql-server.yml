@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-211-remote-access-database-flag-for-sql-server
+    comment: '030039061000'
     description: |
       The 'remote access' database flag for Cloud SQL SQL Server instance is not set to 'off'
     resource: gcp.sql-instance
@@ -22,4 +23,3 @@ policies:
           - type: value
             key: settings.databaseFlags[?name=='remote access'].name
             value: absent
-    comment: '0139061000'

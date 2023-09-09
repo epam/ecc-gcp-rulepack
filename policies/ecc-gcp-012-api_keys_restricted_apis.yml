@@ -6,16 +6,16 @@
 
 policies:
   - name: ecc-gcp-012-api_keys_restricted_apis
+    comment: '030026001000'
     description: |
       API Keys are not restricted to only APIs that application needs access
     resource: gcp.api-key
     filters:
       - or:
-        - type: value
-          key: restrictions.apiTargets
-          value: absent
-        - type: value
-          key: restrictions.apiTargets[].service
-          value: "cloudapis.googleapis.com"
-          op: contains
-    comment: '0126001000'
+          - type: value
+            key: restrictions.apiTargets
+            value: absent
+          - type: value
+            key: restrictions.apiTargets[].service
+            value: "cloudapis.googleapis.com"
+            op: contains

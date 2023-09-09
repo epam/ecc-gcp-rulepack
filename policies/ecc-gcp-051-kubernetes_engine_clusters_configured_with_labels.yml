@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-051-kubernetes_engine_clusters_configured_with_labels
+    comment: '030010070700'
     description: |
       Kubernetes Clusters are not configured with Labels
     resource: gcp.gke-cluster
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: resourceLabels
         value: absent
-    comment: '0110070700'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-302-cloud-armor-prevents-message-lookup-in-log4j2
+    comment: '030027022000'
     description: |
       Cloud Armor does not prevent message lookup in Log4j2
     resource: gcp.security-policy
@@ -14,4 +15,3 @@ policies:
         key: "rules[?match.expr.expression==`evaluatePreconfiguredExpr('cve-canary')`].action | {range: join(', ', @)}.range"
         value: "deny(403)"
         op: ne
-    comment: '0123022000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-304-vertex-ai-workbench-does-not-have-public-ips
+    comment: '030040112000'
     description: |
       GCP Vertex AI Workbench has public IPs
     resource: gcp.notebook-instance
@@ -14,4 +15,3 @@ policies:
         key: noPublicIp
         op: ne
         value: true
-    comment: '0140112000'

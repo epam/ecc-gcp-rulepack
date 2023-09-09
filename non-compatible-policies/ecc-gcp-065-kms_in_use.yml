@@ -11,6 +11,7 @@
 
 policies:
   - name: ecc-gcp-065-kms_in_use
+    comment: '030029102010'
     description: |
       There are regions in projects where  Key Management Service is not in use
     resource: gcp.kms-location
@@ -22,4 +23,3 @@ policies:
       - not:
           - type: kms-keyring
             exist: true
-    comment: '0129102010'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-314-access-approval
+    comment: '030033011000'
     description: |
       'Access Approval' is not Enabled
     resource: gcp.project
@@ -13,4 +14,3 @@ policies:
       - type: access-approval-filter
         key: enrolledServices
         value: present
-    comment: '0133011000'

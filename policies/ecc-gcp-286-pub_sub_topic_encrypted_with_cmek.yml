@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-286-pub_sub_topic_encrypted_with_cmek
+    comment: '030025052000'
     description: |
       Pub/Sub topic is not encrypted using a customer-managed encryption key
     resource: gcp.pubsub-topic
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: "kmsKeyName"
         value: absent
-    comment: '0125052000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-025-no_default_network
+    comment: '030018021000'
     description: |
       Default network exists in the project
     resource: gcp.vpc
@@ -14,4 +15,3 @@ policies:
         key: name
         op: eq
         value: default
-    comment: '0118021000'

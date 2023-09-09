@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-133-kubernetes_cluster_intra-node_visibility_disabled
+    comment: '030032071200'
     description: |
       Kubernetes cluster intranode visibility is Disabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: networkConfig.enableIntraNodeVisibility
         op: ne
         value: true
-    comment: '0132071200'

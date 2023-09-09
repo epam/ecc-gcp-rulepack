@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-239-sql_configured_with_storage_auto_resize_true
+    comment: '030050062000'
     description: |
       Automatic storage increase is not enabled for your Cloud SQL database instances
     resource: gcp.sql-instance
@@ -15,4 +16,3 @@ policies:
             key: settings.storageAutoResize
             value: true
             op: eq
-    comment: '0150062000'

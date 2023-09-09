@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-324-user-privilege-escalation-impersonation_project_scope
+    comment: '030033002000'
     description: |
       User has privileges escalation - Impersonation (Project scope)
     resource: gcp.project-iam-policy-bindings-by-members
@@ -14,4 +15,3 @@ policies:
         op: intersect
         value: ["iam.serviceAccounts.actAs"]
         by: user
-    comment: '0133002000'

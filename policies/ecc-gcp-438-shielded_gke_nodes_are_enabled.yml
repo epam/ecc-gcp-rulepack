@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-438-shielded_gke_nodes_are_enabled
+    comment: '030023071200'
     description: |
       Shielded GKE Nodes are disabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: shieldedNodes.enabled
         value: true
         op: ne
-    comment: '0123071200'

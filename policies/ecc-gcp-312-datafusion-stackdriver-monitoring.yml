@@ -9,6 +9,7 @@
 
 policies:
   - name: ecc-gcp-312-datafusion-stackdriver-monitoring
+    comment: '030032052000'
     description: |
       Datafusion does not have stack driver monitoring enabled
     resource: gcp.datafusion-instance
@@ -17,4 +18,3 @@ policies:
         key: enableStackdriverMonitoring
         value: true
         op: ne
-    comment: '0132052000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-434-cmek_for_gke_persistent_disks
+    comment: '030043071200'
     description: |
       Customer-Managed Encryption Keys (CMEK) is not Enabled for GKE Persistent Disks (PD) (FOR NODE BOOT DISKS)
     resource: gcp.gke-cluster
@@ -15,4 +16,3 @@ policies:
           nodePools!=`null` &&
           length(nodePools[?config.bootDiskKmsKey==`null` && (config.diskType==`pd-standard` || config.diskType==`pd-ssd`)])>=`1`
         value: true
-    comment: '0143071200'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-248-cloud_functions_configured_with_event_trigger
+    comment: '030020032000'
     description: |
       Event trigger is not configured in your function
     resource: gcp.function
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: eventTrigger
         value: absent
-    comment: '0120032000'

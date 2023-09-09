@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-216-not_ip_forwarding_on_instance_template
+    comment: '030030032000'
     description: |
       IP forwarding is enabled on Instance templates
     resource: gcp.instance-template
@@ -14,4 +15,3 @@ policies:
         key: properties.canIpForward
         value: true
         op: eq
-    comment: '0130032000'

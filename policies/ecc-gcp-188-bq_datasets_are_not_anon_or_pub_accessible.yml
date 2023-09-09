@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-188-bq_datasets_are_not_anon_or_pub_accessible
+    comment: '030033051000'
     description: |
       BigQuery datasets are anonymously or publicly accessible
     resource: gcp.bq-dataset
@@ -19,4 +20,3 @@ policies:
             key: 'access[].specialGroup | join(`, `, @)'
             value: allAuthenticatedUsers
             op: contains
-    comment: '0133051000'

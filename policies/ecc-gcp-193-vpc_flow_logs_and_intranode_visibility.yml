@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-193-vpc_flow_logs_and_intranode_visibility
+    comment: '030019071200'
     description: |
       VPC Flow Logs and Intranode Visibility are Disabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: networkConfig.enableIntraNodeVisibility
         value: true
         op: ne
-    comment: '0119071200'
