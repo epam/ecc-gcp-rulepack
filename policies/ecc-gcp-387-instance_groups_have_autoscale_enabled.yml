@@ -5,12 +5,12 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 policies:
-  - name: ecc-gcp-152-vm_instances_without_custom_metadata
+  - name: ecc-gcp-387-instance_groups_have_autoscale_enabled
+    comment: '030005032000'
     description: |
-      There are VM Instances without any custom metadata information
-    resource: gcp.instance
+      Instance groups have autoscale disabled
+    resource: gcp.instance-group-manager
     filters:
       - type: value
-        key: metadata.items
+        key: status.autoscaler
         value: absent
-    comment: '030010032000'

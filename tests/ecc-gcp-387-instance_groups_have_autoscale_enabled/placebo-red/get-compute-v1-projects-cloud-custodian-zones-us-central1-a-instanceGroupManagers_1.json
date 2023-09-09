@@ -1,0 +1,91 @@
+{
+  "headers": {
+    "etag": "ju1xTM7I8cIipvJHXnOhrvLr4LY=/wDKWei66Z3fmxJISB121wq__mc4=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 06 Sep 2023 07:10:01 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "2393",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers?alt=json"
+  },
+  "body": {
+    "id": "projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers",
+    "items": [
+      {
+        "kind": "compute#instanceGroupManager",
+        "id": "7489135653982411592",
+        "creationTimestamp": "2023-09-06T00:09:27.450-07:00",
+        "name": "group-387-red",
+        "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+        "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-387-red",
+        "versions": [
+          {
+            "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-387-red",
+            "targetSize": {
+              "calculated": 0
+            }
+          }
+        ],
+        "instanceGroup": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroups/group-387-red",
+        "baseInstanceName": "app-387-red",
+        "fingerprint": "SX9EgknSzAA=",
+        "currentActions": {
+          "none": 0,
+          "creating": 0,
+          "creatingWithoutRetries": 0,
+          "verifying": 0,
+          "recreating": 0,
+          "deleting": 0,
+          "abandoning": 0,
+          "restarting": 0,
+          "refreshing": 0,
+          "suspending": 0,
+          "resuming": 0,
+          "stopping": 0,
+          "starting": 0
+        },
+        "status": {
+          "isStable": true,
+          "versionTarget": {
+            "isReached": true
+          },
+          "stateful": {
+            "hasStatefulConfig": false,
+            "perInstanceConfigs": {
+              "allEffective": true
+            }
+          }
+        },
+        "targetSize": 0,
+        "listManagedInstancesResults": "PAGELESS",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers/group-387-red",
+        "updatePolicy": {
+          "type": "OPPORTUNISTIC",
+          "minimalAction": "REPLACE",
+          "maxSurge": {
+            "fixed": 1,
+            "calculated": 1
+          },
+          "maxUnavailable": {
+            "fixed": 1,
+            "calculated": 1
+          },
+          "replacementMethod": "SUBSTITUTE"
+        },
+        "instanceLifecyclePolicy": {
+          "forceUpdateOnRepair": "NO"
+        }
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers",
+    "kind": "compute#instanceGroupManagerList"
+  }
+}

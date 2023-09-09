@@ -5,12 +5,12 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 policies:
-  - name: ecc-gcp-152-vm_instances_without_custom_metadata
+  - name: ecc-gcp-446-compute_instance_template_label_info
+    comment: '030010032000'
     description: |
-      There are VM Instances without any custom metadata information
-    resource: gcp.instance
+      Compute instance template without label info
+    resource: gcp.instance-template
     filters:
       - type: value
-        key: metadata.items
+        key: properties.labels
         value: absent
-    comment: '030010032000'

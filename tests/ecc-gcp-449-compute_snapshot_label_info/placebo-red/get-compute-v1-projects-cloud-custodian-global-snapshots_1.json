@@ -1,0 +1,49 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Sun, 03 Sep 2023 19:34:49 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1177",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/snapshots?alt=json"
+  },
+  "body": {
+    "kind": "compute#snapshotList",
+    "id": "projects/cloud-custodian/global/snapshots",
+    "items": [
+      {
+        "kind": "compute#snapshot",
+        "id": "2221353459370254416",
+        "creationTimestamp": "2023-09-03T12:30:07.751-07:00",
+        "name": "snapshot-449-red",
+        "status": "READY",
+        "sourceDisk": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/disks/disk-449-red",
+        "sourceDiskId": "8897739022805456677",
+        "diskSizeGb": "10",
+        "storageBytes": "2437972864",
+        "storageBytesStatus": "UP_TO_DATE",
+        "licenses": [
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/licenses/debian-10-buster"
+        ],
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/snapshots/snapshot-449-red",
+        "labelFingerprint": "42WmSpB8rSM=",
+        "licenseCodes": [
+          "5543610867827062957"
+        ],
+        "storageLocations": [
+          "us-central1"
+        ],
+        "downloadBytes": "2438032565",
+        "creationSizeBytes": "2437972864"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/snapshots"
+  }
+}

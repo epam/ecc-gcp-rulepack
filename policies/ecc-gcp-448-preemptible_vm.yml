@@ -5,12 +5,18 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 policies:
-  - name: ecc-gcp-152-vm_instances_without_custom_metadata
+  - name: ecc-gcp-448-preemptible_vm
+    comment: '030006032000'
     description: |
-      There are VM Instances without any custom metadata information
+      VM is not preemptible
     resource: gcp.instance
     filters:
       - type: value
-        key: metadata.items
-        value: absent
-    comment: '030010032000'
+        key: scheduling.preemptible
+        value: true
+        op: ne
+      - not:
+          - type: value
+            key: "disks[].licenses[] | {range: join(', ', @)}.range"
+            value: gke
+            op: contains
