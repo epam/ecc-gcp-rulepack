@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-152-vm_instances_without_custom_metadata
+    comment: '030010032000'
     description: |
       There are VM Instances without any custom metadata information
     resource: gcp.instance
@@ -13,4 +14,4 @@ policies:
       - type: value
         key: metadata.items
         value: absent
-    comment: '0110032000'
+
