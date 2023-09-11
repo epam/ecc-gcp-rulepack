@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-387-instance_groups_have_autoscale_enabled
+    comment: '030005032000'
     description: |
       Instance groups have autoscale disabled
     resource: gcp.instance-group-manager
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: status.autoscaler
         value: absent
-    comment: '0105032000'

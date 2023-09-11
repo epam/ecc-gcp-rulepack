@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-037-not_enable_connecting_to_serial_ports_for_instance
+    comment: '030030031000'
     description: |
       'Enable connecting to serial ports' is enabled for a VM Instance
     resource: gcp.instance
@@ -18,4 +19,3 @@ policies:
           - "true"
           - "1"
         op: intersect
-    comment: '0130031000'

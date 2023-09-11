@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-318-function-runtime-outdated
+    comment: '030020032000'
     description: |
       Cloud function runtime is outdated
     resource: gcp.function
@@ -14,4 +15,3 @@ policies:
         key: runtime
         value: ["go111", "nodejs8", "nodejs6"]
         op: in
-    comment: '0120032000'

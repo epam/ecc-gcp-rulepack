@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-213-bigquery-tables-encrypted-with-CMEK
+    comment: '030025051000'
     description: |
       Some BigQuery Tables are not encrypted with Customer-managed encryption key (CMEK)
     resource: gcp.bq-table
@@ -13,4 +14,3 @@ policies:
       - type: "encryption-configuration-bigquery-filter"
         key: encryptionConfiguration.kmsKeyName
         value: absent
-    comment: '0125051000'

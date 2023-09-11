@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-198-skip_show_database_database_flag_for_mysql
+    comment: '030022061000'
     description: |
       The 'skip_show_database' database flag for Cloud SQL MySQL instance is not set to 'on'
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.databaseFlags[?value=='on'].name
             value: skip_show_database
             op: contains
-    comment: '0122061000'

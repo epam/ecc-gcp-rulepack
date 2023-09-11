@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-055-container_optimized_os_used_for_gke_node_image
+    comment: '030023071200'
     description: |
       Container-Optimized OS (cos_containerd) is not used for GKE node images
     resource: gcp.gke-cluster
@@ -15,4 +16,3 @@ policies:
             key: nodeConfig.imageType
             value: COS
             op: contains
-    comment: '0123071200'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-316-asset-inventory
+    comment: '030018011000'
     description: |
       Cloud Asset Inventory is not Enabled
     resource: gcp.service
@@ -18,4 +19,3 @@ policies:
         key: state
         value: "DISABLED"
         op: eq
-    comment: '0118011000'

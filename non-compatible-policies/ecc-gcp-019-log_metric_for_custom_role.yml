@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-019-log_metric_for_custom_role
+    comment: '030019011000'
     description: |
       The project does not have Log metric filter and alerts for Custom Role changes
     resource: gcp.project
@@ -15,4 +16,3 @@ policies:
             key: filter
             op: eq
             value: "resource.type=\"iam_role\" AND protoPayload.methodName = \"google.iam.admin.v1.CreateRole\" OR protoPayload.methodName=\"google.iam.admin.v1.DeleteRole\" OR protoPayload.methodName=\"google.iam.admin.v1.UpdateRole\""
-    comment: '0119011000'

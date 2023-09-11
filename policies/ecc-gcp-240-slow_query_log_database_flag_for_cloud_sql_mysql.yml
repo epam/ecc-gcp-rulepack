@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-240-slow_query_log_database_flag_for_cloud_sql_mysql
+    comment: '030019062000'
     description: |
       MySQL database instance has the 'slow_query_log' flag set to Off
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.databaseFlags[?name == 'slow_query_log'].value
             value: "on"
             op: contains
-    comment: '0119062000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-072-outbound_traffic_restricted_to_that_which_is_necessary
+    comment: '030042022000'
     description: |
       Outbound traffic is not restricted to only that, which is necessary, and traffic is allowed for all protocols from the entire Internet (0.0.0.0/0)
     resource: gcp.firewall
@@ -25,4 +26,3 @@ policies:
             value: "0.0.0.0/0"
             op: in
             value_type: swap
-    comment: '0142022000'

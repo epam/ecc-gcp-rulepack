@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-177-log_checkpoints_flag_for_postgresql_set_to_on
+    comment: '030019060800'
     description: |
       The 'log_checkpoints' database flag for Cloud SQL PostgreSQL instance is not set to 'on'
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.databaseFlags[?name == 'log_checkpoints'].value
             value: "on"
             op: contains
-    comment: '0119060800'

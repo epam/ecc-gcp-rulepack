@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-315-enable_pgaudit-flag-for-postgresql
+    comment: '030019061000'
     description: |
       The 'cloudsql.enable_pgaudit' Database Flag for Cloud Sql Postgresql Instance is not Set to 'on' For Centralized Logging 
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.databaseFlags[?name == 'cloudsql.enable_pgaudit'].value
             value: "on"
             op: contains
-    comment: '0119061000'

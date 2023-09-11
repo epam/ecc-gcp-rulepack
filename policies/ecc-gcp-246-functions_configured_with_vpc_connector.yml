@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-246-functions_configured_with_vpc_connector
+    comment: '030023032000'
     description: |
       Cloud Functions function is not configured with a VPC connector
     resource: gcp.function
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: vpcConnector
         value: absent
-    comment: '0123032000'

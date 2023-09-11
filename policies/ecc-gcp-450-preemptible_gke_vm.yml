@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-450-preemptible_gke_vm
+    comment: '030006072000'
     description: |
       GKE nodepool VMs are not preemptible
     resource: gcp.gke-nodepool
@@ -14,4 +15,3 @@ policies:
         key: config.preemptible
         value: true
         op: ne
-    comment: '0106072000'

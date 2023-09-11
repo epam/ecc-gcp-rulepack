@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-242-cloud_functions_restrict_public_access
+    comment: '030033032000'
     description: |
       Cloud Functions function does not restrict public access
     resource: gcp.function
@@ -14,4 +15,3 @@ policies:
         key: members
         op: intersect
         value: [allUsers, allAuthenticatedUsers]
-    comment: '0133032000'

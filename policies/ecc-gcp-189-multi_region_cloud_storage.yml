@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-189-multi_region_cloud_storage
+    comment: '030020042000'
     description: |
       Cloud Storage has not multi-region bucket location
     resource: gcp.bucket
@@ -14,4 +15,3 @@ policies:
         key: locationType
         value: "multi-region"
         op: ne
-    comment: '0120042000'

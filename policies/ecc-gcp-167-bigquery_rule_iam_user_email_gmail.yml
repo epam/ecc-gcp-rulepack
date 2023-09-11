@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-167-bigquery_rule_iam_user_email_gmail
+    comment: '030033052000'
     description: |
       BigQuery IAM role grants an individual Google account access to a dataset
     resource: gcp.bq-dataset
@@ -14,4 +15,3 @@ policies:
         key: 'access[].userByEmail | join(`, `, @)'
         value: gmail.com
         op: contains
-    comment: '0133052000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-166-gke_specific_purpose_designed_network
+    comment: '030024072000'
     description: |
       GKE Clusters use default network instead of the specific purpose-designed networks
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: network
         op: eq
         value: default
-    comment: '0124072000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-445-disk_with_one_snapshot
+    comment: '030002032000'
     description: |
       VM disk with more than one snapshot
     resource: gcp.snapshot
@@ -17,4 +18,3 @@ policies:
         group-by: "sourceDiskId"
         discard: 1
       - type: disk-availability
-    comment: '0102032000'

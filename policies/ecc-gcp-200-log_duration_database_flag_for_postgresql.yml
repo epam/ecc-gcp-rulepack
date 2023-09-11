@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-200-log_duration_database_flag_for_postgresql
+    comment: '030019060800'
     description: |
       The 'log_duration' database flag for Cloud SQL PostgreSQL instance is not set to 'on'
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.databaseFlags[?name == 'log_duration'].value
             value: "on"
             op: contains
-    comment: '0119060800'

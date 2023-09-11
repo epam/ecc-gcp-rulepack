@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-107-compute_engine_old_disk_snapshot
+    comment: '030046032000'
     description: |
       There are volumes that have not had a backup or snapshot in the past 14 days
     resource: gcp.snapshot
@@ -21,4 +22,3 @@ policies:
         value_type: age
         value: 14
       - type: disk-availability
-    comment: '0146032000'

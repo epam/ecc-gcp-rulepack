@@ -9,6 +9,7 @@
 
 policies:
   - name: ecc-gcp-311-datafusion-stackdriver-logging
+    comment: '030019052000'
     description: |
       Datafusion does not have stack driver logging enabled
     resource: gcp.datafusion-instance
@@ -17,4 +18,3 @@ policies:
         key: enableStackdriverLogging
         value: true
         op: ne
-    comment: '0119052000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-451-compute_disk_label_info
+    comment: '030010032000'
     description: |
       Compute disk without label info
     resource: gcp.disk
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: labels
         value: absent
-    comment: '0110032000'

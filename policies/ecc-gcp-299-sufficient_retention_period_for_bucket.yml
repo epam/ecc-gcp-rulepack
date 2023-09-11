@@ -10,6 +10,7 @@
 
 policies:
   - name: ecc-gcp-299-sufficient_retention_period_for_bucket
+    comment: '030023042010'
     description: |
       There is no sufficient retention period configured for Google Cloud Storage objects
     resource: gcp.bucket
@@ -20,4 +21,3 @@ policies:
             value: 10000000
             value_type: integer
             op: lt
-    comment: '0123042010'

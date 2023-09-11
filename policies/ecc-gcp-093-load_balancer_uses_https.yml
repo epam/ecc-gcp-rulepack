@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-093-load_balancer_uses_https
+    comment: '030044022000'
     description: |
       GCP Load Balancer uses HTTP instead of HTTPS
     resource: gcp.loadbalancer-backend-service
@@ -15,4 +16,3 @@ policies:
             key: protocol
             op: contains
             value: HTTPS
-    comment: '0144022000'

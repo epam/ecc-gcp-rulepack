@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-176-local_infile_flag_for_mysql_instance_set_to_off
+    comment: '030020061000'
     description: |
       The 'local_infile' database flag for a Cloud SQL MySQL instance is not set to 'off'
     resource: gcp.sql-instance
@@ -18,4 +19,3 @@ policies:
         key: settings.databaseFlags[?value=='on'].name
         value: local_infile
         op: contains
-    comment: '0120061000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-082-cloud_sql_retention_policy_is_at_least_7_days
+    comment: '030022062000'
     description: |
       Cloud SQL retention policy is less then 7 days
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.backupConfiguration.backupRetentionSettings.retainedBackups
             value: 7
             op: lt
-    comment: '0122062000'

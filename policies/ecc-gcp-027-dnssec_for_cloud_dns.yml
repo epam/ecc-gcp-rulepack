@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-027-dnssec_for_cloud_dns
+    comment: '030030021000'
     description: |
       DNSSEC is not enabled for Cloud DNS
     resource: gcp.dns-managed-zone
@@ -18,4 +19,3 @@ policies:
         key: dnssecConfig.state
         value: "on"
         op: ne
-    comment: '0130021000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-163-bucket_labels_parameter
+    comment: '030010042100'
     description: |
       Buckets have no labels
     resource: gcp.bucket
@@ -14,4 +15,3 @@ policies:
           - type: value
             key: labels
             value: present
-    comment: '0110042100'

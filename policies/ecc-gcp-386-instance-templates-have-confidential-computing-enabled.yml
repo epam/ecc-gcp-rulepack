@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-386-instance-templates-have-confidential-computing-enabled
+    comment: '030023032000'
     description: |
       Compute Instance Templates have not Confidential Computing enabled
     resource: gcp.instance-template
@@ -14,4 +15,3 @@ policies:
         key: properties.confidentialInstanceConfig.enableConfidentialCompute
         op: ne
         value: true
-    comment: '0123032000'

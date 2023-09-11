@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-236-mysql_use_the_latest_major_version
+    comment: '030021062000'
     description: |
       MySQL database servers are not using the latest major version of MySQL database
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: databaseVersion
             value: "MYSQL_8_"
             op: contains
-    comment: '0121062000'

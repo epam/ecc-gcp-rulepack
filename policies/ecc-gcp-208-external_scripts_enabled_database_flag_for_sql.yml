@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-208-external_scripts_enabled_database_flag_for_sql
+    comment: '030023061000'
     description: |
       The 'external scripts enabled' database flag for Cloud SQL SQL Server instance is not set to 'off'
     resource: gcp.sql-instance
@@ -18,4 +19,3 @@ policies:
         key: settings.databaseFlags[?name=='external scripts enabled'].value
         value: "on"
         op: contains
-    comment: '0123061000'

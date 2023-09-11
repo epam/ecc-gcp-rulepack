@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-162-bucket_lifecycle_parameter
+    comment: '030007042100'
     description: |
       Buckets have no set life cycle value
     resource: gcp.bucket
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: lifecycle.rule
         value: absent
-    comment: '0107042100'

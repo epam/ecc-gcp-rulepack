@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-077-no_admin_name_for_google_sql
+    comment: '030035062000'
     description: |
       Names like 'Admin' are used for Google SQL Instance admin account login
     resource: gcp.sql-user
@@ -14,4 +15,3 @@ policies:
         key: name
         op: in
         value: [Admin, admin, Administrator, administrator]
-    comment: '0135062000'

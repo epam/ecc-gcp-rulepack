@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-033-vpc_flow_logs_for_every_subnet
+    comment: '030019021000'
     description: |
       VPC Flow logs are not enabled for every subnet in a VPC Network
     resource: gcp.subnet
@@ -18,4 +19,3 @@ policies:
         key: enableFlowLogs
         op: ne
         value: true
-    comment: '0119021000'

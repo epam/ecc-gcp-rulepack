@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-197-compute_instances_have_confidential_computing_enabled
+    comment: '030023031000'
     description: |
       Compute instances have not Confidential Computing enabled
     resource: gcp.instance
@@ -22,4 +23,3 @@ policies:
           - type: value
             key: "confidentialInstanceConfig.enableConfidentialCompute"
             value: absent
-    comment: '0123031000'

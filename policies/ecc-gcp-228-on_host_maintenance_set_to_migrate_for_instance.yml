@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-228-on_host_maintenance_set_to_migrate_for_instance
+    comment: '030023032000'
     description: |
       'On Host Maintenance' configuration setting is not set to 'Migrate' for all VM instances
     resource: gcp.instance
@@ -14,4 +15,3 @@ policies:
         key: scheduling.onHostMaintenance
         op: ne
         value: "MIGRATE"
-    comment: '0123032000'

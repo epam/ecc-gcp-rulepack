@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-415-gke-clusters-have-sandbox-enabled
+    comment: '030021071200'
     description: |
       GKE Sandbox is not enabled
     resource: gcp.gke-nodepool
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: config.sandboxConfig
         value: absent
-    comment: '0121071200'

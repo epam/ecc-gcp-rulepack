@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-123-gke_unsupported_master_node_version
+    comment: '030021072000'
     description: |
       There is unsupported GKE Master node version
     resource: gcp.gke-cluster
@@ -42,4 +43,3 @@ policies:
             key: releaseChannel.channel
             value: ["RAPID", "STABLE", "REGULAR"]
             op: ni
-    comment: '0121072000'

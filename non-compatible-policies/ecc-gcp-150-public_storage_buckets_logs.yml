@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-150-public_storage_buckets_logs
+    comment: '030033042000'
     description: |
       There are Storage Buckets with publicly accessible Stackdriver logs
     resource: gcp.bucket-access-control-list
@@ -14,4 +15,3 @@ policies:
         key: entity
         value: [allUsers, allAuthenticatedUsers]
         op: in
-    comment: '0133042000'

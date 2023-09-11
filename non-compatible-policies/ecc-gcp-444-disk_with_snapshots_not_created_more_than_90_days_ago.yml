@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-444-disk_with_snapshots_not_created_more_than_90_days_ago
+    comment: '030002032000'
     description: |
       VM disk with snapshots created more than 90 days ago
     resource: gcp.snapshot
@@ -16,4 +17,3 @@ policies:
         value_type: age
         value: 90
       - type: disk-availability
-    comment: '0102032000'
