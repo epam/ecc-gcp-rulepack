@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-273-armor_security_policy_adaptive_protection_enabled
+    comment: '030027022000'
     description: |
       Cloud Armor Security Policy have not Adaptive Protection enabled
     resource: gcp.security-policy
@@ -15,4 +16,3 @@ policies:
             key: adaptiveProtectionConfig.layer7DdosDefenseConfig.enable
             value: true
             op: eq
-    comment: '0123022000'

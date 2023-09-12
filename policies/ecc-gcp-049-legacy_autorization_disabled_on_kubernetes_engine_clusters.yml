@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-049-legacy_autorization_disabled_on_kubernetes_engine_clusters
+    comment: '030021071100'
     description: |
       Legacy Authorization (ABAC) is Enabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: legacyAbac.enabled
         value: null
         op: ne
-    comment: '0121071100'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-032-private_google_access_for_all_subnetworks
+    comment: '030039020700'
     description: |
       Private Google Access is not enabled for all subnetworks in a VPC Network
     resource: gcp.subnet
@@ -14,4 +15,3 @@ policies:
         key: privateIpGoogleAccess
         op: ne
         value: true
-    comment: '0139020700'

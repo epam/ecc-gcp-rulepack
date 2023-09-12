@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-165-gke_http_load_balancer_enabled
+    comment: '030050072000'
     description: |
       GKE Cluster HTTP Load balancing is not enabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: addonsConfig.httpLoadBalancing.disabled
         op: eq
         value: true
-    comment: '0150072000'

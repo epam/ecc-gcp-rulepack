@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-229-auto_delete_disabled_for_disk_instance
+    comment: '030047032000'
     description: |
       Auto-Delete feature is not disabled for the disks attached to the VM instances
     resource: gcp.instance
@@ -14,4 +15,3 @@ policies:
         key: disks[].autoDelete
         op: contains
         value: true
-    comment: '0147032000'

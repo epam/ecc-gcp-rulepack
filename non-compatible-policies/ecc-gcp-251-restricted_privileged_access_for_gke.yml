@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-251-restricted_privileged_access_for_gke
+    comment: '030033072000'
     description: |
       GKE node is configured with privileged service account
     resource: gcp.gke-nodepool
@@ -14,4 +15,3 @@ policies:
         key: role
         value: ["roles/viewer", "roles/editor", "roles/owner"]
         op: in
-    comment: '0133072000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-116-firewall_allows_internet_traffic_to_netbios-ssn
+    comment: '030042022000'
     description: |
       Firewall rules allow internet traffic to NetBIOS-SSN port (139)
     resource: gcp.firewall
@@ -30,4 +31,3 @@ policies:
           - type: port-range
             key: allowed[].ports[]
             required-ports: 139
-    comment: '0142022000'

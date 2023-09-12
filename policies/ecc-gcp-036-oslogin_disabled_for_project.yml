@@ -9,6 +9,7 @@
 
 policies:
   - name: ecc-gcp-036-oslogin_disabled_for_project
+    comment: '030023031000'
     description: |
       OS Login is not enabled for a Project
     resource: gcp.compute-project
@@ -21,4 +22,3 @@ policies:
               - "True"
               - "true"
             op: intersect
-    comment: '0123031000'

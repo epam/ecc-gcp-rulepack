@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-217-not_enable_serial_ports_for_instance_template
+    comment: '030030032000'
     description: |
       'Enable connecting to serial ports' is enabled for Instance template
     resource: gcp.instance-template
@@ -17,4 +18,3 @@ policies:
           - "True"
           - "true"
         op: intersect
-    comment: '0130032000'

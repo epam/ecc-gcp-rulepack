@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-043-ssl_connections_for_cloud_sql
+    comment: '030044061000'
     description: |
       Cloud SQL database instance does not require all incoming connections to use SSL
     resource: gcp.sql-instance
@@ -14,4 +15,3 @@ policies:
         key: settings.ipConfiguration.requireSsl
         op: ne
         value: true
-    comment: '0144061000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-448-preemptible_vm
+    comment: '030006032000'
     description: |
       VM is not preemptible
     resource: gcp.instance
@@ -19,4 +20,3 @@ policies:
             key: "disks[].licenses[] | {range: join(', ', @)}.range"
             value: gke
             op: contains
-    comment: '0106032000'

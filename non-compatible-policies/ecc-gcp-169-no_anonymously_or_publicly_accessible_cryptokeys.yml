@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-169-no_anonymously_or_publicly_accessible_cryptokeys
+    comment: '030029101000'
     description: |
       Cloud KMS cryptokeys are anonymously or publicly accessible
     resource: gcp.kms-keyring
@@ -14,4 +15,3 @@ policies:
         key: members
         op: intersect
         value: [allUsers, allAuthenticatedUsers]
-    comment: '0129101000'

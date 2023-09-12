@@ -6,11 +6,11 @@
 
 policies:
   - name: ecc-gcp-013-api_keys_rotation_90_days
+    comment: '030026001000'
     description: |
       API keys are not rotated every 90 days
     resource: gcp.gcp-apikeys
     filters:
       - not:
-        - type: time-range
-          value: 90
-    comment: '0126001000'
+          - type: time-range
+            value: 90

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-104-default_firewall_rule_in_use
+    comment: '030018022000'
     description: |
       There is a default firewall rule in use
     resource: gcp.firewall
@@ -18,4 +19,3 @@ policies:
         key: name
         value: default
         op: contains
-    comment: '0118022000'

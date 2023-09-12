@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-151-vm_instances_enabled_with_pre-emptible_termination
+    comment: '030047032000'
     description: |
       VM Instances are enabled with Pre-Emptible termination
     resource: gcp.instance
@@ -18,4 +19,3 @@ policies:
         key: scheduling.preemptible
         value: 1
         op: eq
-    comment: '0147032000'

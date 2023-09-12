@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-261-dataproc_clusters_encrypted_with_cmek
+    comment: '030023151000'
     description: |
       Dataproc cluster is not encrypted with Customer-Managed Key
     resource: gcp.dataproc-clusters
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: config.encryptionConfig.gcePdKmsKeyName
         value: absent
-    comment: '0123151000'

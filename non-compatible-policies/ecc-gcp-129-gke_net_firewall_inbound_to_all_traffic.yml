@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-129-gke_net_firewall_inbound_to_all_traffic
+    comment: '030042072000'
     description: |
       Kubernetes Engine Clusters network firewall inbound rule is overly permissive to all traffic
     resource: gcp.firewall
@@ -21,4 +22,3 @@ policies:
         value: "0.0.0.0/0"
         op: in
         value_type: swap
-    comment: '0142072000'

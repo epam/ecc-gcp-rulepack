@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-175-cloud_storage_buckets_have_uniform_bucket_level_access
+    comment: '030033041000'
     description: |
       Cloud Storage buckets have not uniform bucket-level access enabled
     resource: gcp.bucket
@@ -14,4 +15,3 @@ policies:
         key: iamConfiguration.uniformBucketLevelAccess.enabled
         value: false
         op: eq
-    comment: '0133041000'

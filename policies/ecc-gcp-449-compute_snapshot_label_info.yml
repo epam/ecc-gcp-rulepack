@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-449-compute_snapshot_label_info
+    comment: '030010032000'
     description: |
       Compute snapshot without label info
     resource: gcp.snapshot
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: labels
         value: absent
-    comment: '0110032000'

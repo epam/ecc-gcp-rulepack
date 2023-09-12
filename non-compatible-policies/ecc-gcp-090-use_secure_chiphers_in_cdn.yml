@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-090-use_secure_chiphers_in_cdn
+    comment: '030023022000'
     description: |
       Weak ciphers are used in CDN
     resource: gcp.loadbalancer-backend-frontend-ssl
@@ -22,4 +23,3 @@ policies:
         key: '"c7n:loadbalancer-backend-frontend"."c7n:loadbalancer-backend-service".protocol'
         value: HTTPS
         op: eq
-    comment: '0123022000'

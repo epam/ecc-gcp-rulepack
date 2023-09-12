@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-079-google_cloud_storage_not_host_static_website
+    comment: '030033042000'
     description: |
       Google Cloud Storage bucket hosts a static website
     resource: gcp.bucket
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: website
         value: present
-    comment: '0133042000'

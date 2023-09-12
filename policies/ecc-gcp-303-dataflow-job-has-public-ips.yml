@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-303-dataflow-job-has-public-ips
+    comment: '030040052000'
     description: |
       GCP Cloud Dataflow job has public IP
     resource: gcp.dataflow-job
@@ -18,4 +19,3 @@ policies:
           - type: value
             key: "environment.workerPools[].ipConfiguration | {range: join(', ', @)}.range"
             value: empty
-    comment: '0140052000'

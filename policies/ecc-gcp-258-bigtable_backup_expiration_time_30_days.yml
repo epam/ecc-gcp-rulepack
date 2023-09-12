@@ -6,10 +6,10 @@
 
 policies:
   - name: ecc-gcp-258-bigtable_backup_expiration_time_30_days
+    comment: '030023062000'
     description: |
       Cloud Bigtable backup expiration time is 29 days or less
     resource: gcp.bigtable-instance-cluster-backup
     filters:
       - type: time-range
         value: 29
-    comment: '0123062000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-178-log_connections_flag_for_postgresql_set_to_on
+    comment: '030019061000'
     description: |
       The 'log_connections' database flag for Cloud SQL PostgreSQL instance is not set to 'on'
     resource: gcp.sql-instance
@@ -19,4 +20,3 @@ policies:
             key: settings.databaseFlags[?name == 'log_connections'].value
             value: "on"
             op: contains
-    comment: '0119061000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-008-encryption_keys_rotation_90_days
+    comment: '030029101000'
     description: |
       KMS encryption keys are not rotated within a period of 90 days
     resource: gcp.kms-cryptokey
@@ -16,4 +17,3 @@ policies:
         value_regex: "([0-9]+)s"
         op: gt
         value: 7776000
-    comment: '0129101000'

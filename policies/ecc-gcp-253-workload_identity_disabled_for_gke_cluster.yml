@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-253-workload_identity_disabled_for_gke_cluster
+    comment: '030033071200'
     description: |
       GCP Kubernetes Engine cluster workload identity is disabled
     resource: gcp.gke-cluster
@@ -19,4 +20,3 @@ policies:
                 key: nodePools[].config.workloadMetadataConfig.mode
                 value: "GKE_METADATA"
                 op: contains
-    comment: '0133071200'

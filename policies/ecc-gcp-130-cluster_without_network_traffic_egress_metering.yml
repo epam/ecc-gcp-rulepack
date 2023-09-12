@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-130-cluster_without_network_traffic_egress_metering
+    comment: '030032072000'
     description: |
       Kubernetes Engine Clusters are not configured with network traffic egress metering
     resource: gcp.gke-cluster
@@ -17,4 +18,3 @@ policies:
         key: resourceUsageExportConfig.enableNetworkEgressMetering
         op: ne
         value: true
-    comment: '0132072000'

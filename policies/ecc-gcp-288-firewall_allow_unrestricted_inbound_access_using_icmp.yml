@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-288-firewall_allow_unrestricted_inbound_access_using_icmp
+    comment: '030042022000'
     description: |
       Firewall rules allow internet traffic to ICMP
     resource: gcp.firewall
@@ -20,4 +21,3 @@ policies:
         value: "0.0.0.0/0"
         op: in
         value_type: swap
-    comment: '0142022000'

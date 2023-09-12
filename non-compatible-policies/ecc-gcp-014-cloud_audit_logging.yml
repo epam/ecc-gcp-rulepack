@@ -6,10 +6,10 @@
 
 policies:
   - name: ecc-gcp-014-cloud_audit_logging
+    comment: '030019011000'
     description: |
       Cloud Audit Logging is not configured properly across all services and all users from a project
     resource: gcp.project
     filters:
       - not:
           - type: audit-config-project-filter
-    comment: '0119011000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-272-firewall_logging_enabled
+    comment: '030019022000'
     description: |
       Firewall logging is not enabled
     resource: gcp.firewall
@@ -14,4 +15,3 @@ policies:
         key: logConfig.enable
         value: true
         op: ne
-    comment: '0119022000'

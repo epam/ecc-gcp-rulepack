@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-264-run_revision_without_vpc_connector
+    comment: '030041082000'
     description: |
       Cloud Run revision is configured without a VPC connector
     resource: gcp.namespace-revision
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: metadata.annotations."run.googleapis.com/vpc-access-connector"
         value: absent
-    comment: '0141082000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-207-log_min_error_statement-database-flag-postgresql
+    comment: '030019061000'
     description: |
       The 'log_min_error_statement' database flag for Cloud SQL PostgreSQL instance is not set to 'Error' or stricter
     resource: gcp.sql-instance
@@ -38,4 +39,3 @@ policies:
             key: settings.databaseFlags[?name == 'log_min_error_statement'].value
             value: "panic"
             op: contains
-    comment: '0119061000'

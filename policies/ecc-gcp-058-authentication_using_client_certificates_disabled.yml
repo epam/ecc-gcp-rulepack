@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-058-authentication_using_client_certificates_disabled
+    comment: '030020071200'
     description: |
       Authentication using Client Certificates is Enabled
     resource: gcp.gke-cluster
@@ -14,4 +15,3 @@ policies:
         key: masterAuth.clientKey
         op: ne
         value: null
-    comment: '0120071200'

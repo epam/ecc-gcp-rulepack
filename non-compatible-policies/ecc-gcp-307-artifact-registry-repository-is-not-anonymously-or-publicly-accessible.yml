@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-307-artifact-registry-repository-is-not-anonymously-or-publicly-accessible
+    comment: '030040082000'
     description: |
       GCP Artifact Registry repository is anonymously or publicly accessible
     resource: gcp.artifactregistry-repository
@@ -14,4 +15,3 @@ policies:
         key: members
         value: [allUsers, allAuthenticatedUsers]
         op: intersect
-    comment: '0140082000'

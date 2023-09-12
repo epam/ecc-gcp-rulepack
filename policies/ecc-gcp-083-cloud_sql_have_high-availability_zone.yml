@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-083-cloud_sql_have_high-availability_zone
+    comment: '030020062000'
     description: |
       Cloud SQL instances have not High-Availability Zone enabled
     resource: gcp.sql-instance
@@ -18,4 +19,3 @@ policies:
         key: settings.availabilityType
         value: REGIONAL
         op: ne
-    comment: '0120062000'

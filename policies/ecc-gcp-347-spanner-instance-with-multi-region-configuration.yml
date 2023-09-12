@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-347-spanner-instance-with-multi-region-configuration
+    comment: '030050062000'
     description: |
       Cloud Spanner Instance is deployed without multi-region configuration
     resource: gcp.spanner-instance
@@ -14,4 +15,3 @@ policies:
         key: config
         op: regex
         value: 'projects/.*/instanceConfigs/regional.*'
-    comment: '0150062000'

@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-187-cloud_sql_instances_with_automated_backups
+    comment: '030049061000'
     description: |
       Cloud SQL database instances are configured without automated backups
     resource: gcp.sql-instance
@@ -18,4 +19,3 @@ policies:
           - type: value
             key: masterInstanceName
             value: present
-    comment: '0149061000'

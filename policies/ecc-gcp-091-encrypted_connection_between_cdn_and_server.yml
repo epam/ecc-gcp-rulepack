@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-091-encrypted_connection_between_cdn_and_server
+    comment: '030044022000'
     description: |
       Connection used between CDN and an origin server is not encrypted
     resource: gcp.loadbalancer-backend-service
@@ -20,4 +21,3 @@ policies:
                 key: protocol
                 op: contains
                 value: HTTPS
-    comment: '0144022000'

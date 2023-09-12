@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-039-vm_disks_encrypted_csek
+    comment: '030043041000'
     description: |
       VM disks for critical VMs are not encrypted with Customer-Supplied Encryption Keys (CSEK)
     resource: gcp.disk
@@ -19,4 +20,3 @@ policies:
             key: sourceImage
             value: gke-node-images
             op: contains
-    comment: '0143041000'

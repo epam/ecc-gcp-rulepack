@@ -6,6 +6,7 @@
 
 policies:
   - name: ecc-gcp-446-compute_instance_template_label_info
+    comment: '030010032000'
     description: |
       Compute instance template without label info
     resource: gcp.instance-template
@@ -13,4 +14,3 @@ policies:
       - type: value
         key: properties.labels
         value: absent
-    comment: '0110032000'
