@@ -1,0 +1,90 @@
+{
+  "headers": {
+    "etag": "KuNGgSF3zfCCAaPIHtVNh7poHt8=/cG8uXph9dza3O_yhObojBc5PeMQ=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 14 Sep 2023 14:44:31 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "2385",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers?alt=json"
+  },
+  "body": {
+    "id": "projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers",
+    "items": [
+      {
+        "kind": "compute#instanceGroupManager",
+        "id": "4647672723620670553",
+        "creationTimestamp": "2023-09-14T07:03:34.487-07:00",
+        "name": "group-231-red",
+        "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+        "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-231-red",
+        "versions": [
+          {
+            "instanceTemplate": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/instanceTemplates/template-231-red",
+            "targetSize": {
+              "calculated": 0
+            }
+          }
+        ],
+        "instanceGroup": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroups/group-231-red",
+        "baseInstanceName": "app",
+        "fingerprint": "aaiIsieGhL0=",
+        "currentActions": {
+          "none": 0,
+          "creating": 0,
+          "creatingWithoutRetries": 0,
+          "verifying": 0,
+          "recreating": 0,
+          "deleting": 0,
+          "abandoning": 0,
+          "restarting": 0,
+          "refreshing": 0,
+          "suspending": 0,
+          "resuming": 0,
+          "stopping": 0,
+          "starting": 0
+        },
+        "status": {
+          "isStable": true,
+          "versionTarget": {
+            "isReached": true
+          },
+          "stateful": {
+            "hasStatefulConfig": false,
+            "perInstanceConfigs": {
+              "allEffective": true
+            }
+          }
+        },
+        "targetSize": 0,
+        "listManagedInstancesResults": "PAGELESS",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers/group-231-red",
+        "updatePolicy": {
+          "type": "OPPORTUNISTIC",
+          "minimalAction": "REPLACE",
+          "maxSurge": {
+            "fixed": 1,
+            "calculated": 1
+          },
+          "maxUnavailable": {
+            "fixed": 1,
+            "calculated": 1
+          },
+          "replacementMethod": "SUBSTITUTE"
+        },
+        "instanceLifecyclePolicy": {
+          "forceUpdateOnRepair": "NO"
+        }
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers",
+    "kind": "compute#instanceGroupManagerList"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "headers": {
+    "etag": "z4QY0MfNoT5NFUHCsYK3tVtt4go=/Mp4sjIM2GIE5e_e16gD9SdgC0BA=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 14 Sep 2023 14:45:07 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "247",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-west2-b/instanceGroupManagers?alt=json"
+  },
+  "body": {
+    "id": "projects/cloud-custodian/zones/us-west2-b/instanceGroupManagers",
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-west2-b/instanceGroupManagers",
+    "kind": "compute#instanceGroupManagerList"
+  }
+}
