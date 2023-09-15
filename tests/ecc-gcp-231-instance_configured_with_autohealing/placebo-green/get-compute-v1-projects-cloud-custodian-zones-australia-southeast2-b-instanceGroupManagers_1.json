@@ -1,0 +1,23 @@
+{
+  "headers": {
+    "etag": "rNythZic8PItUyrioC8amC__7bs=/QA95KRr0I-vFwfIwzhPUNhREeQ8=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 14 Sep 2023 14:44:55 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "271",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/zones/australia-southeast2-b/instanceGroupManagers?alt=json"
+  },
+  "body": {
+    "id": "projects/cloud-custodian/zones/australia-southeast2-b/instanceGroupManagers",
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/australia-southeast2-b/instanceGroupManagers",
+    "kind": "compute#instanceGroupManagerList"
+  }
+}

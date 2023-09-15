@@ -9,7 +9,7 @@ policies:
     comment: '030020032000'
     description: |
       Google Cloud Managed Instance Groups (MIGs) are configured without Autohealing feature.
-    resource: gcp.instance-group-managers
+    resource: gcp.instance-group-manager
     filters:
       - type: value
         key: autoHealingPolicies
