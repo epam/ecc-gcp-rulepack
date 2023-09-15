@@ -9,7 +9,7 @@ policies:
     comment: '030023062000'
     description: |
       Cloud Spanner backup is created with an expiration date of 29 days or less
-    resource: gcp.spanner-instance-backup
+    resource: gcp.spanner-backup
     filters:
       - type: time-range
         value: 29
