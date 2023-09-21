@@ -1,0 +1,51 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 14 Sep 2023 11:21:06 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "2255",
+    "-content-encoding": "gzip",
+    "content-location": "https://redis.googleapis.com/v1/projects/cloud-custodian/locations/-/instances?alt=json"
+  },
+  "body": {
+    "instances": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/instances/mrr-memory-cache-453-red",
+        "displayName": "memory-cache-db-453-red",
+        "locationId": "us-central1-b",
+        "redisVersion": "REDIS_6_X",
+        "reservedIpRange": "10.199.186.200/29",
+        "host": "10.199.186.203",
+        "port": 6379,
+        "currentLocationId": "us-central1-b",
+        "createTime": "2023-09-14T09:29:18.828504553Z",
+        "state": "READY",
+        "tier": "BASIC",
+        "memorySizeGb": 1,
+        "authorizedNetwork": "projects/cloud-custodian/global/networks/default",
+        "persistenceIamIdentity": "serviceAccount:service-443732426401@cloud-redis.iam.gserviceaccount.com",
+        "connectMode": "DIRECT_PEERING",
+        "transitEncryptionMode": "DISABLED",
+        "nodes": [
+          {
+            "id": "node-0",
+            "zone": "us-central1-b"
+          }
+        ],
+        "readReplicasMode": "READ_REPLICAS_DISABLED",
+        "persistenceConfig": {
+          "persistenceMode": "DISABLED"
+        },
+        "maintenanceVersion": "20230821_00_00"
+      }
+    ]
+  }
+}
