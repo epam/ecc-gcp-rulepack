@@ -6,4 +6,4 @@ class PolicyTest(object):
         for key, value in resources[0]['labels'].items():
             if not key.startswith("goog-dataproc-"):
                 count += 1
-        base_test.assertTrue(count==0)
+        base_test.assertTrue(count == 0)
