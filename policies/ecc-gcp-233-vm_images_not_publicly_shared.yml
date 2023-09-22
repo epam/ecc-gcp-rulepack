@@ -11,7 +11,8 @@ policies:
       VM disk images are publicly shared with all other GCP accounts
     resource: gcp.image
     filters:
-      - type: gcp-iam-policy-filter
-        key: members
-        value: [allUsers, allAuthenticatedUsers]
-        op: intersect
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          op: intersect
+          value: [allUsers, allAuthenticatedUsers]
