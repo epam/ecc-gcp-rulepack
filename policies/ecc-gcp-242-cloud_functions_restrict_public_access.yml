@@ -11,7 +11,8 @@ policies:
       Cloud Functions function does not restrict public access
     resource: gcp.function
     filters:
-      - type: gcp-iam-policy-filter
-        key: members
-        op: intersect
-        value: [allUsers, allAuthenticatedUsers]
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          op: intersect
+          value: [allUsers, allAuthenticatedUsers]
