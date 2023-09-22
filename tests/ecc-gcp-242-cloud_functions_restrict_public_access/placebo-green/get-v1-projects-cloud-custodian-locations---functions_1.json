@@ -1,0 +1,46 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 12 Jan 2023 08:19:18 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "10067",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudfunctions.googleapis.com/v1/projects/cloud-custodian/locations/-/functions?alt=json"
+  },
+  "body": {
+    "functions": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/functions/function-242-green",
+        "sourceArchiveUrl": "gs://bucket-242-green/index.zip",
+        "httpsTrigger": {
+          "url": "https://us-central1-cloud-custodian.cloudfunctions.net/function-242-green",
+          "securityLevel": "SECURE_OPTIONAL"
+        },
+        "status": "ACTIVE",
+        "entryPoint": "hello_world",
+        "timeout": "60s",
+        "availableMemoryMb": 128,
+        "serviceAccountEmail": "cloud-custodian@appspot.gserviceaccount.com",
+        "updateTime": "2023-01-12T08:14:46.886Z",
+        "versionId": "1",
+        "labels": {
+          "compliancestatus": "green",
+          "custodiarule": "ecc-gcp-242-cloud_functions_restrict_public_access"
+        },
+        "runtime": "python37",
+        "ingressSettings": "ALLOW_ALL",
+        "buildId": "25cb83ef-d3b6-4c4b-a09a-a5b8a8b7c0f1",
+        "buildName": "projects/cloud-custodian/locations/us-central1/builds/25cb83ef-d3b6-4c4b-a09a-a5b8a8b7c0f1",
+        "dockerRegistry": "CONTAINER_REGISTRY"
+      }
+    ]
+  }
+}
