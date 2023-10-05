@@ -11,7 +11,8 @@ policies:
       Cloud Storage bucket is anonymously or publicly accessible
     resource: gcp.bucket
     filters:
-      - type: gcp-iam-policy-filter
-        key: members
-        value: [allUsers, allAuthenticatedUsers]
-        op: intersect
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          value: [allUsers, allAuthenticatedUsers]
+          op: intersect
