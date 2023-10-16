@@ -1,0 +1,131 @@
+{
+  "headers": {
+    "x-guploader-uploadid": "ADPycdt8UWuCwk44CC23zaaUWxpRwR4UKbwSwIFQ_BhAtkLLtoesLSJBoJ0LuskGwvv3B16SSo2J0_Sbb4NTs38Sz5GcIQ3P308e",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Tue, 08 Nov 2022 19:30:29 GMT",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "expires": "Tue, 08 Nov 2022 19:30:29 GMT",
+    "content-length": "37310",
+    "server": "UploadServer",
+    "status": "200",
+    "content-location": "https://storage.googleapis.com/storage/v1/b?project=custodian&projection=full&alt=json"
+  },
+  "body": {
+    "kind": "storage#buckets",
+    "items": [
+      {
+        "kind": "storage#bucket",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/all-users-040-green",
+        "id": "all-users-040-green",
+        "name": "all-users-040-green",
+        "projectNumber": "111111111111",
+        "metageneration": "2",
+        "location": "US-CENTRAL1",
+        "storageClass": "STANDARD",
+        "etag": "CAI=",
+        "timeCreated": "2022-11-08T19:30:10.839Z",
+        "updated": "2022-11-08T19:30:12.227Z",
+        "acl": [
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "all-users-040-green/project-owners-111111111111",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/all-users-040-green/acl/project-owners-111111111111",
+            "bucket": "all-users-040-green",
+            "entity": "project-owners-111111111111",
+            "role": "OWNER",
+            "etag": "CAI=",
+            "projectTeam": {
+              "projectNumber": "111111111111",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "all-users-040-green/project-editors-111111111111",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/all-users-040-green/acl/project-editors-111111111111",
+            "bucket": "all-users-040-green",
+            "entity": "project-editors-111111111111",
+            "role": "OWNER",
+            "etag": "CAI=",
+            "projectTeam": {
+              "projectNumber": "111111111111",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "all-users-040-green/project-viewers-111111111111",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/all-users-040-green/acl/project-viewers-111111111111",
+            "bucket": "all-users-040-green",
+            "entity": "project-viewers-111111111111",
+            "role": "READER",
+            "etag": "CAI=",
+            "projectTeam": {
+              "projectNumber": "111111111111",
+              "team": "viewers"
+            }
+          },
+          {
+            "kind": "storage#bucketAccessControl",
+            "id": "all-users-040-green/allUsers",
+            "selfLink": "https://www.googleapis.com/storage/v1/b/all-users-040-green/acl/allUsers",
+            "bucket": "all-users-040-green",
+            "entity": "allUsers",
+            "role": "READER",
+            "etag": "CAI="
+          }
+        ],
+        "defaultObjectAcl": [
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-owners-111111111111",
+            "role": "OWNER",
+            "etag": "CAI=",
+            "projectTeam": {
+              "projectNumber": "111111111111",
+              "team": "owners"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-editors-111111111111",
+            "role": "OWNER",
+            "etag": "CAI=",
+            "projectTeam": {
+              "projectNumber": "111111111111",
+              "team": "editors"
+            }
+          },
+          {
+            "kind": "storage#objectAccessControl",
+            "entity": "project-viewers-111111111111",
+            "role": "READER",
+            "etag": "CAI=",
+            "projectTeam": {
+              "projectNumber": "111111111111",
+              "team": "viewers"
+            }
+          }
+        ],
+        "owner": {
+          "entity": "project-owners-111111111111"
+        },
+        "labels": {
+          "compliancestatus": "green",
+          "custodiarule": "ecc-gcp-040-cloud_storage_not_publicly_accessible"
+        },
+        "iamConfiguration": {
+          "bucketPolicyOnly": {
+            "enabled": false
+          },
+          "uniformBucketLevelAccess": {
+            "enabled": false
+          },
+          "publicAccessPrevention": "inherited"
+        },
+        "locationType": "region"
+      }
+    ]
+  }
+}
