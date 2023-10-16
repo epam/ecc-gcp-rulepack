@@ -1,0 +1,75 @@
+{
+  "headers": {
+    "etag": "U/sey1mt6LQgpq8nkA/iEg==",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 16 Oct 2023 13:38:38 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "27493",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigquery.googleapis.com/bigquery/v2/projects/cloud-custodian/jobs?allUsers=true&projection=full&alt=json"
+  },
+  "body": {
+    "etag": "U/sey1mt6LQgpq8nkA/iEg==",
+    "kind": "bigquery#jobList",
+    "jobs": [
+      {
+        "id": "cloud-custodian:US.job_391186e4_456_red",
+        "kind": "bigquery#job",
+        "jobReference": {
+          "projectId": "cloud-custodian",
+          "jobId": "job_391186e4_456_red",
+          "location": "US"
+        },
+        "state": "DONE",
+        "errorResult": {
+          "reason": "notFound",
+          "message": "Not found: Dataset cloud-custodian:dataset_456_red was not found in location US"
+        },
+        "statistics": {
+          "creationTime": "1695906539628",
+          "startTime": "1695906539657",
+          "endTime": "1695906539657"
+        },
+        "configuration": {
+          "query": {
+            "query": "SELECT /* do nothing */ 1;",
+            "destinationTable": {
+              "projectId": "cloud-custodian",
+              "datasetId": "dataset_456_red",
+              "tableId": "table_456_red"
+            },
+            "createDisposition": "CREATE_IF_NEEDED",
+            "writeDisposition": "WRITE_EMPTY",
+            "priority": "INTERACTIVE",
+            "useQueryCache": true,
+            "useLegacySql": false
+          },
+          "jobType": "QUERY"
+        },
+        "status": {
+          "errorResult": {
+            "reason": "notFound",
+            "message": "Not found: Dataset cloud-custodian:dataset_456_red was not found in location US"
+          },
+          "errors": [
+            {
+              "reason": "notFound",
+              "message": "Not found: Dataset cloud-custodian:dataset_456_red was not found in location US"
+            }
+          ],
+          "state": "DONE"
+        },
+        "user_email": "test@cloud-custodian.iam.gserviceaccount.com",
+        "principal_subject": "serviceAccount:test@cloud-custodian.iam.gserviceaccount.com"
+      }
+    ]
+  }
+}
