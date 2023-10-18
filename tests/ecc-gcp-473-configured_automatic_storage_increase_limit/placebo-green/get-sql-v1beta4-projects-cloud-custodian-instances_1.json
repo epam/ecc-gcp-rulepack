@@ -1,0 +1,96 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 18 Oct 2023 08:37:37 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "8240",
+    "-content-encoding": "gzip",
+    "content-location": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances?alt=json"
+  },
+  "body": {
+    "items": [
+      {
+        "kind": "sql#instance",
+        "state": "RUNNABLE",
+        "databaseVersion": "MYSQL_5_7",
+        "settings": {
+          "authorizedGaeApplications": [],
+          "tier": "db-f1-micro",
+          "kind": "sql#settings",
+          "userLabels": {
+            "compliancestatus": "green",
+            "custodiarule": "ecc-gcp-473-configured_automatic_storage_increase_limit"
+          },
+          "availabilityType": "ZONAL",
+          "pricingPlan": "PER_USE",
+          "replicationType": "SYNCHRONOUS",
+          "activationPolicy": "ALWAYS",
+          "ipConfiguration": {
+            "authorizedNetworks": [],
+            "sslMode": "ALLOW_UNENCRYPTED_AND_ENCRYPTED",
+            "ipv4Enabled": true,
+            "requireSsl": false
+          },
+          "locationPreference": {
+            "zone": "us-central1-b",
+            "kind": "sql#locationPreference"
+          },
+          "dataDiskType": "PD_SSD",
+          "backupConfiguration": {
+            "startTime": "10:00",
+            "kind": "sql#backupConfiguration",
+            "backupRetentionSettings": {
+              "retentionUnit": "COUNT",
+              "retainedBackups": 7
+            },
+            "enabled": false,
+            "transactionLogRetentionDays": 7
+          },
+          "connectorEnforcement": "NOT_REQUIRED",
+          "settingsVersion": "1",
+          "storageAutoResizeLimit": "10",
+          "storageAutoResize": true,
+          "dataDiskSizeGb": "10",
+          "deletionProtectionEnabled": false
+        },
+        "etag": "21f4e8008bef131e36832f9c63359ceadcd677d9090fdb2e8286dc0d5bf1804c",
+        "ipAddresses": [
+          {
+            "type": "PRIMARY",
+            "ipAddress": "34.70.49.160"
+          }
+        ],
+        "serverCaCert": {
+          "kind": "sql#sslCert",
+          "certSerialNumber": "0",
+          "cert": "-----BEGIN CERTIFICATE-----\n#\n-----END CERTIFICATE-----",
+          "commonName": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=7ade42ec-cd2a-4586-8a21-877a34a7f2ed",
+          "sha1Fingerprint": "1eba089b7d87045132b48dd95c2b93b898ae9860",
+          "instance": "db-instance-c10b44c1-473-green",
+          "createTime": "2023-10-18T08:22:39.405Z",
+          "expirationTime": "2033-10-15T08:23:39.405Z"
+        },
+        "instanceType": "CLOUD_SQL_INSTANCE",
+        "project": "cloud-custodian",
+        "serviceAccountEmailAddress": "test@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+        "backendType": "SECOND_GEN",
+        "selfLink": "https://sqladmin.googleapis.com/sql/v1beta4/projects/cloud-custodian/instances/db-instance-c10b44c1-473-green",
+        "connectionName": "cloud-custodian:us-central1:db-instance-c10b44c1-473-green",
+        "name": "db-instance-c10b44c1-473-green",
+        "region": "us-central1",
+        "gceZone": "us-central1-f",
+        "databaseInstalledVersion": "MYSQL_5_7_43",
+        "maintenanceVersion": "MYSQL_5_7_43.R20230909.02_00",
+        "createTime": "2023-10-18T08:22:52.533Z"
+      }
+    ]
+  }
+}
