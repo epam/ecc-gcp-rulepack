@@ -9,9 +9,9 @@ policies:
     comment: '030040070700'
     description: |
       Kubernetes Cluster is created without Private cluster enabled
-    resource: gcp.gke-cluster-beta-api
+    resource: gcp.gke-cluster
     filters:
       - type: value
-        key: privateCluster
+        key: privateClusterConfig.enablePrivateNodes
         value: true
         op: ne
