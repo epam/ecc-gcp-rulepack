@@ -1,0 +1,65 @@
+{
+  "headers": {
+    "etag": "zHGPSvqeNl_HjYPVUuHO1v8FnGE=/YdAN1_t35hxfskOAw1rctVbdkWA=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 08:29:37 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "6222",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/securityPolicies?alt=json"
+  },
+  "body": {
+    "kind": "compute#securityPolicyList",
+    "id": "projects/cloud-custodian/global/securityPolicies",
+    "items": [
+      {
+        "kind": "compute#securityPolicy",
+        "id": "1516419158573924499",
+        "creationTimestamp": "2023-01-19T00:25:32.900-08:00",
+        "name": "security-policy-302-green",
+        "rules": [
+          {
+            "kind": "compute#securityPolicyRule",
+            "description": "",
+            "priority": 1,
+            "match": {
+              "expr": {
+                "expression": "evaluatePreconfiguredExpr('cve-canary')"
+              }
+            },
+            "action": "deny(403)",
+            "preview": false,
+            "headerAction": {}
+          },
+          {
+            "kind": "compute#securityPolicyRule",
+            "description": "default rule",
+            "priority": 2147483647,
+            "match": {
+              "versionedExpr": "SRC_IPS_V1",
+              "config": {
+                "srcIpRanges": [
+                  "*"
+                ]
+              }
+            },
+            "action": "allow",
+            "preview": false,
+            "headerAction": {}
+          }
+        ],
+        "fingerprint": "1vbnVMP4fg8=",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/securityPolicies/security-policy-302-green",
+        "type": "CLOUD_ARMOR"
+      }
+    ]
+  }
+}

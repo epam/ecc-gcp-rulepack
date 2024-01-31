@@ -9,7 +9,7 @@ policies:
     comment: '030027022000'
     description: |
       Cloud Armor does not prevent message lookup in Log4j2
-    resource: gcp.security-policy
+    resource: gcp.armor-policy
     filters:
       - type: value
         key: "rules[?match.expr.expression==`evaluatePreconfiguredExpr('cve-canary')`].action | {range: join(', ', @)}.range"
