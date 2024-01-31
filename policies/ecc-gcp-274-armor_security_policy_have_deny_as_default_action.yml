@@ -9,7 +9,7 @@ policies:
     comment: '030027022000'
     description: |
       Cloud Armor Security Policy does not have deny as default action
-    resource: gcp.security-policy
+    resource: gcp.armor-policy
     filters:
       - type: value
         key: "rules[?priority==`2147483647`].action | {range: join(', ', @)}.range"
