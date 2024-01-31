@@ -1,0 +1,52 @@
+{
+  "headers": {
+    "etag": "2mU5xS3dMXQUsp13d9Br4HHqM1s=/7a1v_vlSj9RPtfa1qiCBzD3ZBIA=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 16 Jan 2023 11:02:20 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "8786",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/securityPolicies?alt=json"
+  },
+  "body": {
+    "kind": "compute#securityPolicyList",
+    "id": "projects/cloud-custodian/global/securityPolicies",
+    "items": [
+      {
+        "kind": "compute#securityPolicy",
+        "id": "2567783743400482745",
+        "creationTimestamp": "2023-01-16T02:39:18.861-08:00",
+        "name": "security-policy-274-green",
+        "rules": [
+          {
+            "kind": "compute#securityPolicyRule",
+            "description": "default rule",
+            "priority": 2147483647,
+            "match": {
+              "versionedExpr": "SRC_IPS_V1",
+              "config": {
+                "srcIpRanges": [
+                  "*"
+                ]
+              }
+            },
+            "action": "deny",
+            "preview": false,
+            "headerAction": {}
+          }
+        ],
+        "fingerprint": "#",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/securityPolicies/security-policy-274-green",
+        "type": "CLOUD_ARMOR"
+      }
+    ]
+  }
+}

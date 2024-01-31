@@ -1,0 +1,63 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 09:16:21 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3934",
+    "-content-encoding": "gzip",
+    "content-location": "https://redis.googleapis.com/v1/projects/cloud-custodian/locations/-/instances?alt=json"
+  },
+  "body": {
+    "instances": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/instances/mrr-memory-cache-310-green",
+        "displayName": "memory-cache-db-310-green",
+        "labels": {
+          "compliancestatus": "green",
+          "custodiarule": "ecc-gcp-310-memorystore-intransit-encryption"
+        },
+        "locationId": "us-central1-b",
+        "redisVersion": "REDIS_6_X",
+        "reservedIpRange": "10.97.74.8/29",
+        "host": "10.97.74.11",
+        "port": 6378,
+        "currentLocationId": "us-central1-b",
+        "createTime": "2023-01-19T08:51:13.367611333Z",
+        "state": "READY",
+        "tier": "BASIC",
+        "memorySizeGb": 1,
+        "authorizedNetwork": "projects/cloud-custodian/global/networks/default",
+        "persistenceIamIdentity": "serviceAccount:service-443732426401@cloud-redis.iam.gserviceaccount.com",
+        "connectMode": "DIRECT_PEERING",
+        "serverCaCerts": [
+          {
+            "serialNumber": "0",
+            "cert": "-----BEGIN CERTIFICATE-----\n#\n-----END CERTIFICATE-----",
+            "createTime": "2023-01-19T08:51:21.119367Z",
+            "expireTime": "2033-01-16T08:51:20.948Z",
+            "sha1Fingerprint": "d8862d1b52b9e7aba917f860e53a1ee85e7b8085"
+          }
+        ],
+        "transitEncryptionMode": "SERVER_AUTHENTICATION",
+        "nodes": [
+          {
+            "id": "node-0",
+            "zone": "us-central1-b"
+          }
+        ],
+        "readReplicasMode": "READ_REPLICAS_DISABLED",
+        "persistenceConfig": {
+          "persistenceMode": "DISABLED"
+        }
+      }
+    ]
+  }
+}
