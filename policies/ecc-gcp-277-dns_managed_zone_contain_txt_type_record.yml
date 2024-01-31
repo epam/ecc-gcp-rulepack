@@ -12,7 +12,9 @@ policies:
     resource: gcp.dns-managed-zone
     filters:
       - not:
-          - type: dns-zone-records-sets-filter
-            key: type
-            op: eq
-            value: "TXT"
+          - type: records-sets
+            attrs:
+              - type: value
+                key: type
+                op: eq
+                value: "TXT"
