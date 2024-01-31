@@ -9,7 +9,7 @@ policies:
     comment: '030027022000'
     description: |
       Cloud Armor Security Policy have not Adaptive Protection enabled
-    resource: gcp.security-policy
+    resource: gcp.armor-policy
     filters:
       - not:
           - type: value
