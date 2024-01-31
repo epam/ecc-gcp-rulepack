@@ -1,0 +1,76 @@
+{
+  "headers": {
+    "etag": "BzJtq_bg-EmeyO-ZfcJNrhWJRxg=/_cOe9kdaNdeYJbrZCqTCCtha2zc=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 16 Jan 2023 11:01:21 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "17753",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/networks?alt=json"
+  },
+  "body": {
+    "kind": "compute#networkList",
+    "id": "projects/cloud-custodian/global/networks",
+    "items": [
+      {
+        "kind": "compute#network",
+        "id": "539943938508232215",
+        "creationTimestamp": "2023-01-16T02:37:44.670-08:00",
+        "name": "network-271-green",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-271-green",
+        "selfLinkWithId": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/539943938508232215",
+        "autoCreateSubnetworks": true,
+        "subnetworks": [
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/me-west1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-southwest1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-south2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-south1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-central1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-central2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-east1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-east5/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-east4/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-west4/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west6/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west4/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/southamerica-east1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-west3/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-southeast2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-south1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-west1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-north1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-northeast2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west8/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-west2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west9/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-southeast1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/northamerica-northeast2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-east2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/northamerica-northeast1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/australia-southeast1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/europe-west3/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/southamerica-west1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/us-east1/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/australia-southeast2/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-northeast3/subnetworks/network-271-green",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/regions/asia-northeast1/subnetworks/network-271-green"
+        ],
+        "routingConfig": {
+          "routingMode": "REGIONAL"
+        },
+        "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks"
+  }
+}

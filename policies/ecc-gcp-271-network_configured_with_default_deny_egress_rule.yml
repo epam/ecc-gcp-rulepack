@@ -1,0 +1,51 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-271-network_configured_with_default_deny_egress_rule
+    comment: '030042022000'
+    description: |
+      Network is not configured with default deny egress rule in firewall
+    resource: gcp.vpc
+    filters:
+      - not:
+          - type: firewall
+            attrs:
+              - type: value
+                key: direction
+                op: eq
+                value: "EGRESS"
+          - type: firewall
+            attrs:
+              - type: value
+                key: priority
+                op: eq
+                value: 65535
+          - type: firewall
+            attrs:
+              - type: value
+                key: denied[].IPProtocol
+                op: eq
+                value: ["all"]
+          - type: firewall
+            attrs:
+              - type: value
+                key: logConfig.enable
+                value: true
+                op: eq
+          - or:
+              - type: firewall
+                attrs:
+                  - type: value
+                    key: "destinationRanges | {range: join(', ', @)}.range"
+                    value: 0.0.0.0
+                    op: contains
+              - type: firewall
+                attrs:
+                  - type: value
+                    key: "destinationRanges | {range: join(', ', @)}.range"
+                    value: /0
+                    op: contains
