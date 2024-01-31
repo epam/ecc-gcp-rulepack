@@ -9,7 +9,7 @@ policies:
     comment: '030027022000'
     description: |
       Cloud Armor Security Policy have not non-default rules defined
-    resource: gcp.security-policy
+    resource: gcp.armor-policy
     filters:
       - type: value
         key: length(rules[?priority!=`2147483647`])
