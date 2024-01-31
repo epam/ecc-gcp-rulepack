@@ -9,7 +9,7 @@ policies:
     comment: '030041082000'
     description: |
       Cloud Run revision is configured without a VPC connector
-    resource: gcp.namespace-revision
+    resource: gcp.cloud-run-revision
     filters:
       - type: value
         key: metadata.annotations."run.googleapis.com/vpc-access-connector"
