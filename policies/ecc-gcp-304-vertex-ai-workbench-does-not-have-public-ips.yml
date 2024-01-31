@@ -9,7 +9,7 @@ policies:
     comment: '030040112000'
     description: |
       GCP Vertex AI Workbench has public IPs
-    resource: gcp.notebook-instance
+    resource: gcp.notebook
     filters:
       - type: value
         key: noPublicIp
