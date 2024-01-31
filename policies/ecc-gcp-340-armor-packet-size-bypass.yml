@@ -9,7 +9,7 @@ policies:
     comment: '030027022000'
     description: |
       Cloud Armor has packet size bypass
-    resource: gcp.security-policy
+    resource: gcp.armor-policy
     filters:
       - not:
           - type: value
