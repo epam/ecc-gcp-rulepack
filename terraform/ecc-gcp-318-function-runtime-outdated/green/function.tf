@@ -1,6 +1,6 @@
 resource "google_cloudfunctions_function" "this" {
   name                  = "function-318-green"
-  runtime               = "python37"
+  runtime               = "python311"
   available_memory_mb   = 128
   trigger_http          = true
   entry_point           = "hello_world"

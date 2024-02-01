@@ -20,7 +20,7 @@
       {
         "kind": "sql#instance",
         "state": "RUNNABLE",
-        "databaseVersion": "POSTGRES_14",
+        "databaseVersion": "POSTGRES_15",
         "settings": {
           "authorizedGaeApplications": [],
           "tier": "db-f1-micro",
@@ -85,8 +85,8 @@
         "name": "db-instance-237-green-e6a670c7",
         "region": "us-central1",
         "gceZone": "us-central1-a",
-        "databaseInstalledVersion": "POSTGRES_14_4",
-        "maintenanceVersion": "POSTGRES_14_4.R20220710.01_16",
+        "databaseInstalledVersion": "POSTGRES_15_4",
+        "maintenanceVersion": "POSTGRES_15_4.R20220710.01_16",
         "createTime": "2023-01-10T14:39:21.819Z"
       }
     ]

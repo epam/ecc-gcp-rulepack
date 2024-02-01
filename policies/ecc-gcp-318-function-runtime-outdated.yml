@@ -13,5 +13,5 @@ policies:
     filters:
       - type: value
         key: runtime
-        value: ["go111", "nodejs8", "nodejs6"]
-        op: in
+        value: ["nodejs20", "nodejs18", "python312", "python311", "python310", "python39", "python38", "go121", "go120", "go119", "java21", "java17", "java11", "ruby32", "ruby30", "php82", "php81", "dotnet8", "dotnet6"]
+        op: ni

@@ -34,7 +34,7 @@
           "compliancestatus": "green",
           "custodiarule": "ecc-gcp-318-function-runtime-outdated"
         },
-        "runtime": "python37",
+        "runtime": "python311",
         "ingressSettings": "ALLOW_ALL",
         "buildId": "37289a96-7292-49dd-bc3b-cba0c298b590",
         "buildName": "projects/cloud-custodian/locations/us-central1/builds/37289a96-7292-49dd-bc3b-cba0c298b590",
