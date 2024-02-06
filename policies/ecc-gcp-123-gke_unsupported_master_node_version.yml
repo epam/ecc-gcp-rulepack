@@ -19,7 +19,7 @@ policies:
                 op: eq
               - type: value
                 key: currentMasterVersion
-                value: ["1.26.1-gke.1500", "1.25.6-gke.1000"]
+                value: ["1.29.1-gke.1016000", "1.29.0-gke.1381000", "1.28.6-gke.1095000", "1.27.10-gke.1055000", "1.26.13-gke.1052000", "1.25.16-gke.1360000"]
                 op: ni
           - and:
               - type: value
@@ -28,7 +28,7 @@ policies:
                 op: eq
               - type: value
                 key: currentMasterVersion
-                value: ["1.24.9-gke.3200", "1.23.16-gke.1100"]
+                value: ["1.28.3-gke.1118000", "1.27.8-gke.1067004", "1.27.7-gke.1121002", "1.26.11-gke.1055000", "1.25.16-gke.1041000"]
                 op: ni
           - and:
               - type: value
@@ -37,7 +37,7 @@ policies:
                 op: eq
               - type: value
                 key: currentMasterVersion
-                value: ["1.24.9-gke.3200", "1.25.6-gke.1000"]
+                value: ["1.29.0-gke.1381000", "1.28.5-gke.1217000", "1.27.9-gke.1092000", "1.27.8-gke.1067004", "1.26.12-gke.1111000", "1.25.16-gke.1268000"]
                 op: ni
           - type: value
             key: releaseChannel.channel

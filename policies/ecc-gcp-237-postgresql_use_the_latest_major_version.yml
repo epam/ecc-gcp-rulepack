@@ -17,5 +17,5 @@ policies:
         op: regex
       - type: value
         key: databaseVersion
-        value: "POSTGRES_14"
+        value: "POSTGRES_15"
         op: ne
