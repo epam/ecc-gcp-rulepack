@@ -6,7 +6,7 @@
 
 policies:
   - name: ecc-gcp-053-auto_repaire_enabled_for_gke_nodes
-    comment: '030050071200'
+    comment: '030050072600'
     description: |
       Node Auto-Repair is not enabled for GKE nodes
     resource: gcp.gke-cluster

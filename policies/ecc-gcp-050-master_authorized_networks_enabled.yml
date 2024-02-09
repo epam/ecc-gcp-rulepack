@@ -6,7 +6,7 @@
 
 policies:
   - name: ecc-gcp-050-master_authorized_networks_enabled
-    comment: '030040071200'
+    comment: '030040072600'
     description: |
       Master Authorized Networks is not Enabled
     resource: gcp.gke-cluster

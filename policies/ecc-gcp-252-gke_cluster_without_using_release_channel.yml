@@ -6,7 +6,7 @@
 
 policies:
   - name: ecc-gcp-252-gke_cluster_without_using_release_channel
-    comment: '030021072000'
+    comment: '030021072600'
     description: |
       GCP Kubernetes Engine cluster not using Release Channel for version management
     resource: gcp.gke-cluster
