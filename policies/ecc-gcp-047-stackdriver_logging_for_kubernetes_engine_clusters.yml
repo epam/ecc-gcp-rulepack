@@ -9,7 +9,7 @@
 
 policies:
   - name: ecc-gcp-047-stackdriver_logging_for_kubernetes_engine_clusters
-    comment: '030019071200'
+    comment: '030019072600'
     description: |
       Stackdriver Kubernetes Logging is not Enabled
     resource: gcp.gke-cluster

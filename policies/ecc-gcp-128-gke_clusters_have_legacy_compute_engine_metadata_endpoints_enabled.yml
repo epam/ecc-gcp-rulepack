@@ -6,7 +6,7 @@
 
 policies:
   - name: ecc-gcp-128-gke_clusters_have_legacy_compute_engine_metadata_endpoints_enabled
-    comment: '030023071200'
+    comment: '030023072600'
     description: |
       Legacy Compute Engine instance metadata APIs are Enabled
     resource: gcp.gke-cluster

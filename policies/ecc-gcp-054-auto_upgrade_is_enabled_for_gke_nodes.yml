@@ -6,7 +6,7 @@
 
 policies:
   - name: ecc-gcp-054-auto_upgrade_is_enabled_for_gke_nodes
-    comment: '030021071200'
+    comment: '030021072600'
     description: |
       Node Auto-Upgrade is not enabled for GKE nodes
     resource: gcp.gke-cluster

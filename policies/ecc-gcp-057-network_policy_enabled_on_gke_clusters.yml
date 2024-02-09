@@ -6,7 +6,7 @@
 
 policies:
   - name: ecc-gcp-057-network_policy_enabled_on_gke_clusters
-    comment: '030042071200'
+    comment: '030042072600'
     description: |
       Network Policy is not Enabled and set as appropriate
     resource: gcp.gke-cluster
