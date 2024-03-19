@@ -1,0 +1,112 @@
+name: Terraform testing
+
+on:
+  # Run this workflow manually from the Actions tab
+  workflow_dispatch:
+    inputs:
+      resource_priority_list:
+        type: string
+        description: Priority list for resources (you can remove unnecessary resources during testing)
+        default: 'api-key,app-engine,armor-policy,bigtable,bq,bucket,cloud-run,compute-project,dataflow,datafusion,dataproc,disk,dns,firewall,function,gke,image,instance,kms,loadbalancer,notebook,patch-deployment,pubsub,redis,secret,service,snapshot,spanner,sql,subnet,vpc'
+        required: true
+
+
+env:
+  TF_VAR_project: ${{ secrets.TF_VAR_project }}
+  TF_VAR_region: ${{ secrets.TF_VAR_region }}
+  TF_VAR_zone: ${{ secrets.TF_VAR_zone }}
+  TF_DATA_DIR: ${{ github.workspace }}/policy_testing
+  CORE_TESTING_FOLDER: ${{ github.workspace }}
+  OUTPUT_DIR: ${{ github.workspace }}/policy_testing/output
+
+jobs:
+  terraform_test_policy_red_flights:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    runs-on: ubuntu-22.04
+    container: python:3.8
+    steps:
+      - uses: actions/checkout@v3
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          service_account: ${{ secrets.SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
+          token_format: 'access_token'
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.5.0"
+      - name: Install dependencies
+        shell: bash
+        working-directory: policy_testing/scripts
+        run: |
+          pip install -r requirements.txt
+          pip install c7n_gcp
+          apt-get update
+          apt-get install -y jq
+      - name: terraform_test_policy_red_flights
+        shell: bash
+        working-directory: policy_testing/scripts
+        run: |
+          python main.py \
+            --cloud GCP \
+            --infra_color red \
+            -l ${{ inputs.resource_priority_list }} \
+            --base_dir $GITHUB_WORKSPACE \
+            --output_dir $OUTPUT_DIR \
+            --sa ${{ secrets.GOOGLE_IMPERSONATE_SERVICE_ACCOUNT }}
+          echo "Failed policies:"
+          cat $OUTPUT_DIR/.failed
+          test -s $OUTPUT_DIR/.failed && exit 1
+          exit 0
+  terraform_test_policy_green_flights:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    runs-on: ubuntu-22.04
+    container: python:3.8
+    steps:
+      - uses: actions/checkout@v3
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          service_account: ${{ secrets.SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
+          token_format: 'access_token'
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '20'
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: "1.5.0"
+      - name: Install dependencies
+        shell: bash
+        working-directory: policy_testing/scripts
+        run: |
+          pip install -r requirements.txt
+          pip install c7n_gcp
+          apt-get update
+          apt-get install -y jq
+      - name: terraform_test_policy_green_flights
+        shell: bash
+        working-directory: policy_testing/scripts
+        run: |
+          python main.py \
+            --cloud GCP \
+            --infra_color green \
+            -l ${{ inputs.resource_priority_list }} \
+            --base_dir $GITHUB_WORKSPACE \
+            --output_dir $OUTPUT_DIR \
+            --sa ${{ secrets.GOOGLE_IMPERSONATE_SERVICE_ACCOUNT }}
+          echo "Failed policies:"
+          cat $OUTPUT_DIR/.failed
+          test -s $OUTPUT_DIR/.failed && exit 1
+          exit 0
