@@ -46,7 +46,6 @@ jobs:
         working-directory: policy_testing/scripts
         run: |
           pip install -r requirements.txt
-          pip install c7n_gcp
           apt-get update
           apt-get install -y jq
       - name: terraform_test_policy_red_flights
@@ -91,7 +90,6 @@ jobs:
         working-directory: policy_testing/scripts
         run: |
           pip install -r requirements.txt
-          pip install c7n_gcp
           apt-get update
           apt-get install -y jq
       - name: terraform_test_policy_green_flights

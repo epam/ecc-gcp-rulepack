@@ -1,5 +1,5 @@
 module "naming" {
-  source = "../../shared_tf_modules/naming_gcp"
+  source = "../../shared_tf_modules/naming"
 
   prefix = "green"
 }

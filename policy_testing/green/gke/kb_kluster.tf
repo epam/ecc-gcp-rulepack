@@ -77,16 +77,6 @@ resource "google_container_cluster" "this" {
   }
 }
 
-# resource "google_container_cluster" "this2" {
-#   name                     = "${module.naming.resource_prefix.cluster}2"
-#   location                 = var.region
-#   network                  = google_compute_network.cluster.name
-#   subnetwork               = google_compute_subnetwork.cluster.self_link
-#   remove_default_node_pool = true
-#   initial_node_count       = 1
-#   enable_kubernetes_alpha = true
-# }
-
 resource "google_container_node_pool" "this" {
   name       = module.naming.resource_prefix.node_pool
   cluster    = google_container_cluster.this.id
@@ -114,7 +104,6 @@ resource "google_container_node_pool" "this" {
     }
   }
 }
-
 
 resource "google_compute_subnetwork" "cluster" {
   name                     = "${module.naming.resource_prefix.subnetwork}-cluster"

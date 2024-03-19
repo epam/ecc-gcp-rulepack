@@ -1,40 +1,26 @@
 resource "google_container_cluster" "this" {
-  name     = module.naming.resource_prefix.cluster
-  location = var.region
-  # remove_default_node_pool = true
-  initial_node_count = 1
-  min_master_version = "1.25" # 123, 124 red
-  logging_service    = "none"
-  monitoring_service = "none"
-  # enable_kubernetes_alpha = true
-  deletion_protection   = false
-  enable_shielded_nodes = false
-
-  node_config {
-    preemptible  = true
-    machine_type = "e2-micro"
-    image_type   = "ubuntu_containerd"
-    disk_type    = "pd-standard"
-    metadata = {
-      disable-legacy-endpoints = false
-    }
-
-  }
+  name                     = module.naming.resource_prefix.cluster
+  location                 = var.region
+  remove_default_node_pool = true
+  initial_node_count       = 1
+  min_master_version       = "1.25"
+  logging_service          = "none"
+  monitoring_service       = "none"
+  deletion_protection      = false
+  enable_shielded_nodes    = false
 
   networking_mode = "ROUTES"
+
+  node_config {
+    disk_type = "pd-standard"
+    shielded_instance_config {
+      enable_integrity_monitoring = false
+    }
+  }
 
   addons_config {
     http_load_balancing {
       disabled = true
-    }
-  }
-
-  cluster_autoscaling {
-    auto_provisioning_defaults {
-      management {
-        auto_upgrade = false
-        auto_repair  = false
-      }
     }
   }
 
@@ -65,26 +51,26 @@ resource "google_container_cluster" "this" {
   }
 }
 
-# resource "google_container_node_pool" "this" {
-#   name       = module.naming.resource_prefix.node_pool
-#   cluster    = google_container_cluster.this.id
-#   node_count = 1
+resource "google_container_node_pool" "this" {
+  name       = module.naming.resource_prefix.node_pool
+  cluster    = google_container_cluster.this.id
+  node_count = 1
 
 
-#   management {
-#     auto_repair  = false # 053 red
-#     auto_upgrade = false # 054 red
-#   }
+  management {
+    auto_repair  = false
+    auto_upgrade = false
+  }
 
-#   node_config {
-#     preemptible  = true
-#     machine_type = "e2-micro"
-#     image_type   = "ubuntu_containerd" # 055 red
-#     metadata = {
-#       disable-legacy-endpoints = false # 128 red
-#     }
-#   }
-# }
+  node_config {
+    preemptible  = false
+    machine_type = "e2-micro"
+    image_type   = "ubuntu_containerd"
+    metadata = {
+      disable-legacy-endpoints = false
+    }
+  }
+}
 
 resource "google_bigquery_dataset" "cluster_bq" {
   dataset_id                  = replace("${module.naming.resource_prefix.bq_dataset}_cluster", "-", "_")

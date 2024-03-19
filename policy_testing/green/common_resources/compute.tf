@@ -5,7 +5,3 @@ resource "google_compute_disk" "common" {
   type  = "pd-ssd"
   zone  = var.zone
 }
-
-output "disk_name" {
-  value = google_compute_disk.common.name
-}
