@@ -27,7 +27,7 @@ resource "null_resource" "this" {
     crypto_key_name         = google_kms_crypto_key.this.name
     key_ring_name           = module.naming.resource_prefix.key_ring
   }
-  
+
   provisioner "local-exec" {
     command = join(" ", [
       "gcloud  kms keys versions disable ${self.triggers.crypto_key_primary_name}",

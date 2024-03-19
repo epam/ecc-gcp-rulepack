@@ -17,10 +17,10 @@ resource "google_bigtable_table" "this" {
 }
 
 resource "null_resource" "this" {
-triggers = {
-    bigtable_backup      = module.naming.resource_prefix.bigtable_backup
-    bigtable_instance    = google_bigtable_instance.this.name
-    bigtable_table   = google_bigtable_table.this.name
+  triggers = {
+    bigtable_backup   = module.naming.resource_prefix.bigtable_backup
+    bigtable_instance = google_bigtable_instance.this.name
+    bigtable_table    = google_bigtable_table.this.name
   }
 
   provisioner "local-exec" {
