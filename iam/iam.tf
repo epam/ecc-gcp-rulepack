@@ -69,6 +69,8 @@ resource "google_project_iam_custom_role" "this" {
     "datafusion.instances.list",
     "dataproc.clusters.list",
     "dns.managedZones.list",
+    "dns.resourceRecordSets.get",	
+    "dns.resourceRecordSets.list",
     "iam.serviceAccountKeys.list",
     "iam.serviceAccounts.list",
     "logging.logMetrics.get",
