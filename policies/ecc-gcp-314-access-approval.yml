@@ -11,6 +11,6 @@ policies:
       'Access Approval' is not Enabled
     resource: gcp.project
     filters:
-      - type: access-approval-filter
+      - type: access-approval
         key: enrolledServices
         value: present
