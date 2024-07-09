@@ -11,7 +11,8 @@ policies:
       GCP Pub/Sub Topic is anonymously or publicly accessible
     resource: gcp.pubsub-topic
     filters:
-      - type: gcp-iam-policy-filter
-        key: members
-        value: [allUsers, allAuthenticatedUsers]
-        op: intersect
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          value: [allUsers, allAuthenticatedUsers]
+          op: intersect
