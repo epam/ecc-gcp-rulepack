@@ -11,7 +11,8 @@ policies:
       Cloud KMS cryptokeys are anonymously or publicly accessible
     resource: gcp.kms-keyring
     filters:
-      - type: gcp-iam-policy-filter
-        key: members
-        op: intersect
-        value: [allUsers, allAuthenticatedUsers]
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          op: intersect
+          value: [allUsers, allAuthenticatedUsers]

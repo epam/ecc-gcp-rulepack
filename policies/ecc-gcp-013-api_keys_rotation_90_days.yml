@@ -9,7 +9,7 @@ policies:
     comment: '030026001000'
     description: |
       API keys are not rotated every 90 days
-    resource: gcp.gcp-apikeys
+    resource: gcp.api-key
     filters:
       - not:
           - type: time-range
