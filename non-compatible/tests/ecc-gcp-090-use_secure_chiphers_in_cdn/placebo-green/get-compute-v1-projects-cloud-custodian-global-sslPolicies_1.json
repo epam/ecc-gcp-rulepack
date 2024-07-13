@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "etag": "KrkIZmkUr602cssbTgpJIX8KvvI=/4I4FQzzdihfZtkfO4MVM5j7ucuw=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 12:46:53 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "619",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies?filter=name%3Dssl-policy-090-green&alt=json"
+  },
+  "body": {
+    "kind": "compute#sslPoliciesList",
+    "id": "projects/cloud-custodian/global/sslPolicies",
+    "items": [
+      {
+        "kind": "compute#sslPolicy",
+        "id": "4048696898081993229",
+        "creationTimestamp": "2023-01-20T04:45:22.143-08:00",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies/ssl-policy-090-green",
+        "name": "ssl-policy-090-green",
+        "profile": "MODERN",
+        "minTlsVersion": "TLS_1_1",
+        "fingerprint": "jQCFb4rf4bs="
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies"
+  }
+}

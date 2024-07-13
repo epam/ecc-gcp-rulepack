@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 04 Oct 2022 16:36:21 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "server-timing": "gfet4t7; dur=755",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "9822",
+    "-content-encoding": "gzip"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwXqOAg5CA0=",
+    "bindings": [
+      {
+        "role": "projects/cloud-custodian/roles/CustomRole111",
+        "members": [
+          "serviceAccount:custom@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      },
+      {
+        "role": "roles/editor",
+        "members": [
+          "serviceAccount:service-account-id-004-red@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+}

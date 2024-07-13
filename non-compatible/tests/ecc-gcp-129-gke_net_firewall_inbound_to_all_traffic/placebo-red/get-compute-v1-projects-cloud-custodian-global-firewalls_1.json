@@ -1,0 +1,188 @@
+{
+  "headers": {
+    "etag": "SvFVWGHSL_K_0qSBOswKUvrdC4M=/GQBit0ppBs4cz3c21m5Jf5ecEzg=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 13 Dec 2022 08:24:47 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "9868",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls?alt=json"
+  },
+  "body": {
+    "kind": "compute#firewallList",
+    "id": "projects/cloud-custodian/global/firewalls",
+    "items": [
+      {
+        "kind": "compute#firewall",
+        "id": "2445584480647612984",
+        "creationTimestamp": "2022-12-13T00:16:23.086-08:00",
+        "name": "firewall-129-red",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-129-red",
+        "priority": 1000,
+        "sourceRanges": [
+          "0.0.0.0/0"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "all"
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/firewall-129-red"
+      },
+      {
+        "kind": "compute#firewall",
+        "id": "6768737387858463672",
+        "creationTimestamp": "2022-12-13T00:18:31.545-08:00",
+        "name": "gke-cluster-129-red-0da788d8-all",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-129-red",
+        "priority": 1000,
+        "sourceRanges": [
+          "10.84.0.0/14"
+        ],
+        "targetTags": [
+          "gke-cluster-129-red-0da788d8-node"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "sctp"
+          },
+          {
+            "IPProtocol": "tcp"
+          },
+          {
+            "IPProtocol": "udp"
+          },
+          {
+            "IPProtocol": "icmp"
+          },
+          {
+            "IPProtocol": "esp"
+          },
+          {
+            "IPProtocol": "ah"
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/gke-cluster-129-red-0da788d8-all"
+      },
+      {
+        "kind": "compute#firewall",
+        "id": "4131352066221509560",
+        "creationTimestamp": "2022-12-13T00:18:31.608-08:00",
+        "name": "gke-cluster-129-red-0da788d8-exkubelet",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-129-red",
+        "priority": 1000,
+        "sourceRanges": [
+          "0.0.0.0/0"
+        ],
+        "targetTags": [
+          "gke-cluster-129-red-0da788d8-node"
+        ],
+        "denied": [
+          {
+            "IPProtocol": "tcp",
+            "ports": [
+              "10255"
+            ]
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/gke-cluster-129-red-0da788d8-exkubelet"
+      },
+      {
+        "kind": "compute#firewall",
+        "id": "8044153691914472376",
+        "creationTimestamp": "2022-12-13T00:18:31.636-08:00",
+        "name": "gke-cluster-129-red-0da788d8-inkubelet",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-129-red",
+        "priority": 999,
+        "sourceRanges": [
+          "10.84.0.0/14"
+        ],
+        "sourceTags": [
+          "gke-cluster-129-red-0da788d8-node"
+        ],
+        "targetTags": [
+          "gke-cluster-129-red-0da788d8-node"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "tcp",
+            "ports": [
+              "10255"
+            ]
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/gke-cluster-129-red-0da788d8-inkubelet"
+      },
+      {
+        "kind": "compute#firewall",
+        "id": "5781012621947145144",
+        "creationTimestamp": "2022-12-13T00:18:31.787-08:00",
+        "name": "gke-cluster-129-red-0da788d8-vms",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-129-red",
+        "priority": 1000,
+        "sourceRanges": [
+          "10.128.0.0/9"
+        ],
+        "targetTags": [
+          "gke-cluster-129-red-0da788d8-node"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "udp",
+            "ports": [
+              "1-65535"
+            ]
+          },
+          {
+            "IPProtocol": "icmp"
+          },
+          {
+            "IPProtocol": "tcp",
+            "ports": [
+              "1-65535"
+            ]
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/gke-cluster-129-red-0da788d8-vms"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls"
+  }
+}

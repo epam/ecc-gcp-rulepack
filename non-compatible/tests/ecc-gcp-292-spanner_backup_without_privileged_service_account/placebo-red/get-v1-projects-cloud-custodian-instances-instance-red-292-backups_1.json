@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 18 Jan 2023 15:22:43 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "server-timing": "gfet4t7; dur=725",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "580",
+    "-content-encoding": "gzip",
+    "content-location": "https://spanner.googleapis.com/v1/projects/cloud-custodian/instances/instance-red-292/backups?alt=json"
+  },
+  "body": {
+    "backups": [
+      {
+        "name": "projects/cloud-custodian/instances/instance-red-292/backups/backup-red-292",
+        "database": "projects/cloud-custodian/instances/instance-red-292/databases/db-red-292",
+        "expireTime": "2023-01-19T15:21:23Z",
+        "createTime": "2023-01-18T15:21:22.092284Z",
+        "state": "CREATING",
+        "encryptionInfo": {
+          "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+        },
+        "versionTime": "2023-01-18T15:21:22.092284Z",
+        "databaseDialect": "POSTGRESQL",
+        "maxExpireTime": "2024-01-19T15:21:22.092284Z"
+      }
+    ]
+  }
+}

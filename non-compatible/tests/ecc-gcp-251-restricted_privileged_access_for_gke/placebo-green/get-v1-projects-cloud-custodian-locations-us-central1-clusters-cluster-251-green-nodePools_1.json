@@ -1,0 +1,75 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 12 Jan 2023 11:54:52 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "2003",
+    "-content-encoding": "gzip",
+    "content-location": "https://container.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/clusters/cluster-251-green/nodePools?alt=json"
+  },
+  "body": {
+    "nodePools": [
+      {
+        "name": "node-pool-251-green",
+        "config": {
+          "machineType": "e2-medium",
+          "diskSizeGb": 100,
+          "oauthScopes": [
+            "https://www.googleapis.com/auth/cloud-platform"
+          ],
+          "metadata": {
+            "disable-legacy-endpoints": "true"
+          },
+          "imageType": "COS_CONTAINERD",
+          "serviceAccount": "service-account-id-251-green@gcp-lab-custodian.iam.gserviceaccount.com",
+          "preemptible": true,
+          "diskType": "pd-balanced",
+          "shieldedInstanceConfig": {
+            "enableIntegrityMonitoring": true
+          },
+          "loggingConfig": {
+            "variantConfig": {
+              "variant": "DEFAULT"
+            }
+          },
+          "windowsNodeConfig": {}
+        },
+        "initialNodeCount": 1,
+        "management": {
+          "autoUpgrade": true,
+          "autoRepair": true
+        },
+        "podIpv4CidrSize": 24,
+        "locations": [
+          "us-central1-b",
+          "us-central1-a",
+          "us-central1-f"
+        ],
+        "networkConfig": {
+          "enablePrivateNodes": false
+        },
+        "selfLink": "https://container.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/clusters/cluster-251-green/nodePools/node-pool-251-green",
+        "version": "1.24.7-gke.900",
+        "instanceGroupUrls": [
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-b/instanceGroupManagers/gke-cluster-251-gree-node-pool-251-gr-6c1a08f3-grp",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instanceGroupManagers/gke-cluster-251-gree-node-pool-251-gr-cdda7fb6-grp",
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-f/instanceGroupManagers/gke-cluster-251-gree-node-pool-251-gr-ff5858a7-grp"
+        ],
+        "status": "RUNNING",
+        "upgradeSettings": {
+          "maxSurge": 1,
+          "strategy": "SURGE"
+        },
+        "etag": "55629762-c4b6-4fcf-aaec-11d31caa0234"
+      }
+    ]
+  }
+}

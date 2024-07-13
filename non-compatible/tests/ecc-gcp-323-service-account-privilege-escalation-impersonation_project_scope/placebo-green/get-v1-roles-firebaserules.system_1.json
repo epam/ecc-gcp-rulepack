@@ -1,0 +1,44 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 13:09:53 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "819",
+    "-content-encoding": "gzip",
+    "content-location": "https://iam.googleapis.com/v1/roles/firebaserules.system?alt=json"
+  },
+  "body": {
+    "name": "roles/firebaserules.system",
+    "title": "Firebase Rules System",
+    "description": "Read/write/list access for Datastore entities and Cloud Storage objects, as well as get/list/publish access for PubSub topics.",
+    "includedPermissions": [
+      "datastore.databases.get",
+      "datastore.entities.allocateIds",
+      "datastore.entities.create",
+      "datastore.entities.delete",
+      "datastore.entities.get",
+      "datastore.entities.list",
+      "datastore.entities.update",
+      "pubsub.topics.get",
+      "pubsub.topics.list",
+      "pubsub.topics.publish",
+      "resourcemanager.projects.get",
+      "resourcemanager.projects.list",
+      "storage.objects.create",
+      "storage.objects.delete",
+      "storage.objects.get",
+      "storage.objects.list",
+      "storage.objects.update"
+    ],
+    "stage": "GA",
+    "etag": "AA=="
+  }
+}

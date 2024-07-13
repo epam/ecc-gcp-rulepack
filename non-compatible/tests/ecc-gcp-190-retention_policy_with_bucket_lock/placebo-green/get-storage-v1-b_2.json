@@ -1,0 +1,49 @@
+{
+  "headers": {
+    "x-guploader-uploadid": "ADPycdv81WWFcHIA-2HRbFmV8fWJtdWZqzkzbxzgXXUkcVnkRfOWCGwqFs3XJsReH8uwvhv5lAS69RmSyAFDOuvcBiE5Ug",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Wed, 04 Jan 2023 12:33:15 GMT",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "expires": "Wed, 04 Jan 2023 12:33:15 GMT",
+    "content-length": "13080",
+    "server": "UploadServer",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "status": "200",
+    "content-location": "https://storage.googleapis.com/storage/v1/b?project=gcp-lab-custodian&alt=json"
+  },
+  "body": {
+    "kind": "storage#buckets",
+    "items": [
+      {
+        "kind": "storage#bucket",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/bucket-190-green",
+        "id": "bucket-190-green",
+        "name": "bucket-190-green",
+        "projectNumber": "443732426401",
+        "metageneration": "3",
+        "location": "EU",
+        "storageClass": "STANDARD",
+        "etag": "CAM=",
+        "timeCreated": "2023-01-04T12:16:23.248Z",
+        "updated": "2023-01-04T12:16:26.784Z",
+        "retentionPolicy": {
+          "retentionPeriod": "111",
+          "effectiveTime": "2023-01-04T12:16:23.248Z",
+          "isLocked": true
+        },
+        "iamConfiguration": {
+          "bucketPolicyOnly": {
+            "enabled": false
+          },
+          "uniformBucketLevelAccess": {
+            "enabled": false
+          },
+          "publicAccessPrevention": "inherited"
+        },
+        "locationType": "multi-region",
+        "rpo": "DEFAULT"
+      }
+    ]
+  }
+}
