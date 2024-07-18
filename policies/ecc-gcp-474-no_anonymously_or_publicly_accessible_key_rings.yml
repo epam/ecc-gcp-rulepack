@@ -1,0 +1,18 @@
+# Copyright (c) 2023 EPAM Systems, Inc.
+#
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+policies:
+  - name: ecc-gcp-474-no_anonymously_or_publicly_accessible_key_rings
+    comment: '030029101000'
+    description: |
+      Cloud KMS key rings are anonymously or publicly accessible
+    resource: gcp.kms-keyring
+    filters:
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          op: intersect
+          value: [allUsers, allAuthenticatedUsers]
