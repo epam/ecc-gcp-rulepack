@@ -1,0 +1,20 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 17 Jul 2024 17:30:08 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "21",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudkms.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/keyRings/keyring-4b883b31-169-green/cryptoKeys/keyname-4b883b31-169-green:getIamPolicy?alt=json"
+  },
+  "body": {
+    "etag": "ACAB"
+  }
+}
