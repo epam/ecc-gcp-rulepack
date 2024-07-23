@@ -1,0 +1,29 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 22 Jul 2024 15:01:30 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "247",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudfunctions.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/functions/function-244-green:getIamPolicy?alt=json"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwYd1w/BUaQ=",
+    "bindings": [
+      {
+        "role": "roles/cloudfunctions.invoker",
+        "members": [
+          "serviceAccount:service-account-id-244-green@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+}
