@@ -1,0 +1,29 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 22 Jul 2024 15:46:46 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "170",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudfunctions.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/functions/function-244-red:getIamPolicy?alt=json"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwYd18JLWVg=",
+    "bindings": [
+      {
+        "role": "roles/cloudfunctions.invoker",
+        "members": [
+          "allUsers"
+        ]
+      }
+    ]
+  }
+}
