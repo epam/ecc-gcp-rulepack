@@ -7,6 +7,6 @@ resource "google_pubsub_topic_iam_binding" "this" {
   topic   = google_pubsub_topic.this.name
   role    = "roles/pubsub.viewer"
   members = [
-    "group:Test@test.com",
+    "user:test@test.com",
   ]
 }
