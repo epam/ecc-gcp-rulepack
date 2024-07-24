@@ -14,11 +14,13 @@ policies:
       - type: value
         key: httpsTrigger
         value: present
-      - type: gcp-iam-policy-filter
-        key: role
-        value: "roles/cloudfunctions.invoker"
-        op: in
-      - type: gcp-iam-policy-filter
-        key: members[]
-        op: contains
-        value: "allUsers"
+      - type: iam-policy
+        doc:
+          key: "bindings[*].role"
+          op: contains
+          value: "roles/cloudfunctions.invoker"
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          op: contains
+          value: "allUsers"

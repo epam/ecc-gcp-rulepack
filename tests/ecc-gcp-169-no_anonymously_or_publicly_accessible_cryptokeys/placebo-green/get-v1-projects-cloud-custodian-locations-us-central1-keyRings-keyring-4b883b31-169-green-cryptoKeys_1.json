@@ -1,0 +1,46 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 17 Jul 2024 17:29:28 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1123",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudkms.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/keyRings/keyring-4b883b31-169-green/cryptoKeys?alt=json"
+  },
+  "body": {
+    "cryptoKeys": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/keyRings/keyring-4b883b31-169-green/cryptoKeys/keyname-4b883b31-169-green",
+        "primary": {
+          "name": "projects/cloud-custodian/locations/us-central1/keyRings/keyring-4b883b31-169-green/cryptoKeys/keyname-4b883b31-169-green/cryptoKeyVersions/1",
+          "state": "ENABLED",
+          "createTime": "2024-07-17T17:28:10.385057935Z",
+          "protectionLevel": "SOFTWARE",
+          "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION",
+          "generateTime": "2024-07-17T17:28:10.385057935Z"
+        },
+        "purpose": "ENCRYPT_DECRYPT",
+        "createTime": "2024-07-17T17:28:10.385057935Z",
+        "nextRotationTime": "2024-10-15T17:28:10.946681Z",
+        "rotationPeriod": "7776001s",
+        "labels": {
+          "custodiarule": "ecc-gcp-169-no_anonymously_or_publicly_accessible_cryptokeys",
+          "compliancestatus": "green"
+        },
+        "versionTemplate": {
+          "protectionLevel": "SOFTWARE",
+          "algorithm": "GOOGLE_SYMMETRIC_ENCRYPTION"
+        },
+        "destroyScheduledDuration": "2592000s"
+      }
+    ],
+    "totalSize": 1
+  }
+}
