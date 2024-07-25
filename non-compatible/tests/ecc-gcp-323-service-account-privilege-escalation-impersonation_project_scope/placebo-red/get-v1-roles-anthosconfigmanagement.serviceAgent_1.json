@@ -1,0 +1,33 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 13:01:45 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "456",
+    "-content-encoding": "gzip",
+    "content-location": "https://iam.googleapis.com/v1/roles/anthosconfigmanagement.serviceAgent?alt=json"
+  },
+  "body": {
+    "name": "roles/anthosconfigmanagement.serviceAgent",
+    "title": "Anthos Config Management Service Agent",
+    "description": "Gives the Anthos Config Management service agent access toCloud Platform resources.",
+    "includedPermissions": [
+      "container.clusters.get",
+      "gkehub.features.get",
+      "gkehub.locations.get",
+      "gkehub.locations.list",
+      "gkehub.memberships.get",
+      "gkehub.memberships.list"
+    ],
+    "stage": "GA",
+    "etag": "AA=="
+  }
+}

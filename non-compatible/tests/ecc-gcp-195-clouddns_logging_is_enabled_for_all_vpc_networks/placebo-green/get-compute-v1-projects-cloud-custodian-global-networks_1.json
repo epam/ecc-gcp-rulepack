@@ -1,0 +1,39 @@
+{
+  "headers": {
+    "etag": "P4xNKPr1FeA_vKOCgtumxRuXlFk=/9MaKry0l0asUiI5OurLnWimQfxk=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 05 Jan 2023 15:15:52 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "8811",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/networks?alt=json"
+  },
+  "body": {
+    "kind": "compute#networkList",
+    "id": "projects/cloud-custodian/global/networks",
+    "items": [
+      {
+        "kind": "compute#network",
+        "id": "1463565406988622431",
+        "creationTimestamp": "2023-01-05T06:54:40.022-08:00",
+        "name": "network-195-green",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/network-195-green",
+        "selfLinkWithId": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/1463565406988622431",
+        "autoCreateSubnetworks": false,
+        "routingConfig": {
+          "routingMode": "REGIONAL"
+        },
+        "networkFirewallPolicyEnforcementOrder": "AFTER_CLASSIC_FIREWALL"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks"
+  }
+}

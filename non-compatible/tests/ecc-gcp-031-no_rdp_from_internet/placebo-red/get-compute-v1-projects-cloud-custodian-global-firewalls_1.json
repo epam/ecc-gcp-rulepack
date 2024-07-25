@@ -1,0 +1,48 @@
+{
+  "headers": {
+    "etag": "fPyr6LZMiZoJkw4HBaXb7p_AShY=/53sKO2K8tsKyxkIV7g-T5u6b0L4=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 31 Oct 2022 12:29:26 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "5832",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls?alt=json"
+  },
+  "body": {
+    "kind": "compute#firewallList",
+    "id": "projects/cloud-custodian/global/firewalls",
+    "items": [
+      {
+        "kind": "compute#firewall",
+        "id": "7739325586458726322",
+        "creationTimestamp": "2022-10-27T23:06:21.684-07:00",
+        "name": "firewall-031-red",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+        "priority": 1000,
+        "sourceRanges": [
+          "0.0.0.0/0"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "all"
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/firewall-031-red"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls"
+  }
+}

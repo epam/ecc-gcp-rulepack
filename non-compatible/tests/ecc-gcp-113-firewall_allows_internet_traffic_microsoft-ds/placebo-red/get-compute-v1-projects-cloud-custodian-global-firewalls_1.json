@@ -1,0 +1,51 @@
+{
+  "headers": {
+    "etag": "OZeDm9q1eIhyudZEk11OLIiAexY=/B2r78-eaPRSQ0uSORqOrtgrmv3c=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 01 Dec 2022 20:29:44 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "6575",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls?alt=json"
+  },
+  "body": {
+    "kind": "compute#firewallList",
+    "id": "projects/cloud-custodian/global/firewalls",
+    "items": [
+      {
+        "kind": "compute#firewall",
+        "id": "989127758806560933",
+        "creationTimestamp": "2022-12-01T12:27:54.668-08:00",
+        "name": "microsoft-ds-from-internet-113-red",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+        "priority": 1000,
+        "sourceRanges": [
+          "0.0.0.0/0"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "tcp",
+            "ports": [
+              "445"
+            ]
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/microsoft-ds-from-internet-113-red"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls"
+  }
+}

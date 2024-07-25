@@ -1,0 +1,47 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 13:01:46 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "964",
+    "-content-encoding": "gzip",
+    "content-location": "https://iam.googleapis.com/v1/roles/appengine.serviceAgent?alt=json"
+  },
+  "body": {
+    "name": "roles/appengine.serviceAgent",
+    "title": "App Engine Standard Environment Service Agent",
+    "description": "Give App Engine Standard Enviroment service account access to managed resources. Includes access to service accounts.",
+    "includedPermissions": [
+      "appengine.versions.delete",
+      "appengine.versions.get",
+      "appengine.versions.list",
+      "appengine.versions.update",
+      "datastore.databases.get",
+      "datastore.entities.create",
+      "datastore.entities.delete",
+      "datastore.entities.get",
+      "datastore.entities.list",
+      "datastore.entities.update",
+      "datastore.indexes.list",
+      "datastore.namespaces.get",
+      "datastore.namespaces.list",
+      "datastore.statistics.get",
+      "datastore.statistics.list",
+      "iam.serviceAccounts.getAccessToken",
+      "iam.serviceAccounts.getOpenIdToken",
+      "iam.serviceAccounts.signBlob",
+      "storage.buckets.create",
+      "storage.buckets.get"
+    ],
+    "stage": "GA",
+    "etag": "AA=="
+  }
+}

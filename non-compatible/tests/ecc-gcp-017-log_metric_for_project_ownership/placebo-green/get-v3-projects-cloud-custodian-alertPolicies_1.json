@@ -1,0 +1,56 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 26 Jan 2023 14:44:52 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1266",
+    "-content-encoding": "gzip",
+    "content-location": "https://monitoring.googleapis.com/v3/projects/cloud-custodian/alertPolicies?alt=json"
+  },
+  "body": {
+    "alertPolicies": [
+      {
+        "name": "projects/cloud-custodian/alertPolicies/15779585574153353088",
+        "displayName": "Alert_Policy_017_green",
+        "combiner": "OR",
+        "creationRecord": {
+          "mutateTime": "2023-01-26T14:44:42.572674912Z",
+          "mutatedBy": "vitalii-kanivets@gcp-lab-custodian.iam.gserviceaccount.com"
+        },
+        "mutationRecord": {
+          "mutateTime": "2023-01-26T14:44:42.572674912Z",
+          "mutatedBy": "vitalii-kanivets@gcp-lab-custodian.iam.gserviceaccount.com"
+        },
+        "conditions": [
+          {
+            "conditionThreshold": {
+              "filter": "resource.type=\"gce_instance\" metric.type=\"logging.googleapis.com/user/test_metric_017_green\"",
+              "comparison": "COMPARISON_GT",
+              "duration": "0s",
+              "trigger": {
+                "count": 1
+              },
+              "aggregations": [
+                {
+                  "alignmentPeriod": "600s",
+                  "perSeriesAligner": "ALIGN_DELTA"
+                }
+              ]
+            },
+            "displayName": "condition_017_green",
+            "name": "projects/cloud-custodian/alertPolicies/15779585574153353088/conditions/15779585574153354463"
+          }
+        ],
+        "enabled": true
+      }
+    ],
+    "totalSize": 1
+  }
+}

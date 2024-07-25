@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 27 Jan 2023 07:33:50 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "4443",
+    "-content-encoding": "gzip",
+    "content-location": "https://logging.googleapis.com/v2/projects/cloud-custodian/metrics?alt=json"
+  },
+  "body": {
+    "metrics": [
+      {
+        "name": "test_metric_023_green",
+        "filter": "resource.type=gcs_bucket AND protoPayload.methodName=\"storage.setIamPermissions\"",
+        "metricDescriptor": {
+          "name": "projects/cloud-custodian/metricDescriptors/logging.googleapis.com/user/test_metric_023_green",
+          "metricKind": "DELTA",
+          "valueType": "INT64",
+          "unit": "1",
+          "type": "logging.googleapis.com/user/test_metric_023_green"
+        },
+        "createTime": "2023-01-27T07:31:37.306039836Z",
+        "updateTime": "2023-01-27T07:31:37.306039836Z"
+      }
+    ]
+  }
+}

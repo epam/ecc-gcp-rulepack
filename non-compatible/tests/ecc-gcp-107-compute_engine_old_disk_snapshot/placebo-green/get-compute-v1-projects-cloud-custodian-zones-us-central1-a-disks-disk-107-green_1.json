@@ -1,0 +1,51 @@
+{
+  "headers": {
+    "etag": "SZY2r8oGdGecB9qT3adwSGME7g0=/9Kn92dtwjIfaA_8ERsxt2qemXFk=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 01 Dec 2022 18:05:56 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1275",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/disks/disk-107-green?alt=json"
+  },
+  "body": {
+    "kind": "compute#disk",
+    "id": "8897739022805456677",
+    "creationTimestamp": "2150-12-01T05:17:41.805-08:00",
+    "name": "disk-107-green",
+    "sizeGb": "10",
+    "zone": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a",
+    "status": "READY",
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/disks/disk-107-green",
+    "sourceImage": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/images/debian-10-buster-v20210701",
+    "sourceImageId": "3744104277097859331",
+    "type": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/diskTypes/pd-balanced",
+    "licenses": [
+      "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/licenses/debian-10-buster"
+    ],
+    "guestOsFeatures": [
+      {
+        "type": "UEFI_COMPATIBLE"
+      },
+      {
+        "type": "VIRTIO_SCSI_MULTIQUEUE"
+      }
+    ],
+    "lastAttachTimestamp": "2021-07-02T03:26:18.632-07:00",
+    "users": [
+      "https://www.googleapis.com/compute/v1/projects/cloud-custodian/zones/us-central1-a/instances/disk-107-green"
+    ],
+    "labelFingerprint": "42WmSpB8rSM=",
+    "licenseCodes": [
+      "5543610867827062957"
+    ],
+    "physicalBlockSizeBytes": "4096"
+  }
+}

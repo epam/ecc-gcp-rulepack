@@ -1,0 +1,52 @@
+{
+  "headers": {
+    "etag": "FsGpMGnJQurEJRUEGlC4Jmifw_I=/13cf-cr_Geszi6F8IO3kiKZh84w=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 16 Jan 2023 13:25:18 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "11254",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls?alt=json"
+  },
+  "body": {
+    "kind": "compute#firewallList",
+    "id": "projects/cloud-custodian/global/firewalls",
+    "items": [
+      {
+        "kind": "compute#firewall",
+        "id": "1719276936479961375",
+        "creationTimestamp": "2023-01-16T05:24:00.889-08:00",
+        "name": "redis-from-internet-282-red",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+        "priority": 1000,
+        "sourceRanges": [
+          "0.0.0.0/0"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "tcp",
+            "ports": [
+              "6379"
+            ]
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/redis-from-internet-282-red"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls"
+  }
+}

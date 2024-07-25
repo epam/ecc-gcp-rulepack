@@ -1,0 +1,39 @@
+{
+  "headers": {
+    "etag": "WkUKDPpkEY6kk4mcUWlWfku93sU=/2no-SdehHnsiwvK9EAYeWw4l1As=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 13:07:28 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1037",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/targetHttpsProxies?alt=json"
+  },
+  "body": {
+    "kind": "compute#targetHttpsProxyList",
+    "id": "projects/cloud-custodian/global/targetHttpsProxies",
+    "items": [
+      {
+        "kind": "compute#targetHttpsProxy",
+        "id": "3830423778176216842",
+        "creationTimestamp": "2023-01-20T05:06:45.672-08:00",
+        "name": "test-proxy-170-red",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/targetHttpsProxies/test-proxy-170-red",
+        "urlMap": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/urlMaps/url-map-target-proxy-170-red",
+        "sslCertificates": [
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslCertificates/c7n-test-certificate-170-red"
+        ],
+        "quicOverride": "NONE",
+        "sslPolicy": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies/c7n-ssl-policy-170-red",
+        "fingerprint": "sYKAj7xn6Ss="
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/targetHttpsProxies"
+  }
+}

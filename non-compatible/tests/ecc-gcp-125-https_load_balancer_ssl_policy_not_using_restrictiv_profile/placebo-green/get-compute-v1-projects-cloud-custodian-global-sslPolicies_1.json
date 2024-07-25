@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "etag": "aCfmd23fXCr3wJDEOTuK1TtZxIY=/f_DIFP11K5hOmhg_iYxJxG3M9U4=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 09 Dec 2022 12:49:47 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "627",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies?filter=name+%3D+%22c7n-ssl-policy-125-green%22&alt=json"
+  },
+  "body": {
+    "kind": "compute#sslPoliciesList",
+    "id": "projects/cloud-custodian/global/sslPolicies",
+    "items": [
+      {
+        "kind": "compute#sslPolicy",
+        "id": "3901867256312664287",
+        "creationTimestamp": "2022-12-09T04:46:40.222-08:00",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies/c7n-ssl-policy-125-green",
+        "name": "c7n-ssl-policy-125-green",
+        "profile": "MODERN",
+        "minTlsVersion": "TLS_1_2",
+        "fingerprint": "C1a273SpEvg="
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies"
+  }
+}

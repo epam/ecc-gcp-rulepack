@@ -1,0 +1,47 @@
+{
+  "headers": {
+    "x-guploader-uploadid": "ADPycdsyMXM01JyLkZSGj8hzDgT_wpzrQLHlCUMrT8lYs38Jn8XeBnIoUvHsIbSt0oUcOq9mkvhL-dspFB_mcBrQuAq1j7ltnhj7",
+    "content-type": "application/json; charset=UTF-8",
+    "date": "Fri, 09 Dec 2022 15:30:02 GMT",
+    "vary": "Origin, X-Origin",
+    "cache-control": "private, max-age=0, must-revalidate, no-transform",
+    "expires": "Fri, 09 Dec 2022 15:30:02 GMT",
+    "content-length": "15077",
+    "server": "UploadServer",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "status": "200",
+    "content-location": "https://storage.googleapis.com/storage/v1/b?project=gcp-lab-custodian&alt=json"
+  },
+  "body": {
+    "kind": "storage#buckets",
+    "items": [
+      {
+        "kind": "storage#bucket",
+        "selfLink": "https://www.googleapis.com/storage/v1/b/bucket_with_logs_142_green",
+        "id": "bucket_with_logs_142_green",
+        "name": "bucket_with_logs_142_green",
+        "projectNumber": "443732426401",
+        "metageneration": "1",
+        "location": "US-CENTRAL1",
+        "storageClass": "STANDARD",
+        "etag": "CAE=",
+        "timeCreated": "2022-12-09T14:26:12.319Z",
+        "updated": "2022-12-09T14:26:12.319Z",
+        "logging": {
+          "logBucket": "bucket_for_logs_142_green",
+          "logObjectPrefix": "bucket_with_logs_142_green"
+        },
+        "iamConfiguration": {
+          "bucketPolicyOnly": {
+            "enabled": false
+          },
+          "uniformBucketLevelAccess": {
+            "enabled": false
+          },
+          "publicAccessPrevention": "inherited"
+        },
+        "locationType": "region"
+      }
+    ]
+  }
+}

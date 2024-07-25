@@ -1,0 +1,51 @@
+{
+  "headers": {
+    "etag": "cMd5ZypYX4KdzeouU76tFC3xRV8=/DUkDgrPcvn5yZ_M0H68jJ7MO_Ww=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 04 Nov 2022 07:20:36 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "6607",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls?alt=json"
+  },
+  "body": {
+    "kind": "compute#firewallList",
+    "id": "projects/cloud-custodian/global/firewalls",
+    "items": [
+      {
+        "kind": "compute#firewall",
+        "id": "5969452155995226648",
+        "creationTimestamp": "2022-11-04T00:19:19.883-07:00",
+        "name": "ssh-from-internet-030-red",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+        "priority": 1000,
+        "sourceRanges": [
+          "0.0.0.0/0"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "tcp",
+            "ports": [
+              "22"
+            ]
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/ssh-from-internet-030-red"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls"
+  }
+}

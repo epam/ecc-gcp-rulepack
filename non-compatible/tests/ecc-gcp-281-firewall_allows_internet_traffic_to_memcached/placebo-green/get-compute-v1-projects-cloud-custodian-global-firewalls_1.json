@@ -1,0 +1,49 @@
+{
+  "headers": {
+    "etag": "fe7sQwMkkxldzx2mcSQoxA0Jhl4=/XpgrUPL1nqIvB3w9Sfl9ESO9F2g=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 16 Jan 2023 13:25:02 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "11254",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls?alt=json"
+  },
+  "body": {
+    "kind": "compute#firewallList",
+    "id": "projects/cloud-custodian/global/firewalls",
+    "items": [
+      {
+        "kind": "compute#firewall",
+        "id": "7808213636356829443",
+        "creationTimestamp": "2023-01-16T05:23:57.007-08:00",
+        "name": "no-memcached-from-internet-281-green",
+        "description": "",
+        "network": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/networks/default",
+        "priority": 1000,
+        "sourceTags": [
+          "green"
+        ],
+        "allowed": [
+          {
+            "IPProtocol": "icmp"
+          }
+        ],
+        "direction": "INGRESS",
+        "logConfig": {
+          "enable": false
+        },
+        "disabled": false,
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls/no-memcached-from-internet-281-green"
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/firewalls"
+  }
+}

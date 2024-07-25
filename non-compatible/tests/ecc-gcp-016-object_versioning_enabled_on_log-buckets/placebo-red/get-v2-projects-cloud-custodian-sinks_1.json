@@ -1,0 +1,29 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 24 Oct 2022 12:04:08 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3051",
+    "-content-encoding": "gzip",
+    "content-location": "https://logging.googleapis.com/v2/projects/cloud-custodian/sinks?alt=json"
+  },
+  "body": {
+    "sinks": [
+      {
+        "name": "log-sink-016-red",
+        "destination": "storage.googleapis.com/bucket_without_ver_016_red",
+        "filter": "resource.type = gce_instance AND severity >= WARNING",
+        "writerIdentity": "serviceAccount:p443732426401-094502@gcp-sa-logging.iam.gserviceaccount.com",
+        "createTime": "2022-10-24T12:03:47.748967121Z",
+        "updateTime": "2022-10-24T12:03:47.748967121Z"
+      }
+    ]
+  }
+}

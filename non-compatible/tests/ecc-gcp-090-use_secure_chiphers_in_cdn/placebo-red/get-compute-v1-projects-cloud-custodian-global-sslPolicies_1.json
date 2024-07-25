@@ -1,0 +1,35 @@
+{
+  "headers": {
+    "etag": "zHGPSvqeNl_HjYPVUuHO1v8FnGE=/9062pOjCk4OcgS6kpcqFRJTiS78=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 12:42:42 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "615",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies?filter=name%3Dssl-policy-090-red&alt=json"
+  },
+  "body": {
+    "kind": "compute#sslPoliciesList",
+    "id": "projects/cloud-custodian/global/sslPolicies",
+    "items": [
+      {
+        "kind": "compute#sslPolicy",
+        "id": "5157935213739193614",
+        "creationTimestamp": "2023-01-20T04:41:05.964-08:00",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies/ssl-policy-090-red",
+        "name": "ssl-policy-090-red",
+        "profile": "MODERN",
+        "minTlsVersion": "TLS_1_0",
+        "fingerprint": "u9v_Oi9pzNo="
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies"
+  }
+}

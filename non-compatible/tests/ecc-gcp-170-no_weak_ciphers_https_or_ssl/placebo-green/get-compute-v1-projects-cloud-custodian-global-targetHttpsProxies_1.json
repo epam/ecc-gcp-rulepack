@@ -1,0 +1,39 @@
+{
+  "headers": {
+    "etag": "H3w6mWA-BrXhSj7RRJovp3wh8XI=/PSfa2n11sDnga_xdHi_SJpAleMY=",
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 20 Jan 2023 13:03:22 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1047",
+    "-content-encoding": "gzip",
+    "content-location": "https://compute.googleapis.com/compute/v1/projects/cloud-custodian/global/targetHttpsProxies?alt=json"
+  },
+  "body": {
+    "kind": "compute#targetHttpsProxyList",
+    "id": "projects/cloud-custodian/global/targetHttpsProxies",
+    "items": [
+      {
+        "kind": "compute#targetHttpsProxy",
+        "id": "4775456311467257427",
+        "creationTimestamp": "2023-01-20T05:01:48.935-08:00",
+        "name": "test-proxy-170-green",
+        "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/targetHttpsProxies/test-proxy-170-green",
+        "urlMap": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/urlMaps/url-map-target-proxy-170-green",
+        "sslCertificates": [
+          "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslCertificates/c7n-test-certificate-170-green"
+        ],
+        "quicOverride": "NONE",
+        "sslPolicy": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/sslPolicies/c7n-ssl-policy-170-green",
+        "fingerprint": "m8CW3Xe44xg="
+      }
+    ],
+    "selfLink": "https://www.googleapis.com/compute/v1/projects/cloud-custodian/global/targetHttpsProxies"
+  }
+}

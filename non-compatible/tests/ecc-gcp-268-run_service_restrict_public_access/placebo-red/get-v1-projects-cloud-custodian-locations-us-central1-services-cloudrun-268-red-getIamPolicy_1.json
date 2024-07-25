@@ -1,0 +1,29 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 17 Jan 2023 13:26:54 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "171",
+    "-content-encoding": "gzip",
+    "content-location": "https://run.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/services/cloudrun-268-red:getIamPolicy?alt=json"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwXydaXvQm4=",
+    "bindings": [
+      {
+        "role": "roles/run.viewer",
+        "members": [
+          "allAuthenticatedUsers"
+        ]
+      }
+    ]
+  }
+}

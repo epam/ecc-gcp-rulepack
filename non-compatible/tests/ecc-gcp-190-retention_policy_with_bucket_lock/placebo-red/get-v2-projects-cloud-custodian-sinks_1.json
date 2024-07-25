@@ -1,0 +1,30 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 04 Jan 2023 12:32:14 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3444",
+    "-content-encoding": "gzip",
+    "content-location": "https://logging.googleapis.com/v2/projects/cloud-custodian/sinks?alt=json"
+  },
+  "body": {
+    "sinks": [
+      {
+        "name": "pubsub-sink-190-red",
+        "destination": "storage.googleapis.com/bucket-190-red",
+        "filter": "resource.type = gce_instance AND severity >= WARNING",
+        "writerIdentity": "serviceAccount:p443732426401-466533@gcp-sa-logging.iam.gserviceaccount.com",
+        "createTime": "2023-01-04T12:30:13.017608207Z",
+        "updateTime": "2023-01-04T12:30:13.017608207Z"
+      }
+    ]
+  }
+}

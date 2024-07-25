@@ -1,0 +1,46 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 12 Jan 2023 08:18:51 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "10067",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudfunctions.googleapis.com/v1/projects/cloud-custodian/locations/-/functions?alt=json"
+  },
+  "body": {
+    "functions": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/functions/function-241-red",
+        "sourceArchiveUrl": "gs://bucket-241-red/index.zip",
+        "httpsTrigger": {
+          "url": "https://us-central1-gcp-lab-custodian.cloudfunctions.net/function-241-red",
+          "securityLevel": "SECURE_OPTIONAL"
+        },
+        "status": "ACTIVE",
+        "entryPoint": "hello_world",
+        "timeout": "60s",
+        "availableMemoryMb": 128,
+        "serviceAccountEmail": "gcp-lab-custodian@appspot.gserviceaccount.com",
+        "updateTime": "2023-01-12T08:12:06.993Z",
+        "versionId": "1",
+        "labels": {
+          "compliancestatus": "red",
+          "custodiarule": "epam-gcp-241-functions_without_privileged_service_accounts"
+        },
+        "runtime": "python37",
+        "ingressSettings": "ALLOW_ALL",
+        "buildId": "2a305f0f-f263-4b79-97e2-5d3d0f215a6d",
+        "buildName": "projects/cloud-custodian/locations/us-central1/builds/2a305f0f-f263-4b79-97e2-5d3d0f215a6d",
+        "dockerRegistry": "CONTAINER_REGISTRY"
+      }
+    ]
+  }
+}

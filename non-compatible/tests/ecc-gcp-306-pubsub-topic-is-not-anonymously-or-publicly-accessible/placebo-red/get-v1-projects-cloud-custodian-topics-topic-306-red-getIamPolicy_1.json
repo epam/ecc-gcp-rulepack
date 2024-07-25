@@ -1,0 +1,30 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 19 Jan 2023 09:06:49 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "174",
+    "-content-encoding": "gzip",
+    "content-location": "https://pubsub.googleapis.com/v1/projects/cloud-custodian/topics/topic-306-red:getIamPolicy?alt=json"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwXymbHdaVM=",
+    "bindings": [
+      {
+        "role": "roles/pubsub.viewer",
+        "members": [
+          "allAuthenticatedUsers"
+        ]
+      }
+    ]
+  }
+}

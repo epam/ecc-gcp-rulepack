@@ -1,0 +1,31 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 09 Dec 2022 15:29:45 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "4332",
+    "-content-encoding": "gzip",
+    "content-location": "https://logging.googleapis.com/v2/projects/cloud-custodian/sinks?alt=json"
+  },
+  "body": {
+    "sinks": [
+      {
+        "name": "log-sink-142",
+        "destination": "storage.googleapis.com/bucket_with_logs_142_red",
+        "filter": "resource.type = gce_instance AND severity >= WARNING",
+        "writerIdentity": "serviceAccount:p443732426401-362897@gcp-sa-logging.iam.gserviceaccount.com",
+        "createTime": "2022-12-09T14:26:16.573489118Z",
+        "updateTime": "2022-12-09T14:26:16.573489118Z",
+        "description": "log sink for instance"
+      }
+    ]
+  }
+}
