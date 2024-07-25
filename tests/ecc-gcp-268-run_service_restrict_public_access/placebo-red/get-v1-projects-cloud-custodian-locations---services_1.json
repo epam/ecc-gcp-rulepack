@@ -1,0 +1,129 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 25 Jul 2024 08:44:35 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3510",
+    "-content-encoding": "gzip",
+    "content-location": "https://run.googleapis.com/v1/projects/cloud-custodian/locations/-/services?alt=json"
+  },
+  "body": {
+    "apiVersion": "serving.knative.dev/v1",
+    "kind": "ServiceList",
+    "items": [
+      {
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Service",
+        "metadata": {
+          "name": "cloudrun-268-red",
+          "namespace": "443732426401",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/443732426401/services/cloudrun-268-red",
+          "uid": "681ca3bd-0eb5-40b2-b24b-9182397eecd7",
+          "resourceVersion": "AAYeDi7IIwk",
+          "generation": 1,
+          "labels": {
+            "compliancestatus": "red",
+            "custodiarule": "ecc-gcp-268-run_service_restrict_public_access",
+            "cloud.googleapis.com/location": "us-central1"
+          },
+          "annotations": {
+            "serving.knative.dev/creator": "test@epam.com",
+            "serving.knative.dev/lastModifier": "test@epam.com",
+            "run.googleapis.com/operation-id": "af03cc50-bc84-4e06-a0a9-195a087f9757",
+            "run.googleapis.com/ingress": "all",
+            "run.googleapis.com/ingress-status": "all"
+          },
+          "creationTimestamp": "2024-07-25T08:28:37.262603Z"
+        },
+        "spec": {
+          "template": {
+            "metadata": {
+              "labels": {
+                "run.googleapis.com/startupProbeType": "Default"
+              },
+              "annotations": {
+                "autoscaling.knative.dev/maxScale": "100"
+              }
+            },
+            "spec": {
+              "containerConcurrency": 80,
+              "timeoutSeconds": 300,
+              "serviceAccountName": "443732426401-compute@developer.gserviceaccount.com",
+              "containers": [
+                {
+                  "image": "us-docker.pkg.dev/cloudrun/container/hello",
+                  "resources": {
+                    "limits": {
+                      "memory": "512Mi",
+                      "cpu": "1000m"
+                    }
+                  },
+                  "ports": [
+                    {
+                      "name": "http1",
+                      "containerPort": 8080
+                    }
+                  ],
+                  "startupProbe": {
+                    "timeoutSeconds": 240,
+                    "periodSeconds": 240,
+                    "failureThreshold": 1,
+                    "tcpSocket": {
+                      "port": 8080
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "traffic": [
+            {
+              "percent": 100,
+              "latestRevision": true
+            }
+          ]
+        },
+        "status": {
+          "observedGeneration": 1,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastTransitionTime": "2024-07-25T08:28:43.507465Z"
+            },
+            {
+              "type": "ConfigurationsReady",
+              "status": "True",
+              "lastTransitionTime": "2024-07-25T08:28:37.497357Z"
+            },
+            {
+              "type": "RoutesReady",
+              "status": "True",
+              "lastTransitionTime": "2024-07-25T08:28:43.473001Z"
+            }
+          ],
+          "latestReadyRevisionName": "cloudrun-268-red-00001-fnz",
+          "latestCreatedRevisionName": "cloudrun-268-red-00001-fnz",
+          "traffic": [
+            {
+              "revisionName": "cloudrun-268-red-00001-fnz",
+              "percent": 100,
+              "latestRevision": true
+            }
+          ],
+          "url": "https://cloudrun-268-red-7vdccu4y3a-uc.a.run.app",
+          "address": {
+            "url": "https://cloudrun-268-red-7vdccu4y3a-uc.a.run.app"
+          }
+        }
+      }
+    ]
+  }
+}
