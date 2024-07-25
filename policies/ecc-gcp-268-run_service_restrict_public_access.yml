@@ -9,9 +9,10 @@ policies:
     comment: '030040082000'
     description: |
       Cloud Run service allows public access
-    resource: gcp.namespace-service
+    resource: gcp.cloud-run-service
     filters:
-      - type: namespace-service-iam-filter
-        key: members
-        op: intersect
-        value: [allAuthenticatedUsers, allUsers]
+      - type: iam-policy
+        doc:
+          key: "bindings[*].members[]"
+          op: intersect
+          value: [allUsers, allAuthenticatedUsers]
