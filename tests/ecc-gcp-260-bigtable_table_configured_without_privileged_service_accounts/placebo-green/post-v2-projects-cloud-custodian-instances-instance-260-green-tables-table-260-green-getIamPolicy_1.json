@@ -1,0 +1,28 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 26 Jul 2024 11:03:38 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "237",
+    "-content-encoding": "gzip"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwYeJF3MiB0=",
+    "bindings": [
+      {
+        "role": "roles/bigtable.reader",
+        "members": [
+          "serviceAccount:service-account-260-green@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+}
