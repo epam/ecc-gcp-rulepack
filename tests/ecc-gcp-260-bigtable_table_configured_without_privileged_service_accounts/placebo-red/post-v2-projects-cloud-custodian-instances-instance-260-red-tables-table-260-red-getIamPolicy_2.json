@@ -1,0 +1,28 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 26 Jul 2024 10:51:10 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "226",
+    "-content-encoding": "gzip"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwYeI2ovbkE=",
+    "bindings": [
+      {
+        "role": "roles/editor",
+        "members": [
+          "serviceAccount:service-account-260-red@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+}

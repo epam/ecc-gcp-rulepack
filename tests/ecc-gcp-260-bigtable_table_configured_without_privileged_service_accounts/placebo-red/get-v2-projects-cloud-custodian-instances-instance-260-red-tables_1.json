@@ -1,0 +1,24 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Fri, 26 Jul 2024 10:51:08 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "125",
+    "-content-encoding": "gzip",
+    "content-location": "https://bigtableadmin.googleapis.com/v2/projects/cloud-custodian/instances/instance-260-red/tables?alt=json"
+  },
+  "body": {
+    "tables": [
+      {
+        "name": "projects/cloud-custodian/instances/instance-260-red/tables/table-260-red"
+      }
+    ]
+  }
+}
