@@ -1,0 +1,36 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Mon, 29 Jul 2024 15:06:12 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "server-timing": "gfet4t7; dur=289",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "621",
+    "-content-encoding": "gzip",
+    "content-location": "https://spanner.googleapis.com/v1/projects/cloud-custodian/instances?alt=json"
+  },
+  "body": {
+    "instances": [
+      {
+        "name": "projects/cloud-custodian/instances/spanner-instance-295-green",
+        "config": "projects/cloud-custodian/instanceConfigs/regional-us-central1",
+        "displayName": "spanner-instance-295-green",
+        "nodeCount": 1,
+        "state": "READY",
+        "labels": {
+          "custodianrule": "ecc-gcp-295-spanner_instance_without_privileged_serviceaccount",
+          "compliancestatus": "green"
+        },
+        "processingUnits": 1000,
+        "instanceType": "PROVISIONED",
+        "createTime": "2024-07-29T14:44:00.264788Z",
+        "updateTime": "2024-07-29T14:44:00.264788Z"
+      }
+    ]
+  }
+}
