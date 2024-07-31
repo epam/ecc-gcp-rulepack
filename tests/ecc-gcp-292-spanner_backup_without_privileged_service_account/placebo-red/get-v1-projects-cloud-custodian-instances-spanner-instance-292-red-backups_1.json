@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 30 Jul 2024 16:12:02 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "server-timing": "gfet4t7; dur=790",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "621",
+    "-content-encoding": "gzip",
+    "content-location": "https://spanner.googleapis.com/v1/projects/cloud-custodian/instances/spanner-instance-292-red/backups?alt=json"
+  },
+  "body": {
+    "backups": [
+      {
+        "name": "projects/cloud-custodian/instances/spanner-instance-292-red/backups/spanner-bu-292-red",
+        "database": "projects/cloud-custodian/instances/spanner-instance-292-red/databases/spanner-db-292-red",
+        "expireTime": "2024-07-30T21:39:33.854742Z",
+        "createTime": "2024-07-30T15:39:34.327168Z",
+        "state": "READY",
+        "encryptionInfo": {
+          "encryptionType": "GOOGLE_DEFAULT_ENCRYPTION"
+        },
+        "versionTime": "2024-07-30T15:39:34.327168Z",
+        "databaseDialect": "GOOGLE_STANDARD_SQL",
+        "maxExpireTime": "2025-07-31T15:39:34.327168Z"
+      }
+    ]
+  }
+}
