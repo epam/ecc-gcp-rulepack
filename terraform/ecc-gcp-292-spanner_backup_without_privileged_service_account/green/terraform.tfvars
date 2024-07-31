@@ -1,0 +1,7 @@
+project    = "project_id"
+region     = "us-central1"
+sa         = "service-account-292-green"
+spanner-i  = "spanner-instance-292-green"
+spanner-db = "spanner-db-292-green"
+spanner-bu = "spanner-bu-292-green"
+rule       = "ecc-gcp-292-spanner_backup_without_privileged_service_account"

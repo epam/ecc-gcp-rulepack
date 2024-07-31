@@ -1,0 +1,28 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 30 Jul 2024 15:28:56 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "server-timing": "gfet4t7; dur=489",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "241",
+    "-content-encoding": "gzip"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwYeeJabXoI=",
+    "bindings": [
+      {
+        "role": "roles/spanner.backupAdmin",
+        "members": [
+          "serviceAccount:service-account-292-green@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+}
