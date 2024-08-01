@@ -1,0 +1,46 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Thu, 01 Aug 2024 09:01:13 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1083",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudfunctions.googleapis.com/v1/projects/cloud-custodian/locations/-/functions?alt=json"
+  },
+  "body": {
+    "functions": [
+      {
+        "name": "projects/cloud-custodian/locations/us-central1/functions/function-241-red",
+        "sourceArchiveUrl": "gs://bucket-241-red/index.zip",
+        "httpsTrigger": {
+          "url": "https://us-central1-gcp-lab-custodian.cloudfunctions.net/function-241-red",
+          "securityLevel": "SECURE_OPTIONAL"
+        },
+        "status": "ACTIVE",
+        "entryPoint": "hello_world",
+        "timeout": "60s",
+        "availableMemoryMb": 128,
+        "serviceAccountEmail": "gcp-lab-custodian@appspot.gserviceaccount.com",
+        "updateTime": "2024-08-01T08:45:33.884Z",
+        "versionId": "1",
+        "labels": {
+          "compliancestatus": "red",
+          "custodiarule": "ecc-gcp-241-functions_without_privileged_service_accounts"
+        },
+        "runtime": "python37",
+        "ingressSettings": "ALLOW_ALL",
+        "buildId": "9cac1a7e-dcb8-42a7-9bdf-926417b184fc",
+        "buildName": "projects/cloud-custodian/locations/us-central1/builds/9cac1a7e-dcb8-42a7-9bdf-926417b184fc",
+        "dockerRegistry": "ARTIFACT_REGISTRY",
+        "automaticUpdatePolicy": {}
+      }
+    ]
+  }
+}
