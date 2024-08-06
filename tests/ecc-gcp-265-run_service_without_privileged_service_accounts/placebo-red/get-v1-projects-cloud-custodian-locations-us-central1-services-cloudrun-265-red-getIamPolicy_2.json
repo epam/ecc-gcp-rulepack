@@ -1,0 +1,29 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 06 Aug 2024 09:16:43 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "229",
+    "-content-encoding": "gzip",
+    "content-location": "https://run.googleapis.com/v1/projects/cloud-custodian/locations/us-central1/services/cloudrun-265-red:getIamPolicy?alt=json"
+  },
+  "body": {
+    "version": 1,
+    "etag": "BwYfABSGkmM=",
+    "bindings": [
+      {
+        "role": "roles/editor",
+        "members": [
+          "serviceAccount:service-account-id-265-red@gcp-lab-custodian.iam.gserviceaccount.com"
+        ]
+      }
+    ]
+  }
+}

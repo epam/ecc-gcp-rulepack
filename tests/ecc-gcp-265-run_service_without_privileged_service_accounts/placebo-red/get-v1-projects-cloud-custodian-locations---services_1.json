@@ -1,0 +1,129 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Tue, 06 Aug 2024 09:16:41 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "3523",
+    "-content-encoding": "gzip",
+    "content-location": "https://run.googleapis.com/v1/projects/cloud-custodian/locations/-/services?alt=json"
+  },
+  "body": {
+    "apiVersion": "serving.knative.dev/v1",
+    "kind": "ServiceList",
+    "items": [
+      {
+        "apiVersion": "serving.knative.dev/v1",
+        "kind": "Service",
+        "metadata": {
+          "name": "cloudrun-265-red",
+          "namespace": "443732426401",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/443732426401/services/cloudrun-265-red",
+          "uid": "17cc0e42-d1e2-4082-b67c-60688fdc9651",
+          "resourceVersion": "AAYfABQZP4k",
+          "generation": 1,
+          "labels": {
+            "compliancestatus": "red",
+            "custodiarule": "ecc-gcp-265-run_service_without_privileged_service_accounts",
+            "cloud.googleapis.com/location": "us-central1"
+          },
+          "annotations": {
+            "serving.knative.dev/creator": "test@epam.com",
+            "serving.knative.dev/lastModifier": "test@epam.com",
+            "run.googleapis.com/operation-id": "40ac3ded-9cc7-4e5f-914f-80a49a20fc6c",
+            "run.googleapis.com/ingress": "all",
+            "run.googleapis.com/ingress-status": "all"
+          },
+          "creationTimestamp": "2024-08-06T09:04:12.846909Z"
+        },
+        "spec": {
+          "template": {
+            "metadata": {
+              "labels": {
+                "run.googleapis.com/startupProbeType": "Default"
+              },
+              "annotations": {
+                "autoscaling.knative.dev/maxScale": "100"
+              }
+            },
+            "spec": {
+              "containerConcurrency": 80,
+              "timeoutSeconds": 300,
+              "serviceAccountName": "443732426401-compute@developer.gserviceaccount.com",
+              "containers": [
+                {
+                  "image": "us-docker.pkg.dev/cloudrun/container/hello",
+                  "resources": {
+                    "limits": {
+                      "memory": "512Mi",
+                      "cpu": "1000m"
+                    }
+                  },
+                  "ports": [
+                    {
+                      "name": "http1",
+                      "containerPort": 8080
+                    }
+                  ],
+                  "startupProbe": {
+                    "timeoutSeconds": 240,
+                    "periodSeconds": 240,
+                    "failureThreshold": 1,
+                    "tcpSocket": {
+                      "port": 8080
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "traffic": [
+            {
+              "percent": 100,
+              "latestRevision": true
+            }
+          ]
+        },
+        "status": {
+          "observedGeneration": 1,
+          "conditions": [
+            {
+              "type": "Ready",
+              "status": "True",
+              "lastTransitionTime": "2024-08-06T09:04:17.923977Z"
+            },
+            {
+              "type": "ConfigurationsReady",
+              "status": "True",
+              "lastTransitionTime": "2024-08-06T09:04:13.057912Z"
+            },
+            {
+              "type": "RoutesReady",
+              "status": "True",
+              "lastTransitionTime": "2024-08-06T09:04:17.893914Z"
+            }
+          ],
+          "latestReadyRevisionName": "cloudrun-265-red-00001-72f",
+          "latestCreatedRevisionName": "cloudrun-265-red-00001-72f",
+          "traffic": [
+            {
+              "revisionName": "cloudrun-265-red-00001-72f",
+              "percent": 100,
+              "latestRevision": true
+            }
+          ],
+          "url": "https://cloudrun-265-red-7vdccu4y3a-uc.a.run.app",
+          "address": {
+            "url": "https://cloudrun-265-red-7vdccu4y3a-uc.a.run.app"
+          }
+        }
+      }
+    ]
+  }
+}
