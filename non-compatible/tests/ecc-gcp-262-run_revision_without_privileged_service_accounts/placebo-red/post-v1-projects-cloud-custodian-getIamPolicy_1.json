@@ -2,26 +2,58 @@
   "headers": {
     "content-type": "application/json; charset=UTF-8",
     "vary": "Origin, X-Origin, Referer",
-    "date": "Mon, 16 Jan 2023 16:03:59 GMT",
+    "date": "Mon, 12 Aug 2024 19:39:22 GMT",
     "server": "ESF",
     "cache-control": "private",
     "x-xss-protection": "0",
     "x-frame-options": "SAMEORIGIN",
     "x-content-type-options": "nosniff",
-    "server-timing": "gfet4t7; dur=792",
+    "server-timing": "gfet4t7; dur=846",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
     "transfer-encoding": "chunked",
     "status": "200",
-    "content-length": "9667",
+    "content-length": "1120",
     "-content-encoding": "gzip"
   },
   "body": {
     "version": 1,
-    "etag": "BwXyY7o6nPA=",
+    "etag": "BwYfgLcITgA=",
     "bindings": [
+      {
+        "role": "roles/containerregistry.ServiceAgent",
+        "members": [
+          "serviceAccount:service-111111111111@containerregistry.iam.gserviceaccount.com"
+        ]
+      },
       {
         "role": "roles/editor",
         "members": [
-          "serviceAccount:service-account-id-262-red@gcp-lab-custodian.iam.gserviceaccount.com"
+          "serviceAccount:111111111111-compute@developer.gserviceaccount.com",
+          "serviceAccount:service-account-id-262-red@cloud-custodian.iam.gserviceaccount.com"
+        ]
+      },
+      {
+        "role": "roles/owner",
+        "members": [
+          "user:test@gmail.com"
+        ]
+      },
+      {
+        "role": "roles/pubsub.serviceAgent",
+        "members": [
+          "serviceAccount:service-111111111111@gcp-sa-pubsub.iam.gserviceaccount.com"
+        ]
+      },
+      {
+        "role": "roles/run.developer",
+        "members": [
+          "serviceAccount:service-account-id-262-green@cloud-custodian.iam.gserviceaccount.com"
+        ]
+      },
+      {
+        "role": "roles/run.serviceAgent",
+        "members": [
+          "serviceAccount:service-111111111111@serverless-robot-prod.iam.gserviceaccount.com"
         ]
       }
     ]

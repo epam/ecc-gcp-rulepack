@@ -2,17 +2,18 @@
   "headers": {
     "content-type": "application/json; charset=UTF-8",
     "vary": "Origin, X-Origin, Referer",
-    "date": "Mon, 16 Jan 2023 16:00:28 GMT",
+    "date": "Mon, 12 Aug 2024 19:39:21 GMT",
     "server": "ESF",
     "cache-control": "private",
     "x-xss-protection": "0",
     "x-frame-options": "SAMEORIGIN",
     "x-content-type-options": "nosniff",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
     "transfer-encoding": "chunked",
     "status": "200",
-    "content-length": "3627",
+    "content-length": "7906",
     "-content-encoding": "gzip",
-    "content-location": "https://run.googleapis.com/apis/serving.knative.dev/v1/namespaces/gcp-lab-custodian/revisions?alt=json"
+    "content-location": "https://run.googleapis.com/apis/serving.knative.dev/v1/namespaces/cloud-custodian/revisions?alt=json"
   },
   "body": {
     "apiVersion": "serving.knative.dev/v1",
@@ -22,46 +23,46 @@
         "apiVersion": "serving.knative.dev/v1",
         "kind": "Revision",
         "metadata": {
-          "name": "cloudrun-262-green-l6q75",
-          "namespace": "443732426401",
-          "selfLink": "/apis/serving.knative.dev/v1/namespaces/443732426401/revisions/cloudrun-262-green-l6q75",
-          "uid": "e7aaaa41-44f8-457c-aa51-5d5eb996e8fc",
-          "resourceVersion": "AAXyY6xlMYo",
+          "name": "cloudrun-262-green-00001-tgx",
+          "namespace": "111111111111",
+          "selfLink": "/apis/serving.knative.dev/v1/namespaces/111111111111/revisions/cloudrun-262-green-00001-tgx",
+          "uid": "74d14e57-b",
+          "resourceVersion": "knoinjmoi",
           "generation": 1,
           "labels": {
-            "serving.knative.dev/route": "cloudrun-262-green",
             "serving.knative.dev/configuration": "cloudrun-262-green",
             "serving.knative.dev/configurationGeneration": "1",
             "serving.knative.dev/service": "cloudrun-262-green",
-            "serving.knative.dev/serviceUid": "134b06b8-6db7-4563-821c-0d581c91aaae",
-            "cloud.googleapis.com/location": "us-central1"
+            "serving.knative.dev/serviceUid": "975f83ea85d7",
+            "serving.knative.dev/route": "cloudrun-262-green",
+            "cloud.googleapis.com/location": "us-central1",
+            "run.googleapis.com/startupProbeType": "Default"
           },
           "annotations": {
-            "serving.knative.dev/creator": "gcp.lab.cust1@epmcseclab.com",
             "autoscaling.knative.dev/maxScale": "100",
-            "run.googleapis.com/operation-id": "5202c732-1809-4468-8af4-0f5c2c60a5d5",
-            "run.googleapis.com/cpu-throttling": "true"
+            "serving.knative.dev/creator": "test@gmail.com",
+            "run.googleapis.com/operation-id": "1510f932c3f5"
           },
           "ownerReferences": [
             {
               "apiVersion": "serving.knative.dev/v1",
               "kind": "Configuration",
               "name": "cloudrun-262-green",
-              "uid": "6aedbf80-1d90-43de-844e-e383ce56d347",
+              "uid": "74d14e57",
               "controller": true,
               "blockOwnerDeletion": true
             }
           ],
-          "creationTimestamp": "2023-01-16T15:59:47.346309Z"
+          "creationTimestamp": "2024-08-12T18:32:58.060078Z"
         },
         "spec": {
           "containerConcurrency": 80,
           "timeoutSeconds": 300,
-          "serviceAccountName": "service-account-id-262-green@gcp-lab-custodian.iam.gserviceaccount.com",
+          "serviceAccountName": "service-account-id-262-green@cloud-custodian.iam.gserviceaccount.com",
           "containers": [
             {
               "name": "hello-1",
-              "image": "us-docker.pkg.dev/cloudrun/container/hello@sha256:2e70803dbc92a7bffcee3af54b5d264b23a6096f304f00d63b7d1e177e40986c",
+              "image": "us-docker.pkg.dev/cloudrun/container/hello@sha256:554bc035f4f70111c01ffe17b93f6dda77dcfc15085a2e7c6ea14de3a580a75c",
               "resources": {
                 "limits": {
                   "memory": "512Mi",
@@ -73,7 +74,15 @@
                   "name": "http1",
                   "containerPort": 8080
                 }
-              ]
+              ],
+              "startupProbe": {
+                "timeoutSeconds": 240,
+                "periodSeconds": 240,
+                "failureThreshold": 1,
+                "tcpSocket": {
+                  "port": 8080
+                }
+              }
             }
           ]
         },
@@ -83,28 +92,32 @@
             {
               "type": "Ready",
               "status": "True",
-              "lastTransitionTime": "2023-01-16T15:59:51.550346Z"
+              "lastTransitionTime": "2024-08-12T18:33:01.529007Z"
             },
             {
               "type": "Active",
               "status": "True",
               "severity": "Info",
-              "lastTransitionTime": "2023-01-16T15:59:51.109773Z"
+              "lastTransitionTime": "2024-08-12T18:33:01.607616Z"
             },
             {
               "type": "ContainerHealthy",
               "status": "True",
-              "lastTransitionTime": "2023-01-16T15:59:51.453935Z"
+              "lastTransitionTime": "2024-08-12T18:33:01.488550Z"
+            },
+            {
+              "type": "ContainerReady",
+              "status": "True",
+              "lastTransitionTime": "2024-08-12T18:32:58.582917Z"
             },
             {
               "type": "ResourcesAvailable",
               "status": "True",
-              "severity": "Error",
-              "lastTransitionTime": "2023-01-16T15:59:51.034404Z"
+              "lastTransitionTime": "2024-08-12T18:33:01.176985Z"
             }
           ],
-          "logUrl": "https://console.cloud.google.com/logs/viewer?project=gcp-lab-custodian&resource=cloud_run_revision/service_name/cloudrun-262-green/revision_name/cloudrun-262-green-l6q75&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22cloudrun-262-green%22%0Aresource.labels.revision_name%3D%22cloudrun-262-green-l6q75%22",
-          "imageDigest": "us-docker.pkg.dev/cloudrun/container/hello@sha256:2e70803dbc92a7bffcee3af54b5d264b23a6096f304f00d63b7d1e177e40986c"
+          "logUrl": "https://console.cloud.google.com/logs/viewer?project=cloud-custodian&resource=cloud_run_revision/service_name/cloudrun-262-green/revision_name/cloudrun-262-green-00001-tgx&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22cloudrun-262-green%22%0Aresource.labels.revision_name%3D%22cloudrun-262-green-00001-tgx%22",
+          "imageDigest": "us-docker.pkg.dev/cloudrun/container/hello@sha256:554bc035f4f70111c01ffe17b93f6dda77dcfc15085a2e7c6ea14de3a580a75c"
         }
       }
     ]
