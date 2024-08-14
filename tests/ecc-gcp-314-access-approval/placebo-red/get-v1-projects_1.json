@@ -1,0 +1,34 @@
+{
+  "headers": {
+    "content-type": "application/json; charset=UTF-8",
+    "vary": "Origin, X-Origin, Referer",
+    "date": "Wed, 14 Aug 2024 16:19:03 GMT",
+    "server": "ESF",
+    "cache-control": "private",
+    "x-xss-protection": "0",
+    "x-frame-options": "SAMEORIGIN",
+    "x-content-type-options": "nosniff",
+    "server-timing": "gfet4t7; dur=805",
+    "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+    "transfer-encoding": "chunked",
+    "status": "200",
+    "content-length": "1240",
+    "-content-encoding": "gzip",
+    "content-location": "https://cloudresourcemanager.googleapis.com/v1/projects?alt=json"
+  },
+  "body": {
+    "projects": [
+      {
+        "projectNumber": "172905316325",
+        "projectId": "seraphic-result-m6",
+        "lifecycleState": "ACTIVE",
+        "name": "project-red",
+        "createTime": "2024-08-14T13:15:24.852Z",
+        "parent": {
+          "type": "organization",
+          "id": "11111111111111"
+        }
+      }
+    ]
+  }
+}
