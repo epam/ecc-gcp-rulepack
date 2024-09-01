@@ -1,3 +1,10 @@
 .DS_Store
-output/
-.idea/
+tf_runner/*
+*.tfstate*
+.terraform/*
+*.log
+*report.csv
+*.terraform*
+**/tmp
+/output
+/.idea
