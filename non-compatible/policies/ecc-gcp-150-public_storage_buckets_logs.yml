@@ -9,9 +9,17 @@ policies:
     comment: '030033042000'
     description: |
       There are Storage Buckets with publicly accessible Stackdriver logs
-    resource: gcp.bucket-access-control-list
+    resource: gcp.log-project-sink
     filters:
-      - type: value
-        key: entity
-        value: [allUsers, allAuthenticatedUsers]
-        op: in
+      - type: bucket-iam-policy
+        doc:
+          key: bindings[].members[]
+          op: intersect
+          value: [allUsers, allAuthenticatedUsers]
+
+    # resource: gcp.sink-bucket-iam-policy
+    # filters:
+    #   - type: value
+    #     key: bindings[].members[]
+    #     value: [allUsers, allAuthenticatedUsers]
+    #     op: intersect 
