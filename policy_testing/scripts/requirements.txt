@@ -1,0 +1,4 @@
+regex
+pytablewriter
+PyYAML
+c7n_gcp
