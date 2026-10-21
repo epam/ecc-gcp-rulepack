@@ -9,17 +9,17 @@ policies:
     comment: '030023022000'
     description: |
       Weak ciphers are used in CDN
-    resource: gcp.loadbalancer-backend-frontend-ssl
+    resource: gcp.loadbalancer-backend-ssl-policy
     filters:
       - type: value
         key: minTlsVersion
         value: [TLS_1_1, TLS_1_2]
         op: ni
       - type: value
-        key: '"c7n:loadbalancer-backend-frontend"."c7n:loadbalancer-backend-service".enableCDN'
+        key: '"c7n:loadbalancer-backend-target-https-proxy"."c7n:loadbalancer-backend-service".enableCDN'
         value: true
         op: eq
       - type: value
-        key: '"c7n:loadbalancer-backend-frontend"."c7n:loadbalancer-backend-service".protocol'
+        key: '"c7n:loadbalancer-backend-target-https-proxy"."c7n:loadbalancer-backend-service".protocol'
         value: HTTPS
         op: eq

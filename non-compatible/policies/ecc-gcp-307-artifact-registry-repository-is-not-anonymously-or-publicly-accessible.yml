@@ -9,7 +9,7 @@ policies:
     comment: '030040082000'
     description: |
       GCP Artifact Registry repository is anonymously or publicly accessible
-    resource: gcp.artifactregistry-repository
+    resource: gcp.artifact-repository
     filters:
       - type: gcp-iam-policy-filter
         key: members
